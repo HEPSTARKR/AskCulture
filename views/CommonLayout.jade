@@ -1,0 +1,41 @@
+//
+   Created by Sunrin on 2015. 12. 25..
+doctype html
+html(lang='ko')
+    head
+        meta(charset='utf-8')
+        title AskCulture
+        script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
+        script(type="text/javascript" src="/javascripts/materialize.min.js")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        link(href='/stylesheets/materialize.min.css' media='screen,projection' type='text/css' rel='stylesheet')
+        link(rel='stylesheet' type='text/css' href='/stylesheets/CommonLayout.css')
+        block CustomHead
+    body
+        nav
+            div(class='nav-wrapper')
+                a(href='#!' class='brand-logo')
+                    img(src='/images/nav_logo.png' height='30px')
+                ul(class='hide-on-med-and-down')
+                    li
+                        input(type='text' placeholder='지역을 검색해보세요')
+                    li
+                        i(class='material-icons') search
+                a(href='#' data-activates='mobile_menu' class='button-collapse')
+                    i(class='material-icons') menu
+                ul(class='right hide-on-med-and-down')
+                    li
+                        div(class='profileImage' style='background: url(/images/kano.png);')
+                    li Welcome, Michelle
+                    li
+                        div(class='btn nav_button') 요청하기
+                    li
+                        div(class='btn nav_button') 제안하기
+                ul(class='side-nav' id='mobile_menu')
+                    li
+                        div(class='profileImage' style='background: url(/images/kano.png);')
+                        div Welcome, Michelle
+                    li 요청하기
+                    li 제안하기
+                script $(".button-collapse").sideNav();
+        block content

@@ -1,135 +1,316 @@
-@font-face {
-    src: url(../font/NanumGothic-Regular.ttf);
-    font-family: 'Nanum Gothic';
+@media screen and (orientation: landscape) {
+    nav {
+        background: none !important;
+        box-shadow: none !important;
+        position: absolute;
+    }
 }
-@font-face {
-    src: url(../font/NanumGothic-ExtraBold.ttf);
-    font-family: 'Nanum Gothic-Bold';
-}
-.contentBox{
-    height: 80vh;
-    width: 100%;
-    display: block;
-    border: solid 1px #e6e6e6;
-    margin: 0;
-}
-.contentBox:first-child{
-    background-image: url(/images/bg1.jpg);
-    background-size: cover;
-    transition: 3s;
+@media screen and (orientation: portrait){
+    nav{
+        position: fixed;
+        z-index: 999;
+        background: midnightblue;
+    }
 }
 #contentHomeBox{
-    padding: 0;
+    background-image: url(/images/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: 3s;
+}
+@media screen and (orientation: landscape) {
+    #introduceService {
+        border: 1px solid #9e9e9e;
+        border-radius: 0.5vw;
+        width: 60%;
+        height: 20%;
+        font-size: 1.2vw;
+        text-align: center;
+        margin: 2% auto;
+        margin-top: 6%;
+        padding: 1% 0;
+    }
+
+    #introduceVideo {
+        margin: auto;
+        margin-left: 20%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    #introduceService{
+        padding: 3% 0 !important;
+    }
+}
+@media screen and (orientation: portrait){
+    #introduceService {
+        border: 1px solid #9e9e9e;
+        border-radius: 0.5vw;
+        width: 80%;
+        height: 20%;
+        font-size: 2vh;
+        text-align: center;
+        margin: 2% auto;
+        margin-top: 20%;
+        padding: 5% 0 !important;
+    }
+    #introduceVideo {
+        margin: auto;
+        width: 80% !important;
+        height: 40% !important;
+        margin-left: 10%;
+    }
+}
+#HomeBoxMenu{
+    bottom: 0px;
+    height: 30%;
     width: 100%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
+
+#HomeBoxOffSet{
+    height: 70%;
+    width: 100%;
+}
+.ServiceBox{
+    display: inline-block;
+    width: 50%;
+}
+.ContentBlockHeader{
+    border : solid 1px #9e9e9e;
+    border-radius: 0.4vw;
+    text-align: center;
+    width: 60%;
+    font-size: 1.1vw;
+    margin: 3% auto;
+    padding: 0.5%;
+    font-weight: bold;
+    color: #7e7e7e;
+}
+.HowToIcon{
+    margin-left:44%
+}
+.HowToLocal .HowToIcon{
+    margin-left: 47%;
+}
+.HowToContentBox{
+    width: 100%;
+    background: url(/images/bg_visitor.png) repeat-y;
+    background-size: 50%;
+    border: 1px solid #e9e9e9;
+}
+.LocalContentBox{
+    background: url(/images/bg_local.png) repeat-y !important;
+    background-position-x: 100% !important;
+    background-size: 50% !important;
+}
+.HowToStep{
+    display: inline-block;
+    text-align: center;
+    width: 31%;
     height: 100%;
-    background-color: rgba(0,0,0,0.1);
-}
-.TextButtonContents{
-    color: white;
-    font-size: 1.2vw;
-    vertical-align: middle;
-    border-bottom: 3px solid rgba(255,255,255,0);
-}
-#MenuBar div{
-    font-size: 1.2vw;
-    margin: 0 1vw;
-    padding: 0 1.5vw;
-    height: 3vh !important;
-    line-height: 3vh !important;
-}
-#MainSearchContent input{
-    border: solid 2px white !important;
-    width: 30vw;
-    height: 2vw;
-    font-size: 1.5vw;
-    padding-left: 1vw;
-    color: white;
-    background: rgba(255,255,255,0.4);
-    display: inline-block;
-}
-#MainSearchContent{
-    color: white;
-    margin-top: 10%;
-    vertical-align: middle;
-}
-.searchContentBox{
-    width: 40%;
-    margin-left: 5%;
-}
-#MainSearchContent p:first-child span{
-    float: right;
-}
-#MainSearchContent div div{
-    float: right;
-    width: 8vw !important;
-    height: 2.5vw;
-    display: inline-block;
-}
-.searchContentBox span{
-    font-family: 'Nanum Gothic', 'Roboto', sans-serif;
-    font-size: 1.8vw;
-}
-.lineContent hr{
-    width: 44%;
-    display: inline-block;
-}
-.lineContent span{
+    vertical-align: top;
+    margin: 0 1%;
     font-size: 1vw;
-    font-style: italic;
-    margin: 0 3%
+    color: #7e7e7e;
 }
-#MenuBar ul{
-    font-size: 1.2vw !important;
-    width: 1.2vw !important;
-    margin: 0 1vw !important;
+.StepHeader{
+    font-size: 1.3vw;
+    font-weight: bold;
 }
-#MenuBar .dropdown-button{
-    background: none;
-    border: white 1px solid !important;
-    font-size: 1.2vw;
-    margin: 0 1vw;
-    padding: 0 1.5vw;
-    height: 3vh !important;
-    line-height: 3vh !important;
-}
-#MenuBar .dropdown-content li a{
-    font-size: 0.6vw !important;
-    width: 0.3vw !important;
-}
-#MenuBar .dropdown-content li{
-    font-size: 0.6vw !important;
-    width: 0.3vw !important;
-}
-#MenuBar .dropdown-content{
-    font-size: 0.6vw !important;
-    width: 0.3vw !important;
-}
-#MenuBar span{
-    margin: 0 2vw;
-}
-#MenuBar{
-    vertical-align: bottom;
-    float: right;
-    margin-right: 2vw;
-}
-#Title{
-    margin-left: 50px;
-    font-family: 'Nanum Gothic-Bold', 'Roboto', sans-serif;
-    font-size: 1.7vw;
+.CountStep{
+    background: #7e7e7e;
     color: white;
+    font-size: 0.7vw;
+    width: 1.3vw;
+    line-height: 1.3vw;
+    border-radius: 100%;
+    height: 1.3vw;
+    margin: auto;
 }
-.TextButtonContents:hover{
-    border-bottom: 0.3vh solid white;
-    transition: 0.5s;
+.StepContent{
+    word-break: keep-all;
+    font-size: 0.5vw;
 }
-body{
-    margin: 0;
-    padding: 0;
+@media screen and (orientation: portrait) {
+    .HowToContent{
+        width: 100% !important;
+    }
+    .StepContent{
+        font-size: 5px !important;
+    }
+    .CountStep{
+        width: 2.5vw;
+        height: 2.5vw;
+        line-height: 2.5vw;
+    }
+    /*.HowToContentBox{
+        height: 15vh;
+    }*/
 }
-#titleDocBar{
-    background: rgba(0,0,0,0.36);
-    padding: 1vh 0;
+.HowToLocal, .HowToVisitor{
+    height: auto;
 }
-#MenuBar div{
-    font-family: 'Nanum Gothic', 'Roboto', sans-serif;
+.HowToLocal .HowToIcon{
+    margin-top: 5%;
+}
+.HowToButton:hover{
+    cursor: pointer;
+}
+.HowToContent{
+    transform: translateY(-0.8vw);
+    margin: auto;
+    vertical-align: text-top;
+    width: 70%;
+    height: 100%;
+}
+.HowToButton{
+    width: 30%;
+    padding: 1%;
+    margin: 3% auto;
+    border: solid 1px #9e9e9e;
+    color: #9e9e9e;
+    font-size: 1.4vw;
+    font-weight: bold;
+    border-radius: 0.4vw;
+    text-align: center;
+}
+@media screen and (orientation: landscape) {
+    .ServiceMent {
+        margin-top: 3vw;
+        font-size: 1.7vw;
+        text-align: center;
+    }
+    .ServiceButton{
+        display: inline-block;
+        background: none;
+        border: solid 1px white;
+        border-radius: 0.6vw;
+        margin: 0 20%;
+        width: 60%;
+        font-size: 1.9vw;
+        height: 5vw !important;
+        line-height: 5vw;
+        padding: 0 10px;
+    }
+}
+@media screen and (orientation: portrait) {
+    .ServiceMent {
+        margin-top: 30%;
+        font-size: 2vh;
+        text-align: center;
+    }
+    .ServiceButton{
+        display: inline-block;
+        background: none;
+        border: solid 1px white;
+        border-radius: 0.6vw;
+        margin: 0 5%;
+        width: 90%;
+        font-size: 1.8vh;
+        height: 5vh !important;
+        line-height: 5vh;
+        padding: 0 5px;
+    }
+}
+.suggestContent .ContentBlockHeader{
+    margin-bottom: 1%;
+}
+.subhead{
+    text-align: center;
+    font-size: 1vw;
+    margin: 0 auto;
+    margin-bottom: 2%;
+}
+@media screen and (orientation: portrait) {
+    .SuggestBox {
+        display: inline-block;
+        margin: 1%;
+        width: 37vw;
+        border-radius: 0.5vw;
+        height: 37vw;
+        border: 1px solid #e0e0e0;
+    }
+    .suggestContent .col{
+        padding: 0 10% !important;
+    }
+    .ContentBlockHeader{
+        margin-top: 30%;
+    }
+    .suggestContent{
+        height: 120vh;
+    }
+    .moreView{
+        font-size: 3vw !important;
+        line-height: 37vw !important;
+    }
+}
+@media screen and (orientation: landscape) {
+    .SuggestBox {
+        display: inline-block;
+        margin: 1%;
+        width: 18vw;
+        border-radius: 0.5vw;
+        height: 18vw;
+        border: 1px solid #5e5e5e;
+    }
+    .moreView{
+        line-height: 18vw;
+    }
+}
+.suggestContent .col{
+    padding: 0 20%;
+}
+.moreView{
+    background: #5e5e5e;
+    color: white;
+    vertical-align: top;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.linkBox img{
+    margin: 5.5px 10px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.linkBox{
+    height: 50px;
+    vertical-align: middle;
+}
+footer{
+    background: #646464 !important;
+}
+.verticalAlignFooter{
+    vertical-align: middle;
+}
+.verticalAlignFooter{
+    border-right: solid 1px white;
+}
+.removeLine{
+    border-right: none;
+}
+.dropdown-button{
+    background: none;
+    border: solid 1px white;
+    display: block;
+    width: 150px;
+    margin: 5% auto;
+}
+.footer-copy{
+    width: 95% !important;
+    color: white;
+    text-align: center;
+    font-size: 5px !important;
+}
+footer img {
+    margin: 2% 37.5%;
+}
+.centerBtn{
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+}
+footer p a{
+    color: white;
 }

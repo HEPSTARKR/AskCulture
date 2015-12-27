@@ -1,0 +1,97 @@
+@font-face {
+    src: url(../font/NanumGothic-Regular.ttf);
+    font-family: 'Nanum Gothic';
+}
+@font-face {
+    src: url(../font/NanumGothic-ExtraBold.ttf);
+    font-family: 'Nanum Gothic-Bold';
+}
+body{
+    font-family: 'Nanum Gothic', 'Roboto', sans-serif;
+}
+nav .nav_button{
+    border-radius: 0.7vw !important;
+    border: solid 1px white !important;
+    color: white !important;
+    background: none;
+    padding: 0 13px;
+    font-family: 'Nanum Gothic', 'Roboto', sans-serif;
+}
+nav .nav_button:hover{
+    background: rgba(255,255,255,0.5);
+}
+.profileImage{
+    border-radius: 100%;
+}
+.brand-logo{
+    height: 30px;
+    margin-top: 7px;
+}
+@media screen and (orientation: landscape) {
+    .brand-logo{
+        margin-left: 15px;
+    }
+
+}
+.profileImage{
+    margin-top: 10px;
+    height: 44px;
+    width: 44px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+nav li{
+    margin: 0 8px;
+}
+nav{
+    background: rgba(0,0,0,0.6);
+}
+.side-nav .profileImage{
+    display: inline-block;
+    vertical-align: middle;
+}
+.side-nav .profileImage + div{
+    display: inline-block;
+    line-height: 44px;
+    vertical-align: middle;
+    padding-left: 10px;
+    margin-top: 6px;
+}
+.brand-logo + ul{
+    margin-left: 120px;
+}
+.brand-logo + ul input{
+    width: 20vw;
+    border: solid 1px white !important;
+    height: 35px !important;
+    padding-left: 12px !important;
+    border-radius: 0.7vw !important;
+}
+.side-nav{
+    color: black !important;
+    border: none !important;
+}
+.brand-logo + ul i{
+    border-radius: 0.7vw;
+    border: 1px solid white;
+    height: 35px;
+    width: 35px;
+    margin-top: 15px;
+    line-height: 35px;
+    margin-left: -10px;
+}
+.hide-on-med-and-down li:hover{
+    background: none !important;
+}
+.contentBox{
+    height: 100vh;
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+.contentBox .col{
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}

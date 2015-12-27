@@ -1,0 +1,115 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title="AskCulture"
+    script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
+    script(type="text/javascript" src="/javascripts/materialize.min.js")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(href='/stylesheets/materialize.min.css' media='screen,projection' type='text/css' rel='stylesheet')
+    link(rel='stylesheet' type='text/css' href='/stylesheets/indexOld.css')
+  body
+    div(class='row contentBox')
+      div(class='col s12 l12 m12' id='contentHomeBox')
+        div(id='titleDocBar')
+          span(id='Title') AskCulture
+          div(id='MenuBar')
+            span(id='HowToService' class='TextButtonContents') 이용방법
+            span(id='Home' class='TextButtonContents') 홈
+            span(id='Login' class='TextButtonContents') 로그인
+            div(id='SignUp' class='btn orange darken-1 waves-effect waves-light') 회원가입
+            a(class='dropdown-button btn white-text' href='#' data-activates='dropLanguage') 한국어
+            ul(id='dropLanguage' class='dropdown-content')
+              li
+                a(href='#') 한국어
+              li
+                a(href='#') 中國語
+              li
+                a(href='#') English
+            a(class='dropdown-button btn white-text' href='#' data-activates='dropMoney') KRW
+            ul(id='dropMoney' class='dropdown-content')
+              li
+                a(href='#') KRW
+              li
+                a(href='#') CNY
+              li
+                a(href='#') USD
+        div(id='MainSearchContent')
+          form(method='get' action='')
+            p(class='searchContentBox')
+              input(type='text' name='searchKeyWord')
+              span 에서
+            div(class='searchContentBox')
+              span 나의 여행을 도와줄 친구를 찾아요!
+              div(class='search' class='btn orange darken-1 waves-effect waves-light')
+            div(class='searchContentBox lineContent')
+              hr
+              span or
+              hr
+            div(class='searchContentBox')
+              span 당신의 친구가 되어줄게요.
+              div(class='search' class='btn orange darken-1 waves-effect waves-light')
+    div(class='row contentBox')
+      div(id='HowToContentBox')
+        div(class='SplitHorizontal-TwoSumWeight')
+          div(class='verticalHowtoBox')
+            div(class='AskCultureCircle') AskCulture
+            p 방문자의 이용방법이 알고 싶으신가요?
+            div 이용방법 확인하기
+        div(class='SplitHorizontal-TwoSumWeight')
+          div(class='verticalHowtoBox')
+            div(class='AskCultureCircle') AskCulture
+            p 지역주민의 이용방법이 알고 싶으신가요?
+            div 이용방법 확인하기
+    div(class='row contentBox')
+      div(id='AskCultureBannerContentBox')
+        img(src='/images/AskCultureBanner.png' width='60%')
+        p AskCulture와 함께 만들 수 있는 여행의 모습을 확인하세요
+    div(class='row contentBox')
+      div(class='localContentBox')
+        p(class='localTitleBox') 이런 문화체험 어때요?
+        p(class='localSubTitleBox') 현지주민들 제안한 문화체험
+        div(class='CardContentBox')
+          div(class='card')
+            div(class='card-image')
+              img(src='/images/AskCultureBanner.png')
+              span(class='card-title') Title goes here <br> Subtitle Here
+          div(class='card')
+            div(class='card-image')
+              img(src='/images/AskCultureBanner.png')
+              span(class='card-title') Title goes here <br> Subtitle Here
+          div(class='card')
+            div(class='card-image')
+              img(src='/images/AskCultureBanner.png')
+              span(class='card-title') Title goes here <br> Subtitle Here
+         a(href='#')
+          span(class='moreContents') 더보기
+    div(class='row contentBox')
+      div(class='localContentBox')
+        p(class='localTitleBox') 이런 문화체험이 하고싶어요!
+        p(class='localSubTitleBox') 현지주민들 제안한 문화체험
+        div(class='CardContentBox')
+          div(class='card')
+            div(class='card-image')
+              img(src='/images/AskCultureBanner.png')
+              span(class='card-title') Title goes here <br> Subtitle Here
+          div(class='card')
+            div(class='card-image')
+              img(src='/images/AskCultureBanner.png')
+              span(class='card-title') Title goes here <br> Subtitle Here
+          div(class='card')
+            div(class='card-image')
+              img(src='/images/AskCultureBanner.png')
+              span(class='card-title') Title goes here <br> Subtitle Here
+         a(href='#')
+          span(class='moreContents') 더보기
+    div(class='row contentBox')
+      div(id='videoHeader')
+        img(src='/images/AskCultureLogo2.png' width='30%')
+        span 에서만 경험할 수 있는 문화 교류 확인해보세요.
+      iframe(width="70%" height="50%" src="https://www.youtube.com/embed/5YtmSuIOTO8" frameborder="0" allowfullscreen)
+    footer
+      p 상호명 에스크컬쳐|대표이사 홍선기|개인정보책임자 이명훈|사업자등록번 000-00-00000|통신판매업신고번호 제2-14-서-영등포-0000호
+      p 서울특별시 영등포구 국제금융로 10길 11 (주)애스크컬쳐
+      p TEL 00-0000-0000|EMAIL askculture@askculture.com|자사는 서울특별시관광협회 공제영업보증보험에 가입되어 있습니다.
+    script(type='text/javascript' src='/javascripts/index.js')

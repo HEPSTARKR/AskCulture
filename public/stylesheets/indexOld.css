@@ -1,0 +1,289 @@
+@font-face {
+    src: url(../font/NanumGothic-Regular.ttf);
+    font-family: 'Nanum Gothic';
+}
+@font-face {
+    src: url(../font/NanumGothic-ExtraBold.ttf);
+    font-family: 'Nanum Gothic-Bold';
+}
+.contentBox{
+    height: 100vh;
+    width: 100%;
+    display: block;
+    border: solid 1px #e6e6e6;
+    margin: 0;
+}
+.contentBox:first-child{
+    background-image: url(/images/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: 3s;
+}
+#contentHomeBox{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+}
+.TextButtonContents{
+    color: white;
+    font-size: 1.2vw;
+    vertical-align: middle;
+    border-bottom: 3px solid rgba(255,255,255,0);
+}
+#MenuBar div{
+    font-size: 1.1vw;
+    margin: 0 1vw;
+    padding: 0vw 1.5vw;
+    height: 3.6vh !important;
+    line-height: 3.6vh !important;
+}
+#MainSearchContent input{
+    border: solid 2px white !important;
+    width: 30vw;
+    height: 2vw;
+    font-size: 1.5vw;
+    padding-left: 1vw;
+    color: white;
+    background: rgba(255,255,255,0.4);
+    display: inline-block;
+}
+#MainSearchContent{
+    color: white;
+    margin-top: 10%;
+    vertical-align: middle;
+}
+.searchContentBox{
+    width: 40%;
+    margin-left: 5%;
+}
+#MainSearchContent p:first-child span{
+    float: right;
+}
+#MainSearchContent div div{
+    float: right;
+    width: 8vw !important;
+    height: 2.5vw;
+    display: inline-block;
+}
+.searchContentBox span{
+    font-family: 'Nanum Gothic', 'Roboto', sans-serif;
+    font-size: 1.8vw;
+}
+.lineContent hr{
+    width: 44%;
+    display: inline-block;
+}
+.lineContent span{
+    font-size: 1vw;
+    font-style: italic;
+    margin: 0 3%
+}
+#MenuBar ul{
+    font-size: 1.2vw !important;
+    width: 1.2vw !important;
+    margin: 0 1vw !important;
+}
+#MenuBar .dropdown-button{
+    background: none;
+    border: white 1px solid !important;
+    font-size: 1.2vw;
+    margin: 0 1vw;
+    padding: 0 1.5vw;
+    height: 3vh !important;
+    line-height: 3vh !important;
+}
+#MenuBar span{
+    margin: 0 2vw;
+}
+#MenuBar{
+    vertical-align: bottom;
+    float: right;
+    margin-right: 2vw;
+    margin-top: 0.3vw;
+}
+@media screen and (orientation: landscape){
+    .CardContentBox .card{
+        width: 30%;
+        display: inline-block;
+        margin: 0 1.5%;
+    }
+    .CardContentBox .card .card-image img{
+        height: 23vw !important;
+    }
+}
+@media screen and (orientation: portrait){
+    .contentBox:nth-child(3){
+        height: 40vh;
+    }
+    .contentBox:nth-child(3) #AskCultureBannerContentBox{
+        padding-top: 3%;
+    }
+    .CardContentBox .card{
+        width: 60%;
+        display: block;
+        margin: 5% 20%;
+    }
+    .moreContents{
+        padding: 0 20% !important;
+    }
+    .CardContentBox .card .card-image img{
+        height: 30vw !important;
+    }
+}
+
+#Title{
+    margin-left: 50px;
+    font-family: 'Nanum Gothic-Bold', 'Roboto', sans-serif;
+    font-size: 1.7vw;
+    color: white;
+}
+.TextButtonContents:hover{
+    border-bottom: 0.3vh solid white;
+    transition: 0.5s;
+}
+.moreContents{
+    color: gray;
+    float: right;
+    font-size: 2vw;
+    padding: 0 3%;
+}
+body{
+    padding: 0;
+}
+.card span{
+    font-size: 2vw !important;
+}
+footer{
+    padding: 1% 0;
+    background: #e7e7e7;
+    color: black;
+    font-family: 'Nanum Gothic', 'Roboto', sans-serif;
+    text-align: center;
+}
+footer p{
+    font-size: 1vw;
+    margin: 0;
+}
+#titleDocBar{
+    background: rgba(0,0,0,0.36);
+    padding: 1vh 0;
+}
+.localTitleBox, .localSubTitleBox{
+    text-align: center;
+    margin: 0;
+    color: black;
+    display: block;
+}
+.localSubTitleBox{
+    margin-top: -1vw;
+    margin-bottom: 5%;
+    font-size: 2vw;
+}
+.localTitleBox{
+    margin-top: 5%;
+    font-size: 3vw;
+}
+#MenuBar div{
+    font-family: 'Nanum Gothic', 'Roboto', sans-serif;
+}
+#HowToContentBox{
+    width: 100%;
+    height: 100%;
+}
+@media screen and (orientation: landscape){
+    .SplitHorizontal-TwoSumWeight{
+        width: 50%;
+        margin-top: 3%;
+        display: inline-block;
+    }
+}
+@media screen and (orientation: portrait){
+    .SplitHorizontal-TwoSumWeight{
+        width: 80%;
+        margin: auto;
+        margin-top: 3%;
+        display: block;
+    }
+    .verticalHowtoBox{
+        width: 80% !important;
+    }
+    .AskCultureCircle{
+        margin: 10% auto !important;
+        width: 30vw !important;
+        height:30vw !important;
+        line-height: 30vw !important;
+        font-size: 5vw !important;
+    }
+    .verticalHowtoBox div:last-child{
+        width: 40% !important;
+        height: 4vw !important;
+        line-height: 4vw !important;
+    }
+    .verticalHowtoBox p{
+        font-size: 3vw !important;
+    }
+    #HowToContentBox{
+        margin-top: 10% !important;
+    }
+}
+.verticalHowtoBox{
+    width: 45%;
+    text-align: center;
+    margin: auto;
+}
+.AskCultureCircle{
+    width: 16vw;
+    height: 16vw;
+    border-radius: 16vw;
+    line-height: 16vw;
+    font-size: 2.5vw;
+    margin: 30% auto;
+    background: #f39925;
+    color: white;
+}
+.verticalHowtoBox div:last-child:hover{
+    cursor: pointer;
+}
+.verticalHowtoBox div:last-child{
+    border: solid black 1px;
+    border-radius: 0.7vw;
+    height: 2.6vw;
+    width: 60%;
+    margin: auto;
+    line-height: 2.6vw;
+    font-size: 1vw;
+}
+.verticalHowtoBox p{
+    font-size: 1.4vw;
+    font-weight: bold;
+}
+.SplitHorizontal-TwoSumWeight:first-child .verticalHowtoBox .AskCultureCircle{
+    background: #b0cf01;
+}
+#AskCultureBannerContentBox{
+    height:100%;
+    width: 100%;
+    padding-top: 10%;
+    background: #313131;
+}
+#AskCultureBannerContentBox img{
+    margin: auto;
+    display: block;
+}
+#AskCultureBannerContentBox p{
+    text-align: center;
+    font-size: 2vw;
+    color: white;
+    margin-top: 7%;
+}
+#videoHeader{
+    margin:10% 25%;
+    display: block;
+}
+#videoHeader span{
+    font-size: 1.5vw;
+}
+iframe{
+    margin: 0 15%
+}
