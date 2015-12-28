@@ -1,0 +1,15 @@
+//
+   Created by Sunrin on 2015. 12. 28..
+extends CommonLayout
+block CustomHead
+    meta(name="viewport" content="initial-scale=1.0, user-scalable=no")
+    link(rel='stylesheet' type='text/css' href='/stylesheets/Suggestions.css')
+block content
+    div(id='map')
+    form(method='post' action='#')
+        div(class='searchPlace')
+            input(type='text' name='place' id='autocomplete' onfocus='geolocate()' placeholder='어디로 여행을 떠나세요?')
+            input(type='hidden' id='realValue' name='realPlace' value='')
+    script(type='text/javascript' src='/javascripts/autoComplete.js')
+    script(type="text/javascript" src='/javascripts/initMap.js')
+    script(type='text/javascript' async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCJHwCqCkJ7C9_ecZihe0qmiKoHF4LrY&libraries=places&callback=initMap&language=En&region=En")
