@@ -10,4 +10,10 @@ router.get('/Suggestions',function(req,res){
   res.render('Suggestions');
 })
 
+router.get('/UploadAsk',function(req,res){
+  res.render('AskForm');
+})
+router.get('/indexENG',function(req,res){
+  res.render('indexENG');
+})
 module.exports = router;

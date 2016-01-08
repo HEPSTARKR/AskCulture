@@ -1,20 +1,213 @@
 #map{
-    height: 80vh;
+    height: 90vh;
     width: 100%;
 }
 .searchPlace{
     width: 100%;
     height: 80px;
-    background: dimgray;
+    position: absolute;
+    top: 75vh;
 }
-.searchPlace input{
+.searchInputBox i{
+    color: white;
+    position: absolute;
+    float: right;
+    font-size: 2vw;
+    right: 30.5vw;
+    margin-top: 5px;
+}
+.searchInputBox i:hover{
+    cursor: pointer;
+}
+.searchPlace .searchInputBox{
     width: 40% !important;
     margin-left: 30%;
-    color: white;
+    color: black;
+    margin-top: 1%;
+    vertical-align: middle;
     padding-left: 2%;
-    border-bottom: solid 1px white;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 0.1vw;
 }
-.searchPlace input:focus{
-    border-bottom: solid 1px white !important;
-    box-shadow: white 0px 1px 0px 0px !important;
+.searchInputBox input{
+    border: none !important;
+    height: 3vw !important;
+    border-right: 0px solid #19bdc4 !important;
+    margin: 0 !important;
+    transition: 0.3s;
+}
+.searchInputBox input:focus{
+    border: none !important;
+    box-shadow: none !important;
+    width: 92% !important;
+    border-right: 40px solid #19bdc4 !important;
+}
+.calendar{
+    width: 25%;
+    font-size: 1.1vw;
+    border: solid 1px lightgray;
+    border-radius: 0.5vw;
+}
+.calendar td{
+    width:1vw;
+}
+.calendar p, .calendar td, .calendar tr{
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    height: 2.2vw;
+}
+.calendar p{
+    vertical-align: middle;
+    line-height: 2vw;
+    font-size: 2vw;
+}
+.calendar tr{
+    height:1.2vw;
+}
+.leftMonth, .rightMonth{
+    font-size: 2.3vw;
+    margin: 0 1.5vw;
+}
+.calendar table{
+    height: 10vw;
+}
+.leftMonth:hover, .rightMonth:hover{
+    cursor: pointer;
+    color: #2ea3b5;
+}
+.calendar p, .calendar .disableDate{
+    color: lightgray;
+}
+.calendar td span{
+    width: 2.2vw;
+    text-align: center;
+    display: inline-block;
+    margin: 0.1vw;
+    height: 2.2vw;
+    border-radius: 2.2vw;
+    line-height: 2.2vw;
+}
+.dateSelected{
+    background: #2ea3b5;
+    color: white;
+}
+.calendar td.days span:not(.disableDate):hover{
+    border: 1px solid #2ea3b5;
+    cursor: pointer;
+}
+.calendar table tr:first-child td{
+    border-bottom: 1px solid lightgray;
+}
+.inputListForm{
+    display: inline-block;
+    vertical-align: top;
+    width: 30vw;
+    margin-left: 5vw;
+}
+.calendar{
+    display: inline-block;
+    vertical-align: top;
+}
+.detailInputBox img, .detailInputBox span{
+    display: inline-block;
+}
+.detailInputBox{
+    height: 3vw;
+    vertical-align: bottom;
+}
+.detailInputBox input[type=text] {
+    height: 30px !important;
+    display: inline-block !important;
+}
+.detailInputBox .select-wrapper{
+    display: inline-block !important;
+    vertical-align: top;
+}
+.detailInputBox .formLabel{
+    vertical-align: top;
+    line-height: 3.5vw;
+    display: inline-block;
+    padding-left: 3px;
+    font-size : 1vw;
+    margin-right: 7px;
+    width: 5vw;
+}
+.inputForm{
+    margin-left: 20%;
+    margin-top: 3%;
+}
+.AskBox{
+    display: inline-block;
+    float: right;
+    margin: 1vw;
+}
+.AskBox p{
+    font-size: 1vw;
+}
+.AskBox a{
+    width: 100% !important;
+    font-size: 2vw;
+}
+.pac-container{
+    border : 1px solid #6EDDDC !important;
+    border-top: 2px solid #19bdc4 !important;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.card-title.circle-clipper{
+    border-radius: 100vw;
+    width: 4vw;
+    position: relative;
+    margin-bottom: -2vw;
+    margin-left:1vw;
+    height: 4vw;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 0 !important;
+}
+.card-image{
+    height: 80%;
+}
+.card-content{
+    height: auto;
+    padding: 0 !important;
+}
+.card-content p{
+    padding-left: 6vw;
+    font-size: 1.8vw;
+    font-weight: bold;
+    vertical-align: middle;
+    margin: 0;
+    font-family: 'Raleway-Regular';
+}
+.ResultContentBox{
+    width: 80%;
+    display: inline-block;
+}
+.listFilter{
+    vertical-align: top;
+    display: inline-block;
+    width: 10%;
+}
+.listFilter ul{
+    float: right;
+}
+.listFilter ul li{
+    color: #9e9e9e;
+}
+.selectFilter{
+    color: black !important;
+}
+.card{
+    display: inline-block;
+    vertical-align:  top;
+    width: 30%;
+    margin: 15px;
+    height: 200px !important;
+}
+.card-content p i{
+    float: right;
+    line-height: 3vw;
 }

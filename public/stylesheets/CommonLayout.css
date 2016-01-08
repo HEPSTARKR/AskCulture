@@ -6,8 +6,47 @@
     src: url(../font/NanumGothic-ExtraBold.ttf);
     font-family: 'Nanum Gothic-Bold';
 }
+@font-face {
+    src: url(../font/Raleway-Bold.ttf);
+    font-family: 'Raleway-Bold';
+}
+@font-face {
+    src: url(../font/Raleway-Regular.ttf);
+    font-family: 'Raleway-Regular';
+}
+@font-face {
+    src: url(../font/Raleway-Thin.ttf);
+    font-family: 'Raleway-Thin';
+}
+@font-face {
+    src: url(../font/윤고딕310.ttf);
+    font-family: '윤고딕310';
+}
+@font-face {
+    src: url(../font/윤고딕330.ttf);
+    font-family: '윤고딕330';
+}
+@font-face {
+    src: url(../font/윤고딕350.ttf);
+    font-family: '윤고딕350';
+}
+@font-face {
+    src: url(../font/HANYGO230.ttf);
+    font-family: '윤고딕230';
+}
+@font-face {
+    src: url(../font/HANYGO240.ttf);
+    font-family: '윤고딕240';
+}
+@font-face {
+    src: url(../font/HANYGO250.ttf);
+    font-family: '윤고딕250';
+}
 body{
-    font-family: 'Nanum Gothic', 'Roboto', sans-serif;
+    font-family: '윤고딕230', 'Nanum Gothic', 'Raleway-Regular', sans-serif;
+}
+nav{
+    z-index: 999;
 }
 nav .nav_button{
     border-radius: 0.7vw !important;
@@ -45,7 +84,8 @@ nav li{
     margin: 0 8px;
 }
 nav{
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.4);
+    position: absolute;
 }
 .side-nav .profileImage{
     display: inline-block;

@@ -1,0 +1,287 @@
+.HeaderCoverBox{
+    width: 100%;
+    background: url(/images/DefaultCover.png);
+    background-size: cover;
+    background-position: center center;
+    height: 60vh;
+}
+.CheckHeaderLinear span{
+    color: #b4b4b4;
+    margin: 0 5px;
+    width: 30px;
+}
+.CheckListFormData{
+    margin-left: 15px;
+    display: inline-block;
+    width: 70%;
+}
+.CheckListFormHeaders{
+    width: 100px;
+    display: inline-block;
+    border-right: 1px solid #b4b4b4;
+}
+.CheckListInputForm .TitleLinear:nth-child(odd){
+    border: none;
+}
+#map2{
+    width: 100%;
+    height: 350px;
+}
+.CheckListFormData input, .CheckListFormData .select-wrapper{
+    margin: 0 !important;
+    height: 20px !important;
+    font-size: 8px !important;
+    line-height: 20px !important;
+}
+.caret{
+    visibility: hidden;
+}
+.CheckHeaderLinear img{
+    vertical-align: middle;
+}
+.linearContent p span{
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 5px;
+    font-size: 3pt;
+    color: white;
+    display: inline-block;
+    background: #19bdc4;
+    border-radius: 100%;
+}
+
+.linearContent p span:last-child{
+    font-size: 8pt !important;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: none;
+    color: #19bdc4;
+    border: 1px solid #19bdc4;
+    line-height: 14px;
+    vertical-align: baseline;
+    margin-bottom: -10px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+.linearContent p span:last-child:hover{
+    background: #19bdc4;
+    color: white;
+}
+.HeaderCoverBox .CoverContentBox .dropdown-button.btn{
+    background: none !important;
+    border-radius: 0 !important;
+    margin: 15px;
+    box-shadow: none !important;
+    padding:0pt 7pt;
+    float: left;
+    position: relative;
+    opacity: 0.5;
+    bottom: -80px;
+    font-size : 14pt;
+    font-weight: bold;
+}
+.HeaderCoverBox .CoverContentBox .dropdown-button.btn:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+.openTab{
+    padding-top: 5%;
+}
+.CoverContentBox{
+    width: 100%;
+    padding-top: 10%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+.PostUserStatus{
+    background: #646464;
+    color: white;
+    padding: 15px;
+    margin: 25px 0;
+    border-radius: 0.5vw;
+}
+.linearContent img{
+     vertical-align: middle;
+}
+.linearContent .linearHead{
+    color: #646464;
+    margin: 0 15px;
+    width: 20%;
+    display: inline-block;
+    border-right: 1px solid #646464;
+    font-weight: bold;
+}
+.simpleIntroduce span{
+    color: #2da3b5;
+    margin-left: 10px;
+}
+.simpleIntroduce{
+    border : 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+}
+.simpleIntroduce p:before{
+    content: "\" ";
+}
+.simpleIntroduce p:after{
+    content: " \"";
+}
+.linearContent p{
+    display: inline-block;
+    text-align: center;
+}
+#map{
+    width: 100%;
+    border: solid 1px #e0e0e0;
+    border-radius: 4px;
+    height: 300px;
+}
+.PostUserStatus p{
+    margin: 0;
+}
+.openTab{
+    width: 60%;
+    margin-left: 20%;
+    padding-top: 100px;
+}
+.dropdown-content{
+    width: 200px !important;
+}
+.indicator{
+    height: 5px !important;
+    background: #636363 !important;
+}
+.ProfileName{
+    text-align: center;
+    color: #dcdcdc;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 17pt;
+    font-family: 'Raleway-Regular';
+}
+.ProfileBox.circle:hover{
+    border-radius: 0 !important;
+}
+.ProfileBox.circle video{
+    opacity: 0;
+    transition: 0.2s;
+}
+.ProfileBox.circle video:hover{
+    opacity: 1;
+}
+.ProfileBox.circle{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin: auto;
+    transition: 0.2s;
+    border-radius: 100%;
+    background: url(/images/myProfile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: solid 8px white;;
+}
+.tab a span{
+    color: #b4b4b4 !important;
+}
+.disabled a span{
+    color: #ebebeb !important;
+}
+.disabled a img{
+    opacity: 0.3;
+}
+.tab a img{
+    vertical-align: middle;
+    margin: 10px
+}
+.tabBox{
+    padding: 0 !important;
+}
+.tabs .tab a{
+    margin-top: 10px;
+}
+.tabs{
+    height: 68px !important;
+}
+.SuggestImage{
+    margin-top: 5%;
+    background: url(/images/tempSuggestImage.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height:350px;
+}
+.SuggestImage i{
+    display: inline-block;
+    line-height: 350px;
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+    font-size: 55pt !important;
+    height: 100%;
+    float: left;
+}
+.SuggestImage i:last-child{
+    float: right;
+}
+.navIndex{
+    margin: auto;
+    position: relative;
+    width: 120px;
+    display: inline-block;
+    top: 320px;
+    left: 30%;
+}
+.TitleInput{
+    border: 1px solid #e0e0e0 !important;
+    display: inline-block !important;
+    border-radius: 5px !important;
+    width: 80% !important;
+    padding-left : 20px !important;
+    height: 25px !important;
+}
+.TitleLinear{
+    margin: 30px 0;
+    border: 1px solid #e0e0e0;
+    border-right: none;
+    padding-top: 15px;
+    border-left: none;
+}
+.SuggestImage i:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.indexCircle{
+    width: 15px;
+    margin: 3px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: bottom;
+    background: white;
+    border-radius: 100%;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.indexCircle:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.SuggestTabHead{
+    margin: 0 20px;
+}
+.PostTextHead{
+    margin-left: 50px;
+    vertical-align: top;
+}
+.PostTextLinearInput{
+    width: 83%;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    margin: 0 15px;
+    height: 300px;
+    vertical-align: bottom;
+}

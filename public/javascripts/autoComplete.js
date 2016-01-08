@@ -21,7 +21,7 @@ function fillInAddress() {
         str= str+' '+place.address_components[i].long_name;
     }
     console.log(place);
-    var pos=place.geometry.location;
+    pos=place.geometry.location;
     map.setCenter({lat: pos.lat(),lng: pos.lng()});
     marker.setPosition({lat: pos.lat(),lng: pos.lng()});
     str+document.getElementById('autocomplete').value;

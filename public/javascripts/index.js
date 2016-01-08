@@ -5,10 +5,10 @@ var backgroundNum = 2;
 var firstToggle=false;
 var secondToggle=false;
 $(document).ready(setInterval(function () {
-        $('#contentHomeBox').css('background-image', 'url(/images/bg' + backgroundNum + '.jpg)');
+        $('#contentHomeBox').css('background-image', 'url(/images/bg' + backgroundNum + '.png)');
         backgroundNum++;
-        if (backgroundNum > 6)backgroundNum = 1;
-    }, 10000)
+        if (backgroundNum > 7)backgroundNum = 1;
+    }, 3000)
 );
 $(document).ready(function () {
     $('.HowToContentBox').slideToggle();
@@ -27,6 +27,7 @@ $(document).ready(function () {
         }
         firstToggle=!firstToggle;
     });
+    $('.searchNav').hide();
     $('.LocalButton').click(function () {
         if(!secondToggle){
             $('.HowToLocal').animate({paddingBottom: '30%'});
@@ -37,5 +38,34 @@ $(document).ready(function () {
         }
         secondToggle=!secondToggle;
     });
-})
-;
+    $('.submitBubble').hide();
+    $('ul.tabs').tabs();
+    $('.tabs li a').click(function(){
+        console.log($('.indicator').css('left'))
+        if($('.indicator').css('left')=='0px'){
+            $('.indicator').css('background','rgba(242, 147, 26, 1)','!important')
+            console.log($('.indecator').css('background'))
+        }else{
+            $('.indicator').css('background','rgba(25, 189, 196, 1)','!important')
+            console.log($('.indecator').css('background'))
+        }
+    })
+    $('.tabs li a').click()
+    $('.searchInputBox i').hide();
+    $('.searchInputBox input').focus(function(){
+        $('.searchInputBox i').fadeIn()
+        $('.submitBubble').show()
+        $("nav").css('background','rgba(0,0,0,0.6)','!important')
+        $('#map').css('z-index',200);
+        $('.searchPlace').css('z-index',201).animate({top: '80vh'},'slow');
+    });
+    $('.searchInputBox input').blur(function(){
+        $('.searchInputBox i').fadeOut()
+        if($('.searchInputBox input').val()==''){
+            $("nav").css('background','none','!important')
+            $('#map').css('z-index',-10);
+            $('.submitBubble').hide();
+            $('.searchPlace').css('z-index',201).animate({top: '60vh'},'slow');
+        }
+    })
+});
