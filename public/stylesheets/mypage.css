@@ -1,0 +1,95 @@
+.contentBox{
+    width: 100vw;
+    height:100vh;
+    padding-top: 80px;
+}
+#profileImageContent{
+    width: 20vw;
+    margin: 0 5vw;
+    display: inline-block;
+}
+.contentProfileImage{
+    background: url(/images/tempProfile.jpg);
+    background-position: center center;
+    background-size: cover;
+    width: 16vw;
+    height: 16vw;
+    display: block;
+    margin: auto;
+    margin-top: 2vw;
+}
+#profileImageContent .btn{
+    display: block;
+    margin: 20px auto;
+}
+.simpleIntroduce{
+    border: 1px solid #6e6e6e;
+    border-radius: 5px;
+    padding: 10px;
+    height: 100px;
+}
+.simpleIntroduce div i, .simpleIntroduce div span{
+    vertical-align: middle;
+    color: #00acc1;
+}
+#profileImageContent i, #profileImageContent span{
+    font-size: 1vw;
+    color: #b4b4b4;
+    vertical-align: middle;
+}
+#profileTabContentBox{
+    width: 50vw;
+    display: inline-block;
+    vertical-align: top;
+}
+.profileNameBox{
+    width: 100%;
+    padding: 2%;
+    color: #6e6e6e;
+    border-bottom: #6e6e6e 1px solid;
+}
+.profileNameBox p{
+    margin: 0;
+    font-size: 1vw;
+}
+.profileNameBox p:first-child{
+    font-size: 2vw;
+}
+.indicator{
+    background: #009688 !important;
+    height: 5px !important;
+}
+.tab a{
+    font-size: 1vw;
+    color: #6e6e6e !important;
+}
+.tab .active{
+    color: #009688 !important;
+}
+.profileIntroduce div{
+    margin: 10px 0;
+}
+.profileIntroduce i, .profileIntroduce span{
+    vertical-align: middle;
+}
+.profileIntroduce span{
+    margin-left: 10px;
+}
+.profileIntroduce{
+    border-right: 1px solid #6e6e6e;
+    display: inline-block;
+    margin: 20px 0;
+    padding-right: 20px;
+}
+.profileIntroduce div:first-child, .profileIntroduce div:last-child{
+    margin: 0 !important;
+}
+.Wanted{
+    padding-top: 10px !important;
+}
+#profileMap{
+    width: 100%;
+    height: 280px;
+    border: solid 1px #6e6e6e;
+    border-radius: 5px;
+}

@@ -47,12 +47,21 @@ body{
 }
 nav{
     z-index: 999;
+    color: #ff9800;
+}
+.nav_name{
+    width: 150px;
+    height: 46px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 nav .nav_button{
-    border-radius: 0.7vw !important;
-    border: solid 1px white !important;
-    color: white !important;
+    border-radius: 0.2vw !important;
+    border: solid 1px #ff9800;
+    color: #ff9800;
     background: none;
+    box-shadow: none !important;
     padding: 0 13px;
     font-family: 'Nanum Gothic', 'Roboto', sans-serif;
 }
@@ -63,8 +72,8 @@ nav .nav_button:hover{
     border-radius: 100%;
 }
 .brand-logo{
-    height: 30px;
-    margin-top: 7px;
+    height: 40px;
+    margin-top: 12px;
 }
 @media screen and (orientation: landscape) {
     .brand-logo{
@@ -84,7 +93,7 @@ nav li{
     margin: 0 8px;
 }
 nav{
-    background: rgba(0,0,0,0.4);
+    background: rgba(255,255,255,1);
     position: absolute;
 }
 .side-nav .profileImage{
@@ -103,23 +112,33 @@ nav{
 }
 .brand-logo + ul input{
     width: 20vw;
-    border: solid 1px white !important;
-    height: 35px !important;
+    border: solid 1px #ff9800 !important;
+    height: 33px !important;
     padding-left: 12px !important;
-    border-radius: 0.7vw !important;
+    border-radius: 0.2vw !important;
+}
+.brand-logo + ul input:focus{
+    box-shadow: none !important;
 }
 .side-nav{
-    color: black !important;
+    color: #ff9800 !important;
     border: none !important;
 }
 .brand-logo + ul i{
-    border-radius: 0.7vw;
-    border: 1px solid white;
+    border-radius: 0.2vw;
+    border: 1px solid #ff9800;
     height: 35px;
     width: 35px;
-    margin-top: 15px;
+    margin-top: 14px;
     line-height: 35px;
     margin-left: -10px;
+}
+nav .material-icons{
+    color: #ff9800;
+    margin-left: 10px;
+}
+nav li a{
+    padding: 0px !important;
 }
 .hide-on-med-and-down li:hover{
     background: none !important;

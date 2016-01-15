@@ -4,7 +4,7 @@
 var a
 function initMap(){
     map = new google.maps.Map(document.getElementById('map'),{
-        center: {lat:151.207,lng: -33.867},
+        center: {lat:-33.867,lng:151.207},
         zoom: 6,
         mapTypeControl: false,
         zoomControl: false,
@@ -19,7 +19,7 @@ function initMap(){
         map: map,
         title: 'Current Place'
     });
-    pos = {lat:151.207,lng: -33.867};
+    pos = {lat:-33.867,lng:151.207};
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
             pos = {
@@ -34,19 +34,19 @@ function initMap(){
     } else {
         handleLocationError(false, infoWindow, map.getCenter());
     }
-    var styles = [
-        {
-            "elementType": "geometry.fill",
-            "stylers": [
-                { "weight": 0.1 },
-                { "saturation": -80 },
-                { "lightness": 75 },
-                { "gamma": 0.01 },
-                { "invert_lightness": true },
-                { "visibility": "on" }
-            ]
-        }
-    ];
+    //var styles = [
+    //    {
+    //        "elementType": "geometry.fill",
+    //        "stylers": [
+    //            { "weight": 0.1 },
+    //            { "saturation": -80 },
+    //            { "lightness": 75 },
+    //            { "gamma": 0.01 },
+    //            { "invert_lightness": true },
+    //            { "visibility": "on" }
+    //        ]
+    //    }
+    //];
     var bounds = {
         north: 40.20519700699742,
         south: 37.467608955693408,
@@ -58,23 +58,15 @@ function initMap(){
         bounds);
     imageMap.setMap(map);
     a = imageMap
-    map.setOptions({styles: styles});
-    if(document.getElementById('autocomplete')){
-        initAutocomplete();
-        map.addListener('bounds_changed',function(){
-            map.setCenter(pos);
-        });
-    }
-    else{
-        map.minZoom=2;
-        map.draggable=true
-        map.setZoom(2);
-        marker.setMap(null);
-    }
+    //map.setOptions({styles: styles});
+    initAutocomplete();
+    map.addListener('bounds_changed',function(){
+        map.setCenter(pos);
+    });
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition({lat:37.53, lng: 126.95});
+    infoWindow.setPosition({lat:-33.867,lng:151.207});
     map.setZoom(6);
-    map.setCenter({lat:37.53, lng: 126.95});
+    map.setCenter({lat:-33.867,lng:151.207});
 }

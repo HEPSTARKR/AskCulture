@@ -1,7 +1,7 @@
 @media screen and (orientation: landscape) {
     nav {
         background: none;
-        box-shadow: none !important;
+        box-shadow: none;
         position: absolute;
     }
 }
@@ -9,11 +9,12 @@
     nav{
         position: fixed;
         z-index: 999;
-        background: midnightblue;
+        background: white;
+        /*background: midnightblue;*/
     }
 }
 #contentHomeBox{
-    background-image: url(/images/bg1.png);
+    background-image: url(/images/bg5.png);
     background-size: cover;
     background-position: center;
     transition: 3s;
@@ -219,7 +220,7 @@ footer img {
 }
 .centerBtn{
     color: white;
-    font-size: 1.5vw;
+    font-size: 1vw;
     text-align: center;
 }
 .howWorkBox p{
@@ -290,14 +291,14 @@ footer img {
     height: 200px !important;
 }
 .RequestHeader{
-    background: #f2931a;
+    background: #ff9800;
     font-weight: bold;
     font-size: 1.5vw;
     padding: 0.5vw 0;
     color: white;
 }
 .tabs li:nth-child(2) a.grey-text.active{
-    color: #f2931a !important;
+    color: #ff9800 !important;
 }
 .indicator{
     height: 5px !important;
@@ -311,10 +312,10 @@ footer img {
     height:10vw;
 }
 #ToBeALocal .circle{
-    background: #f2931a;
+    background: #ff9800;
 }
 #ToBeALocal .howWorkBoxHeader{
-    color: #f2931a;
+    color: #ff9800;
 }
 .circle img{
     margin: auto;
@@ -335,7 +336,7 @@ footer p a{
     width: 100%;
 }
 .filter{
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.2);
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -372,8 +373,8 @@ footer p a{
     position: absolute;
     float: right;
     font-size: 2vw;
-    right: 30.5vw;
-    margin-top: 5px;
+    right: 30.9vw;
+    margin-top: 7px;
 }
 .searchInputBox i:hover{
     cursor: pointer;
@@ -435,7 +436,7 @@ footer p a{
     text-align: center;
 }
 .BubbleLocal p{
-    color: #f2931a;
+    color: #ff9800;
     margin: 0;
     transform: translateX(5px);
     text-align: center;
@@ -467,15 +468,10 @@ footer p a{
 .searchInputBox input{
     border: none !important;
     height: 3vw !important;
-    border-right: 0px solid #19bdc4 !important;
-    margin: 0 !important;
     transition: 0.3s;
-}
-.searchInputBox input:focus{
-    border: none !important;
     box-shadow: none !important;
-    width: 92% !important;
-    border-right: 40px solid #19bdc4 !important;
+    width: 90% !important;
+    border-right: 50px solid #ff9800 !important;
 }
 .pac-container{
     border : 1px solid #6EDDDC !important;

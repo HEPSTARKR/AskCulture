@@ -8,12 +8,15 @@
     position: absolute;
     top: 75vh;
 }
+form{
+    background: #f5f5f5;
+}
 .searchInputBox i{
     color: white;
     position: absolute;
     float: right;
     font-size: 2vw;
-    right: 30.5vw;
+    right: 30.9vw;
     margin-top: 5px;
 }
 .searchInputBox i:hover{
@@ -34,21 +37,17 @@
 .searchInputBox input{
     border: none !important;
     height: 3vw !important;
-    border-right: 0px solid #19bdc4 !important;
-    margin: 0 !important;
     transition: 0.3s;
-}
-.searchInputBox input:focus{
-    border: none !important;
+    margin: 0 !important;
     box-shadow: none !important;
-    width: 92% !important;
-    border-right: 40px solid #19bdc4 !important;
+    width: 90% !important;
+    border-right: 50px solid #ff9800 !important;
 }
 .calendar{
     width: 25%;
     font-size: 1.1vw;
     border: solid 1px lightgray;
-    border-radius: 0.5vw;
+    border-radius: 0.2vw;
 }
 .calendar td{
     width:1vw;
@@ -57,11 +56,12 @@
     padding: 0;
     text-align: center;
     font-weight: bold;
-    height: 2.2vw;
+    height: 2.3vw;
 }
 .calendar p{
+    margin-top: 10px;
     vertical-align: middle;
-    line-height: 2vw;
+    line-height: 2.3vw;
     font-size: 2vw;
 }
 .calendar tr{
@@ -76,9 +76,18 @@
 }
 .leftMonth:hover, .rightMonth:hover{
     cursor: pointer;
-    color: #2ea3b5;
+    color: lightgray;
 }
-.calendar p, .calendar .disableDate{
+.calendar p{
+    color: white;
+}
+.calendar{
+    background: #ff9800;
+}
+table{
+    background: white;
+}
+.calendar .disableDate{
     color: lightgray;
 }
 .calendar td span{
@@ -86,6 +95,7 @@
     text-align: center;
     display: inline-block;
     margin: 0.1vw;
+    border: 1px solid #ffffff;
     height: 2.2vw;
     border-radius: 2.2vw;
     line-height: 2.2vw;

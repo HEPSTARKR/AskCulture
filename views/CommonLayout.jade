@@ -16,8 +16,8 @@ html(lang='ko')
     body
         nav
             div(class='nav-wrapper')
-                a(href='#!' class='brand-logo')
-                    img(src='/images/nav_logo.png' height='30px')
+                a(href='/' class='brand-logo')
+                    img(src='/images/logo.png' height='40px')
                 ul(class='searchNav hide-on-med-and-down')
                     li
                         input(type='text' placeholder='지역을 검색해보세요')
@@ -27,8 +27,9 @@ html(lang='ko')
                     i(class='material-icons') menu
                 ul(class='right hide-on-med-and-down')
                     li
-                        div(class='profileImage' style='background: url(/images/myProfile.png);')
-                    li Welcome, Yeji
+                        a(href='/mypage')
+                            div(class='profileImage' style='background: url(/images/tempProfile.jpg);')
+                    li(class='nav_name') Espressoapsdasd
                     li
                         div(class='btn nav_button') 요청하기
                     li

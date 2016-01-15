@@ -9,7 +9,9 @@ router.get('/', function(req, res, next) {
 router.get('/Suggestions',function(req,res){
   res.render('Suggestions');
 })
-
+router.get('/mypage',function(req,res){
+  res.render('mypage');
+})
 router.get('/UploadAsk',function(req,res){
   res.render('AskForm');
 })
