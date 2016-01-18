@@ -23,7 +23,8 @@ block content
             div(class='searchInputBox')
                 i(class="large material-icons") search
                 input(type='text' name='place' id='autocomplete' onfocus='geolocate()' placeholder='어디로 여행을 떠나세요?')
-            input(type='hidden' id='realValue' name='realPlace' value='')
+            form(method='' action='')
+                input(type='hidden' id='realValue' name='realPlace' value='')
     script(type='text/javascript' src='/javascripts/index.js')
     div(class='row contentBox')
         div(class='col s12 l12 m12')

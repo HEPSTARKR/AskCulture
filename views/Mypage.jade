@@ -7,12 +7,12 @@ block content
     div(class='contentBox')
         div(id='profileImageContent')
             div(class='circle contentProfileImage')
-            a(class='waves-effect waves-light btn teal') 프로필 사진 변경하기
+            a(class='waves-effect waves-light btn orange') 프로필 사진 변경하기
             i(class='material-icons') https
             span 잠금표시된 항목은 본인에게만 보여집니다.
         div(id='profileTabContentBox')
             div(class='profileNameBox')
-                p Michelle Lee
+                p Kanna Hashimoto
                 p Queens, New York, USA
             div(class='row')
                 div(class='col s12 l12 m12')
@@ -41,10 +41,52 @@ block content
                         div(class='Favorite')
                             i(class='material-icons') favorite_border
                             span 관심분야
+                        div(class='Hobby')
+                            i(class='material-icons') bookmark
+                            span 취미
+                        div(class='Notification')
+                            i(class='material-icons') chat
+                            span 알림
+                        div(class='TempLinear')
+                            span
+                        div(class='TempLinear')
+                            span
+                        div(class='TempLinear')
+                            span
+                    div(class='profileIntroduceContent')
+                        div(class='GenderContent contentProfileLinear')
+                            span 16(여)
+                        div(class='PlaceContent contentProfileLinear')
+                            span 영국
+                        div(class='LanguageContent contentProfileLinear')
+                            span KOR
+                            span ENG
+                            span JPN
+                            span +
+                        div(class='InterestContent contentProfileLinear')
+                            span 요리
+                        div(class='HobbyContent contentProfileLinear')
+                            span 여행 등산 낚시 요리
+                        div(class='NotificationContent contentProfileLinear')
+                            div(class='switch')
+                                label Off<input id='AllSet' type='checkbox'><span class='lever'></span>On
+                        div(class='TempLinear')
+                            div(class='switch')
+                                span(class='switchLabel') 내 지역에 올라온 요청들
+                                label Off<input type='checkbox'><span class='lever'></span>On
+                        div(class='TempLinear')
+                            div(class='switch')
+                                span(class='switchLabel') 제안/요청 변경사항
+                                label Off<input type='checkbox'><span class='lever'></span>On
+                        div(class='TempLinear')
+                            div(class='switch')
+                                span(class='switchLabel') 애스크컬쳐 뉴스
+                                label Off<input type='checkbox'><span class='lever'></span>On
                     div(class='simpleIntroduce')
                         div
                             i(class='material-icons') mode_edit
                             span 한줄소개
+                        p 한식이라면 자신있어요! 김치찌개, 삼겹살, 닭볶음탕! Ask만 하세요! 저랑 함께 만들어봐요!^^
                     div(class='profileIntroduce')
                         div(class='Visited')
                             i(class='material-icons') check
@@ -52,6 +94,12 @@ block content
                         div(class='Wanted')
                             i(class='material-icons') touch_app
                             span 방문희망 나라
+                    div(class='profileIntroduceContent')
+                        div(class='VisitedContent contentProfileLinear')
+                            span 일본
+                        div(class='WantedContent contentprofilelinear')
+                            span 미국
                     div(id='profileMap')
     script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCJHwCqCkJ7C9_ecZihe0qmiKoHF4LrY&callback=initMap&language=En&region=En")
     script(type='text/javascript' src='/javascripts/mypage.js')
+    script(type='text/javascript' src='/javascripts/mypageSetting.js')

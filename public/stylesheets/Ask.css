@@ -23,10 +23,6 @@
 .CheckListInputForm .TitleLinear:nth-child(odd){
     border: none;
 }
-#map2{
-    width: 100%;
-    height: 350px;
-}
 .CheckListFormData input, .CheckListFormData .select-wrapper{
     margin: 0 !important;
     height: 20px !important;
@@ -40,30 +36,29 @@
     vertical-align: middle;
 }
 .linearContent p span{
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
     margin: 0 5px;
-    font-size: 3pt;
+    padding: 3px;
+    font-size: 1vw;
+    padding: 0 5px;
     color: white;
     display: inline-block;
+    border-radius: 1vw;
     background: #19bdc4;
-    border-radius: 100%;
 }
 
 .linearContent p span:last-child{
-    font-size: 8pt !important;
-    width: 15px;
-    height: 15px;
+    font-size: 1vw;
+    width: 1.4vw;
+    height: 1.4vw;
+    padding: 0 !important;
     cursor: pointer;
     background: none;
     color: #19bdc4;
+    line-height: 1.4vw;
     border: 1px solid #19bdc4;
-    line-height: 14px;
-    vertical-align: baseline;
-    margin-bottom: -10px;
+    border-radius: 100%;
+    vertical-align: middle;
     transition: 0.5s;
-    font-weight: bold;
 }
 .linearContent p span:last-child:hover{
     background: #19bdc4;
@@ -76,9 +71,10 @@
     box-shadow: none !important;
     padding:0pt 7pt;
     float: left;
-    position: relative;
+    position: absolute;
+    bottom : 41vh;
+    left: 15px;
     opacity: 0.5;
-    bottom: -80px;
     font-size : 14pt;
     font-weight: bold;
 }
@@ -96,11 +92,14 @@
     background: rgba(0,0,0,0.5);
 }
 .PostUserStatus{
-    background: #646464;
-    color: white;
+    color: #646464;
     padding: 15px;
+    font-size: 1vw;
+    border-bottom: 1px solid #646464;
     margin: 25px 0;
-    border-radius: 0.5vw;
+}
+.PostUserStatus p:first-child{
+    font-size: 2vw;
 }
 .linearContent img{
      vertical-align: middle;
@@ -113,8 +112,13 @@
     border-right: 1px solid #646464;
     font-weight: bold;
 }
+.simpleIntroduce i{
+    color: #2da3b5;
+    vertical-align: middle;
+}
 .simpleIntroduce span{
     color: #2da3b5;
+    vertical-align: middle;
     margin-left: 10px;
 }
 .simpleIntroduce{
@@ -128,11 +132,16 @@
 .simpleIntroduce p:after{
     content: " \"";
 }
+.simpleIntroduce p{
+    display: block !important;
+    text-align: center;
+    margin: 10px auto;
+}
 .linearContent p{
     display: inline-block;
     text-align: center;
 }
-#map{
+#profileMap{
     width: 100%;
     border: solid 1px #e0e0e0;
     border-radius: 4px;
@@ -148,6 +157,9 @@
 }
 .dropdown-content{
     width: 200px !important;
+}
+.TitleLinear i{
+    vertical-align: middle;
 }
 .indicator{
     height: 5px !important;
@@ -213,7 +225,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     width: 100%;
-    height:350px;
+    height:35vw;
 }
 .SuggestImage i{
     display: inline-block;
@@ -236,13 +248,23 @@
     top: 320px;
     left: 30%;
 }
+.TitleLinear i, .TitleLinear span{
+    position: absolute;
+}
+.TitleLinear span{
+    margin-left: 30px;
+}
 .TitleInput{
     border: 1px solid #e0e0e0 !important;
     display: inline-block !important;
     border-radius: 5px !important;
-    width: 80% !important;
+    width: calc(100% - 100px) !important;
     padding-left : 20px !important;
+    margin-left: 80px !important;
     height: 25px !important;
+}
+.TitleInput:focus{
+    box-shadow: none !important;
 }
 .TitleLinear{
     margin: 30px 0;
@@ -271,17 +293,105 @@
     cursor: pointer;
 }
 .SuggestTabHead{
-    margin: 0 20px;
+    margin: 0 10px;
 }
 .PostTextHead{
-    margin-left: 50px;
+    margin-left: 30px;
+    position: absolute;
     vertical-align: top;
 }
+input[type=file]{
+    width: 60vw;
+    opacity: 0;
+    position: absolute;
+    height: 35vw;
+}
+input[type=file]:hover{
+    cursor: pointer;
+}
 .PostTextLinearInput{
-    width: 83%;
+    width: calc(100% - 80px);
     border: 1px solid #e0e0e0;
     border-radius: 3px;
     margin: 0 15px;
+    margin-left: 80px;
     height: 300px;
     vertical-align: bottom;
+}
+.profileIntroduce div{
+    margin: 10px 0;
+}
+.profileIntroduce i, .profileIntroduce span{
+    vertical-align: middle;
+}
+.profileIntroduce span{
+    margin-left: 10px;
+}
+.profileIntroduce{
+    border-right: 1px solid #6e6e6e;
+    display: inline-block;
+    margin: 20px 0;
+    padding-right: 20px;
+}
+.profileIntroduce div:first-child, .profileIntroduce div:last-child{
+    margin: 0 !important;
+}
+.LanguageContent span:last-child{
+    font-size: 1vw;
+    width: 1.4vw;
+    height: 1.4vw;
+    padding: 0 !important;
+    cursor: pointer;
+    background: none;
+    color: #19bdc4;
+    line-height: 1.4vw;
+    border: 1px solid #19bdc4;
+    border-radius: 100%;
+    text-align: center;
+    vertical-align: middle;
+    transition: 0.5s;
+}
+.LanguageContent span:last-child:hover{
+    background: #19bdc4;
+    color: white;
+}
+.profileIntroduceContent div:first-child{
+    margin: 0;
+}
+.profileIntroduceContent .contentProfileLinear{
+    vertical-align: middle;
+}
+.profileIntroduceContent{
+    margin: 20px 0;
+    vertical-align: top;
+    width: 35vw;
+    display: inline-block;
+}
+.profileIntroduceContent div{
+    margin: 10px 0;
+    height: 24px;
+    padding-left: 10px;
+    font-size: 14.5px;
+}
+.LanguageContent span{
+    margin: 0 5px;
+    padding: 3px;
+    font-size: 1vw;
+    padding: 0 5px;
+    color: white;
+    display: inline-block;
+    border-radius: 1vw;
+    background: #19bdc4;
+}
+.Wanted{
+    padding-top: 10px;
+}
+.SuggestImage span{
+    color: white;
+    line-height: 35vw;
+    opacity: 0;
+}
+.SuggestImage span:hover{
+    opacity: 1;
+    transition: 0.3s;
 }

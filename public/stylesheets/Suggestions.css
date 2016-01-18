@@ -41,7 +41,7 @@ form{
     margin: 0 !important;
     box-shadow: none !important;
     width: 90% !important;
-    border-right: 50px solid #ff9800 !important;
+    border-right: 150px solid #ff9800 !important;
 }
 .calendar{
     width: 25%;
@@ -62,17 +62,23 @@ form{
     margin-top: 10px;
     vertical-align: middle;
     line-height: 2.3vw;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 .calendar tr{
     height:1.2vw;
 }
 .leftMonth, .rightMonth{
-    font-size: 2.3vw;
+    font-size: 1.5vw;
     margin: 0 1.5vw;
 }
+.leftMonth{
+    float: left;
+}
+.rightMonth{
+    float: right;
+}
 .calendar table{
-    height: 10vw;
+    height: 20vw;
 }
 .leftMonth:hover, .rightMonth:hover{
     cursor: pointer;
@@ -101,11 +107,11 @@ table{
     line-height: 2.2vw;
 }
 .dateSelected{
-    background: #2ea3b5;
+    background: #ff9800;
     color: white;
 }
 .calendar td.days span:not(.disableDate):hover{
-    border: 1px solid #2ea3b5;
+    border: 1px solid #ff9800;
     cursor: pointer;
 }
 .calendar table tr:first-child td{
@@ -121,7 +127,7 @@ table{
     display: inline-block;
     vertical-align: top;
 }
-.detailInputBox img, .detailInputBox span{
+.detailInputBox span{
     display: inline-block;
 }
 .detailInputBox{
@@ -130,6 +136,7 @@ table{
 }
 .detailInputBox input[type=text] {
     height: 30px !important;
+    vertical-align: middle;
     display: inline-block !important;
 }
 .detailInputBox .select-wrapper{
@@ -137,7 +144,7 @@ table{
     vertical-align: top;
 }
 .detailInputBox .formLabel{
-    vertical-align: top;
+    vertical-align: middle;
     line-height: 3.5vw;
     display: inline-block;
     padding-left: 3px;
@@ -162,31 +169,32 @@ table{
     font-size: 2vw;
 }
 .pac-container{
-    border : 1px solid #6EDDDC !important;
-    border-top: 2px solid #19bdc4 !important;
+    border : 1px solid #ff9800 !important;
+    border-top: 2px solid #ff9800 !important;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 .card-title.circle-clipper{
-    border-radius: 100vw;
-    width: 4vw;
+    border-radius: 40px;
+    width: 40px;
     position: relative;
-    margin-bottom: -2vw;
-    margin-left:1vw;
-    height: 4vw;
+    margin-bottom: -20px;
+    margin-left:10px;
+    height: 40px;
     background-size: cover !important;
     background-position: center !important;
     padding: 0 !important;
 }
 .card-image{
-    height: 80%;
+    height: 170px;
 }
 .card-content{
     height: auto;
+    height: 30px;
     padding: 0 !important;
 }
 .card-content p{
     padding-left: 6vw;
-    font-size: 1.8vw;
+    font-size: 15pt;
     font-weight: bold;
     vertical-align: middle;
     margin: 0;
@@ -219,5 +227,8 @@ table{
 }
 .card-content p i{
     float: right;
-    line-height: 3vw;
+    line-height: 30px;
+}
+.detailInputBox i, .detailInputBox span, .detailInputBox input{
+    vertical-align: middle;
 }

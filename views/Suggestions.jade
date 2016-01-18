@@ -130,9 +130,9 @@ block content
                                     span(onclick='SelectDate(this)')
                     div(class='inputListForm')
                         div(class='detailInputBox')
-                            img(src='/images/ic_CATEGORY.png' height='100%')
+                            i(class="material-icons") local_offer
                             span(class='formLabel' for='formKind') 분야
-                            select(multiple)
+                            select(multiple name='kind')
                                 option(value='sports') 스포츠
                                 option(value='art') 예술
                                 option(value='fashion') 패션
@@ -145,45 +145,51 @@ block content
                                 option(value='history') 역사
                                 option(value='shopping') 쇼핑
                         div(class='detailInputBox')
-                            img(src='/images/ic_TIME.png' height='100%')
+                            i(class='material-icons') access_time
                             span(class='formLabel' for='formTime') 소요 시간
-                            select(multiple)
+                            select(multiple name='useTime')
                                 option(value='1') 1시간
                                 option(value='2') 2시간
                                 option(value='3') 3시간
                                 option(value='4') 4시간
                                 option(value='5+') 5시간 이상
                         div(class='detailInputBox')
-                            img(src='/images/ic_HUMAN.png' height='100%')
+                            i(class='material-icons') people
                             span(class='formLabel' for='formHuman') 인원
-                            select(multiple)
+                            select(multiple name='Human')
                                 option(value='1') 1명
                                 option(value='2') 2명
                                 option(value='3+') 3명 이상
                         div(class='detailInputBox')
-                            img(src='/images/ic_COMBINE.png' height='100%')
+                            i(class='material-icons') group_add
                             span(class='formLabel' for='formCombine') 조합
-                            select(multiple)
+                            select(multiple name='Combine')
                                 option(value='single') 싱글
                                 option(value='friend') 친구
                                 option(value='couple') 애인
                                 option(value='family') 가족
                         div(class='detailInputBox')
-                            img(src='/images/ic_COST.png' height='100%')
+                            i(class='material-icons') attach_money
                             span(class='formLabel' for='formCost') 가치
-                            select
+                            select()
                                 option 1
                                 option 2
                                 option 3
                         div(class='detailInputBox')
-                            img(src='/images/ic_LANGUAGE.png' height='100%')
+                            i(class='material-icons') language
                             span(class='formLabel' for='formLanguage') 언어
                             select
                                 option 1
                                 option 2
                                 option 3
                         div(class='detailInputBox')
-                            img(src='/images/ic_PICKUP.png' height='100%')
+                            i(class='material-icons') wc
+                            span(class='formLabel' for='formGender') 희망성별
+                            select
+                                option(value='sameGender') 동성만
+                                option(value='none') 상관없음
+                        div(class='detailInputBox')
+                            i(class='material-icons') directions_bus
                             span(class='formLabel' for='formPickup') 픽업
                             select
                                 option(value='MyCar') 자가용

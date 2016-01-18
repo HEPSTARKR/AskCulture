@@ -20,151 +20,82 @@ block content
     div(class='row')
         div(class='col s12 l12 m12 tabBox')
             ul(class='tabs')
-                li(class='tab col s3 m3 l3')
+                li(class='tab col s4 m4 l4')
                     a(href='#profileTab' class='active')
                         img(src='/images/ic_formTab1.png' height='50%')
                         span Profile
-                li(class='tab col s3 m3 l3')
+                li(class='tab col s4 m4 l4')
                     a(href='#SuggestTab')
                         img(src='/images/ic_formTab2.png' height='50%')
-                        span Suggestion
-                li(class='tab col s3 m3 l3')
-                    a(href='#CheckListTab')
+                        span Suggest
+                li(class='tab col s4 m4 l4')
+                    a(href='#ChecklistTab')
                         img(src='/images/ic_formTab3.png' height='50%')
                         span Checklist
-                li(class='tab disabled col s3 m3 l3')
-                    a(href='#')
-                        img(src='/images/ic_formTab4.png' height='50%')
-                        span Reviews
         div(id='profileTab' class='openTab')
             div(class='PostUserStatus')
-                p(class='PostUserName') Yeji Jeon
+                p(class='PostUserName') Kanna Hashimoto
                 p(class='PostUserPlace') Queens, New York, USA
-            div(class='linearContent')
-                img(src='/images/ic_formGender.png' width='25px')
-                span(class='linearHead') 성별/나이
-                p 23(여)
-            div(class='linearContent')
-                img(src='/images/ic_formPlace.png' width='25px')
-                span(class='linearHead') 주요활동지역
-                p 한국 서울
-            div(class='linearContent')
-                img(src='/images/ic_formLanguage.png' width='25px')
-                span(class='linearHead') 사용가능언어
-                p
+            div(class='profileIntroduce')
+                div(class='Gender')
+                    i(class='material-icons') face
+                    span 성별/나이
+                div(class='Place')
+                    i(class='material-icons') location_on
+                    span 주요활동지역
+                div(class='Language')
+                    i(class='material-icons') language
+                    span 사용가능언어
+                div(class='Interest')
+                    i(class='material-icons') favorite_border
+                    span 관심분야
+                div(class='Hobby')
+                    i(class='material-icons') bookmark
+                    span 취미
+            div(class='profileIntroduceContent')
+                div(class='GenderContent contentProfileLinear')
+                    span 16(여)
+                div(class='PlaceContent contentProfileLinear')
+                    span 영국
+                div(class='LanguageContent contentProfileLinear')
                     span KOR
                     span ENG
                     span JPN
                     span +
+                div(class='InterestContent contentProfileLinear')
+                    span 요리, 문화, 예절
+                div(class='HobbyContent contentProfileLinear')
+                    span 운동, 노래
             div(class='linearContent simpleIntroduce')
-                img(src='/images/ic_formWrite.png' width='20px')
-                span 한줄소개
+                div
+                    i(class='material-icons') mode_edit
+                    span 한줄소개
                 p 한식이라면 자신있어요! 김치찌개, 삼겹살, 닭볶음탕! Ask만 하세요! 저랑 함께 만들어봐요!^^
-            div(class='linearContent')
-                img(src='/images/ic_formVisited.png' width='25px')
-                span(class='linearHead') 방문했던 나라
-                p 서울, 모로코, 일본, 영국, 미국
-            div(class='linearContent')
-                img(src='/images/ic_formWanted.png' width='25px')
-                span(class='linearHead') 방문희망 나라
-                p 독일, 프랑스
-            div(id='map')
-            div(class='linearContent')
-                img(src='/images/ic_formInterest.png' width='25px')
-                span(class='linearHead') 관심분야
-                p 요리, 패션, 미용
-            div(class='linearContent')
-                img(src='/images/ic_formHobby.png' width='25px')
-                span(class='linearHead') 취미
-                p 파티, 노래
+            div(class='profileIntroduce')
+                div(class='Visited')
+                    i(class='material-icons') check
+                    span 방문했던 나라
+                div(class='Wanted')
+                    i(class='material-icons') touch_app
+                    span 방문희망 나라
+            div(class='profileIntroduceContent')
+                div(class='contentProfileLinear VisitedContent')
+                    span 일본, 중국, 한국, 모로코, 인도
+                div(class='contentProfileLinear WantedContent')
+                    span 러시아, 영국
+            div(id='profileMap')
         div(id='SuggestTab' class='openTab')
             div(class='linearContent TitleLinear')
-                img(src='/images/ic_formInterest.png' width='25px')
+                i(class='material-icons') description
                 span(class='SuggestTabHead') 제목
                 input(type='text' class='TitleInput')
             div(class='PostTextLinear')
                 span(class='PostTextHead') 내용
                 textarea(class='PostTextLinearInput')
             div(class='SuggestImage')
-                i(class="material-icons") navigate_before
-                div(class='navIndex')
-                    div(class='indexCircle')
-                    div(class='indexCircle')
-                    div(class='indexCircle')
-                    div(class='indexCircle')
-                    div(class='indexCircle')
-                i(class="material-icons") navigate_next
-        div(id='CheckListTab' class='openTab')
-            div(class='CheckListInputForm')
-                div(class='CheckListFormHeaders')
-                    div(class='CheckHeaderLinear')
-                        img(src='/images/ic_CATEGORY.png' width='25px')
-                        span 분야
-                    div(class='CheckHeaderLinear')
-                        img(src='/images/ic_CALENDAR.png' width='25px')
-                        span 날짜
-                    div(class='CheckHeaderLinear')
-                        img(src='/images/ic_TIME.png' width='25px')
-                        span 소요 시간
-                    div(class='CheckHeaderLinear')
-                        img(src='/images/ic_HUMAN.png' width='25px')
-                        span 인원
-                    div(class='CheckHeaderLinear')
-                        img(src='/images/ic_COST.png' width='25px')
-                        span 가치
-                    div(class='CheckHeaderLinear')
-                        img(src='/images/ic_PICKUP.png' width='25px')
-                        span 픽업
-                div(class='CheckListFormData')
-                    select(multiple)
-                        option(value='sports') 스포츠
-                        option(value='art') 예술
-                        option(value='fashion') 패션
-                        option(value='butty') 미용
-                        option(value='entertainment') 엔터테이먼트
-                        option(value='tradition') 전통문화
-                        option(value='education') 교육
-                        option(value='experience') 체험
-                        option(value='cooking') 요리
-                        option(value='history') 역사
-                        option(value='shopping') 쇼핑
-                    input(type='text' disabled value='달력을 사용해 주세요')
-                    select(multiple)
-                        option(value='1') 1시간
-                        option(value='2') 2시간
-                        option(value='3') 3시간
-                        option(value='4') 4시간
-                        option(value='5+') 5시간 이상
-                    select(multiple)
-                        option(value='1') 1명
-                        option(value='2') 2명
-                        option(value='3+') 3명 이상
-                    select(multiple)
-                        option(value='single') 싱글
-                        option(value='friend') 친구
-                        option(value='couple') 애인
-                        option(value='family') 가족
-                    select
-                        option 1
-                        option 2
-                        option 3
-                    select
-                        option(value='MyCar') 자가용
-                        option(value='transit') 대중교통
-                        option(value='walk') 도보
-                div(class='linearContent TitleLinear')
-                    img(src='/images/ic_formInterest.png' width='25px')
-                    span(class='SuggestTabHead') 포함
-                    input(type='text' class='TitleInput')
-                div(class='linearContent TitleLinear')
-                    img(src='/images/ic_formInterest.png' width='25px')
-                    span(class='SuggestTabHead') 불포함
-                    input(type='text' class='TitleInput')
-                div(class='linearContent TitleLinear')
-                    img(src='/images/ic_formInterest.png' width='25px')
-                    span(class='SuggestTabHead') 약속장소
-                    input(type='text' class='TitleInput' id='autocomplete2')
-            div(id='map2')
+                input(type='file' multiple accept='image/*')
+                span(class='material-icons') navigate_before
+                span(class='material-icons') navigate_next
     script(type='text/javascript' async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCJHwCqCkJ7C9_ecZihe0qmiKoHF4LrY&libraries=places&callback=initMap&language=En&region=En")
-    script(type='text/javascript' src='/javascripts/initMap.js')
+    script(type='text/javascript' src='/javascripts/mypage.js')
     script(type='text/javascript' src='/javascripts/Ask.js')
