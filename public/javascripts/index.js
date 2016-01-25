@@ -44,6 +44,7 @@ $(document).ready(function () {
         if($('.searchInputBox input').val()==''){
             $("nav").css('background','none','!important')
             $('#map').css('z-index',-10);
+            $('nav').css('box-shadow','none')
             $('.brand-logo img').attr('src','/images/logo_white.png');
             $('nav').css('color', '#ffffff');
             $('nav .nav_button').css({'color': '#ffffff','border':'solid 1px #ffffff'});

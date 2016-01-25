@@ -93,9 +93,18 @@ block content
                 span(class='PostTextHead') 내용
                 textarea(class='PostTextLinearInput')
             div(class='SuggestImage')
-                input(type='file' multiple accept='image/*')
-                span(class='material-icons') navigate_before
-                span(class='material-icons') navigate_next
+                input(type='file' multiple accept='image/*' onchange='OnChangeImages(event)')
+                div(class='navImgBefore')
+                    span(class='material-icons navImgBefore') navigate_before
+                div(class='navImgNext')
+                    span(class='material-icons navImgNext') navigate_next
+                img(src='/images/tempSuggestImage.png' height='100%')
+            div(class='ImageNavBar')
+                div(class='ImagePreView' onclick='OnIndexClicked(0)')
+                div(class='ImagePreView' onclick='OnIndexClicked(1)')
+                div(class='ImagePreView' onclick='OnIndexClicked(2)')
+                div(class='ImagePreView' onclick='OnIndexClicked(3)')
+                div(class='ImagePreView' onclick='OnIndexClicked(4)')
     script(type='text/javascript' async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCJHwCqCkJ7C9_ecZihe0qmiKoHF4LrY&libraries=places&callback=initMap&language=En&region=En")
     script(type='text/javascript' src='/javascripts/mypage.js')
     script(type='text/javascript' src='/javascripts/Ask.js')

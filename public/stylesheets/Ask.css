@@ -43,7 +43,7 @@
     color: white;
     display: inline-block;
     border-radius: 1vw;
-    background: #19bdc4;
+    background: #ff9800;
 }
 
 .linearContent p span:last-child{
@@ -53,15 +53,15 @@
     padding: 0 !important;
     cursor: pointer;
     background: none;
-    color: #19bdc4;
+    color: #ff9800;
     line-height: 1.4vw;
-    border: 1px solid #19bdc4;
+    border: 1px solid #ff9800;
     border-radius: 100%;
     vertical-align: middle;
     transition: 0.5s;
 }
 .linearContent p span:last-child:hover{
-    background: #19bdc4;
+    background: #ff9800;
     color: white;
 }
 .HeaderCoverBox .CoverContentBox .dropdown-button.btn{
@@ -113,11 +113,11 @@
     font-weight: bold;
 }
 .simpleIntroduce i{
-    color: #2da3b5;
+    color: #ff9800;
     vertical-align: middle;
 }
 .simpleIntroduce span{
-    color: #2da3b5;
+    color: #ff9800;
     vertical-align: middle;
     margin-left: 10px;
 }
@@ -220,12 +220,15 @@
 }
 .SuggestImage{
     margin-top: 5%;
-    background: url(/images/tempSuggestImage.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: black;
     width: 100%;
+    overflow: hidden;
     height:35vw;
+    border: solid 1px #e6e6e6
+}
+.SuggestImage img{
+    margin: auto;
+    display: block;
 }
 .SuggestImage i{
     display: inline-block;
@@ -343,16 +346,16 @@ input[type=file]:hover{
     padding: 0 !important;
     cursor: pointer;
     background: none;
-    color: #19bdc4;
+    color: #ff9800;
     line-height: 1.4vw;
-    border: 1px solid #19bdc4;
+    border: 1px solid #ff9800;
     border-radius: 100%;
     text-align: center;
     vertical-align: middle;
     transition: 0.5s;
 }
 .LanguageContent span:last-child:hover{
-    background: #19bdc4;
+    background: #ff9800;
     color: white;
 }
 .profileIntroduceContent div:first-child{
@@ -381,17 +384,53 @@ input[type=file]:hover{
     color: white;
     display: inline-block;
     border-radius: 1vw;
-    background: #19bdc4;
+    background: #ff9800;
 }
 .Wanted{
     padding-top: 10px;
 }
-.SuggestImage span{
-    color: white;
-    line-height: 35vw;
+.SuggestImage div{
+    height: 35vw;
+    width: 7vw;
+    position: absolute;
+    z-index: 800;
+    display: inline-block;
     opacity: 0;
 }
-.SuggestImage span:hover{
+.SuggestImage div span{
+    line-height: 35vw;
+    color: white;
+    font-size: 7vw;
+}
+.navImgNext{
+    float: right;
+    right: 20vw;
+}
+.SuggestImage div:hover{
     opacity: 1;
+    cursor: pointer;
     transition: 0.3s;
+}
+.ImageNavBar{
+    width: 100%;
+    height: 10vw;
+    background: black;
+    margin-top: 5px;
+    padding: 5px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    overflow-y: hidden;
+}
+.ImagePreView{
+    height: 100%;
+    width: 16vw;
+    background: none;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    display: inline-block;
+    margin-right: 5px;
+}
+.ImagePreView:last-child{
+    margin-right: 0;
 }
