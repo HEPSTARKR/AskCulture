@@ -127,26 +127,32 @@ table{
     display: inline-block;
     vertical-align: top;
 }
-    .select-dropdown{
-        border: none !important;
-        margin: 0 !important;
-        line-height: 1rem !important;
-        font-size: 1rem !important;
-    }
+input.select-dropdown{
+    border: none !important;
+    background: white !important;
+    border: solid 1px #e8e8e8 !important;
+    margin: 0 !important;
+    height: 2rem !important;
+    padding: 0 15px !important;
+    display: inline !important;
+    vertical-align: middle !important;
+    line-height: 1rem !important;
+    font-size: 1rem !important;
+}
 .select-wrapper .caret{
-    line-height: 1rem !important
+    z-index: 900;
+    top: 30% !important;
+    margin-right: -15px;
 }
 .select-wrapper{
+    margin-left: 45%;
     width: 40% !important;
-    background: white;
-    border: solid 1px #e8e8e8;
     vertical-align: middle;
-    height: 2rem !important;
+    font-size: 3px !important;
     display: inline-block !important;
 }
 .categoryFolderButton{
     font-weight: bold;
-    margin: 1% !important;
     float: right;
     vertical-align: top;
     display: inline-block !important;
@@ -188,7 +194,6 @@ table{
     margin: 1%;
 }
 .inputList .inputLabel{
-    margin: 1%;
     vertical-align: top;
     display: inline-block;
     width: 10%;
@@ -201,10 +206,10 @@ table{
 .inputList .inputFilterLinear{
     display: inline-block;
     width: 85% !important;
-    border: solid 1px #989898;
+    border: solid 1px #e8e8e8;
     background: white;
     color: #989898;
-    font-size: 1.3vw;
+    font-size: 1rem;
     padding: 0.7% 1%;
     height: auto !important;
     margin: 0 !important;

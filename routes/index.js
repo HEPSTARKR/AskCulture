@@ -18,4 +18,7 @@ router.get('/UploadAsk',function(req,res){
 router.get('/indexENG',function(req,res){
   res.render('indexENG');
 })
+router.get('/CommingSoon',function(req,res){
+	res.render('CommingSoon');
+})
 module.exports = router;
