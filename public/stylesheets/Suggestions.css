@@ -43,80 +43,6 @@ form{
     width: 90% !important;
     border-right: 150px solid #ff9800 !important;
 }
-.calendar{
-    width: 25%;
-    font-size: 1.1vw;
-    border: solid 1px lightgray;
-    border-radius: 0.2vw;
-}
-.calendar td{
-    width:1vw;
-}
-.calendar p, .calendar td, .calendar tr{
-    padding: 0;
-    text-align: center;
-    font-weight: bold;
-    height: 2.3vw;
-}
-.calendar p{
-    margin-top: 10px;
-    vertical-align: middle;
-    line-height: 2.3vw;
-    font-size: 1.5vw;
-}
-.calendar tr{
-    height:1.2vw;
-}
-.leftMonth, .rightMonth{
-    font-size: 1.5vw;
-    margin: 0 1.5vw;
-}
-.leftMonth{
-    float: left;
-}
-.rightMonth{
-    float: right;
-}
-.calendar table{
-    height: 20vw;
-}
-.leftMonth:hover, .rightMonth:hover{
-    cursor: pointer;
-    color: lightgray;
-}
-.calendar p{
-    color: white;
-}
-.calendar{
-    background: #ff9800;
-}
-table{
-    background: white;
-}
-.calendar .disableDate{
-    color: lightgray;
-}
-.calendar td span{
-    width: 2.2vw;
-    text-align: center;
-    display: inline-block;
-    margin: 0.1vw;
-    border: 1px solid #ffffff;
-    height: 2.2vw;
-    border-radius: 2.2vw;
-    line-height: 2.2vw;
-}
-.dateSelected{
-    background: #ff9800;
-    color: white;
-}
-.calendar td.days span:not(.disableDate):hover{
-    border: 1px solid #ff9800;
-    cursor: pointer;
-}
-.calendar table tr:first-child td{
-    border-bottom: 1px solid lightgray;
-}
 .inputListForm{
     display: inline-block;
     vertical-align: top;
@@ -151,19 +77,25 @@ input.select-dropdown{
     font-size: 3px !important;
     display: inline-block !important;
 }
-.categoryFolderButton{
+.categoryFolderButton, .languageFolderButton{
     font-weight: bold;
-    float: right;
     vertical-align: top;
+    margin: 4px 0;
     display: inline-block !important;
 }
-.categoryCheckboxList{
+.categoryFolderButton:hover, .languageFolderButton:hover{
+    cursor: pointer;
+}
+.categoryCheckboxList, .languageCheckboxList{
     display: inline-block;
-    width: 80%;
+    width: calc(90% - 25px);
     overflow: hidden;
     height: 25px;
-    margin: 1% 0;
+    margin: 3px 0;
     vertical-align: middle;
+}
+.sizeAuto{
+    height: auto;
 }
 .detailInputBox span{
     display: inline-block;
@@ -195,13 +127,15 @@ input.select-dropdown{
 }
 .inputList .inputLabel{
     vertical-align: top;
+    margin: 5px 0;
     display: inline-block;
     width: 10%;
 }
 .CheckBoxContainer{
     display: inline-block;
-    width: 150px;
-    margin: 0 7%;
+    width: 200px;
+    margin: 0 5%;
+    margin-bottom: 2%;
 }
 .inputList .inputFilterLinear{
     display: inline-block;
@@ -215,12 +149,18 @@ input.select-dropdown{
     margin: 0 !important;
 }
 .inputList .inputFilterLinear:focus{
-    border-bottom: solid 1px #989898 !important;
+    border-bottom: solid 1px #e8e8e8 !important;
     box-shadow: none !important;
 }
 .inputList{
     height: 10%;
+    padding: 0.5% 0;
     border-bottom: solid 1px #e8e8e8;
+}
+#CostSlider{
+    display: inline-block;
+    vertical-align: middle;
+    width: 88%;
 }
 .AskBox{
     display: inline-block;
@@ -238,6 +178,13 @@ input.select-dropdown{
     border : 1px solid #ff9800 !important;
     border-top: 2px solid #ff9800 !important;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.inputList .btn{
+    margin-left: calc(100% - (60px + 4rem));
+    background-color: #ff9800;
+}
+.inputList .btn:hover{
+    background-color: #ffaa11;
 }
 .card-title.circle-clipper{
     border-radius: 40px;
@@ -303,4 +250,121 @@ input.select-dropdown{
 }
 .detailInputBox i, .detailInputBox span, .detailInputBox input{
     vertical-align: middle;
+}
+.noUi-handle, .noUi-connect, .range-label{
+    background-color: #ff9800 !important;
+}
+.SuggestButton{
+    width: 100% !important;
+    text-transform: none !important;
+}
+.SuggestButtonSubtitle{
+    display: inline-block;
+    width: auto;
+    font-weight: bold;
+    border-top: 3px solid #ff9800;
+    padding-top: 3px;
+}
+.recommendContainer{
+    margin: 15px 0;
+    color: #ff9800;
+    border : 2px solid #ff9800;
+}
+.recommendContainer i{
+    display: inline-block;
+    vertical-align: middle;
+}
+.infoContent{
+    width : calc(100% - 4rem);
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 0.5rem;
+    font-weight: bold;
+    display: inline-block;
+}
+#ui-datepicker-div{
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);    padding: 0;
+}
+.ui-datepicker-header{
+    padding: 2rem 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+}
+.ui-datepicker-prev, .ui-datepicker-next{
+    top: calc(50% - 0.9em) !important;
+}
+.ui-datepicker-prev:before{
+    content: '◀';
+    position: absolute;
+    left: calc(50% - 5px);
+    top: calc(50% - 13px);
+    font-size: 1.2em;
+    text-align: center;
+}
+.ui-datepicker-next:before{
+    content: '▶';
+    position: absolute;
+    left: calc(50% - 5px);
+    top: calc(50% - 13px);
+    font-size: 1.2em;
+    text-align: center;
+}
+.ui-datepicker-calendar td a{
+    background: none !important;
+    border: none !important;
+    font-family: 'Raleway-Regular';
+    color: #484848 !important;
+    text-align: center !important;
+}
+.ui-datepicker-calendar td:nth-child(7n+1):not(.ui-state-highlight) a, .ui-datepicker-calendar thead th:nth-child(1){
+    color: #d9582b !important;
+}
+.ui-datepicker-calendar td:nth-child(7n+7):not(.ui-state-highlight) a, .ui-datepicker-calendar thead th:nth-child(7){
+    color: #375aa8 !important;
+}
+.ui-state-default{
+    width: 100%;
+    height:100%;
+}
+.ui-datepicker-calendar td a{
+    display: block !important;
+    height: 2em;
+    width: 2em;
+    margin: auto !important;
+}
+.ui-datepicker-calendar tbody td{
+    width: calc(17rem / 7 + 4px);
+    height: calc(17rem / 7 + 4px);
+}
+.ui-state-highlight{
+    border-radius: 100% !important;
+    background-color: #ff9800 !important;
+    background-clip: content-box;
+    width: calc(17rem / 7);
+    border: none !important;
+    height: calc(17rem / 7);
+    color: white !important;
+}
+.ui-state-highlight .ui-state-default{
+    color: white !important;
+}
+.ui-datepicker-calendar thead{
+    border: none !important;
+}
+.ui-datepicker-month{
+    font-size: 1.5em;
+    font-family: 'Raleway-Regular';
+}
+.ui-datepicker-year{
+    display: block;
+    font-family: 'Raleway-Regular';
+}
+.ui-datepicker-calendar{
+    background: white;
+    margin: 0 !important;
+}
+.ui-datepicker-calendar tr{
+    height: calc(17rem / 7 + 4px);
 }

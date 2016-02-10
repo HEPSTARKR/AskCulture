@@ -1,0 +1,70 @@
+//
+   Created by Sunrin on 2016. 2. 10..
+extends CommonLayout
+block CustomHead
+    link(rel='stylesheet' type='text/css' href='/stylesheets/jquery-ui.min.css')
+block content
+    br
+    br
+    br
+    br
+    br
+    br
+    div(class='input-field')
+        input(type='file' multiple id='file' name='file')
+    div(class='input-field')
+        input(type='text' name='title' id='title')
+        label(for='title') 이것은 제목
+    div(class='input-field')
+        textarea(class='materialize-textarea' name='text' id='text')
+        label(for='text') 이것은 내용
+    div(class='input-field')
+        input(type='text' name='include' id='include')
+        label(for='include') 이것은 포함
+    div(class='input-field')
+        input(type='text' name='exclude' id='exclude')
+        label(for='exclude') 이것은 불포함
+    div(class='input-field')
+        input(type='number' name='person' id='person')
+        label(for='person') 이것은 인원
+    div(class='input-field')
+        input(type='number' name='range' id='range')
+        label(for='range') 이것은 인원수범위
+    div(class='input-field')
+        input(type='number' name='value' id='value')
+        label(for='value') 이것은 가치
+    div(class='input-field')
+        input(type='number' name='x' id='x' value='151.207')
+        label(for='x') 이것은 x좌표
+    div(class='input-field')
+        input(type='number' name='y' id='y' value='-33.867')
+        label(for='y') 이것은 y좌표
+    div(class='input-field')
+        input(type='text' name='area' id='area')
+        label(for='area') 이것은 분야
+    div(class='input-field')
+        input(type='number' name='pickup' id='pickup')
+        label(for='pickup') 이것은 픽업
+    div(class='input-field')
+        input(type='number' name='time' id='time')
+        label(for='time') 이것은 시간
+    div(class='input-field')
+        input(type='text' name='date' id='date')
+        label(for='date') 이것은 날짜
+    div(class='btn asdf') asdf
+    div(class='input-field')
+        input(type='number' name='limit' id='limit')
+        label(for='limit') 이것은 리밋
+    div(class='input-field')
+        input(type='number' name='skip' id='skip')
+        label(for='skip') 이것은 스킵
+    div(class='input-field')
+        input(type='number' name='photoNum' id='photoNum')
+        label(for='photoNum') 이것은 사진번호
+    img(src='/files/postimg/1/1.jpg')
+    div(class='btn getPostButton') 받자
+    script(type='text/javascript' src='/javascripts/jquery-ui.min.js')
+    script(type='text/javascript' src='/javascripts/jquery-ui.multidatespicker.js')
+    script $('#date').multiDatesPicker();
+    input(type='hidden' value='true' id='type')
+    script(type='text/javascript' src='/javascripts/test.js')

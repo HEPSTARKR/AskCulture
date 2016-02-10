@@ -161,3 +161,22 @@ input[type=checkbox]:checked + .lever::after{
     width: 155px;
     display: inline-block;
 }
+.profileNameContent{
+    display: inline-block;
+    width: calc(100% - 100px);
+}
+.profileWriteContent{
+    display: inline-block;
+    width: 100px;
+}
+.profileWriteButtonContainer .modify{
+    padding: 0 2em !important;
+    font-size: 0.8em !important;
+    line-height: 2em !important;
+    height: 2em !important;
+    background: #ff9800 !important;
+    color: white !important;
+}
+.registerDay{
+    font-size: 0.7em !important;
+}

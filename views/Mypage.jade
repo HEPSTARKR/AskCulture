@@ -12,8 +12,14 @@ block content
             span 잠금표시된 항목은 본인에게만 보여집니다.
         div(id='profileTabContentBox')
             div(class='profileNameBox')
-                p Espressoapsdasd
-                p Queens, New York, USA
+                div(class='profileNameContent')
+                    p Espressoapsdasd
+                    p Queens, New York, USA
+                div(class='profileWriteContent')
+                    div(class='profileWriteButtonContainer')
+                        div(class='btn modify') 정보수정
+                        //div 수정 완료
+                    p(class='registerDay') 가입일 2016.02.01
             div(class='row')
                 div(class='col s12 l12 m12')
                     ul(class='tabs')
@@ -25,8 +31,6 @@ block content
                             a(href='#') 내 문화체험
                         li(class='tab col s2 l2 m2')
                             a(href='#') 계정관리
-                        li(class='tab col s2 l2 m2')
-                            a(href='#') 나의 요청
                 div(class='col s12 l12 m12')
                     div(class='profileIntroduce')
                         div(class='Gender')

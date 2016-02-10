@@ -18,7 +18,13 @@ router.get('/UploadAsk',function(req,res){
 router.get('/indexENG',function(req,res){
   res.render('indexENG');
 })
+router.get('/SuggestionsENG',function(req,res){
+  res.render('SuggestionsENG');
+});
 router.get('/CommingSoon',function(req,res){
 	res.render('CommingSoon');
-})
+});
+router.get('/test',function(req,res){
+    res.render('test');
+});
 module.exports = router;
