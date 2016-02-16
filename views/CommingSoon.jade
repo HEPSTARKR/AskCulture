@@ -17,7 +17,7 @@ html(lang='ko')
 				img(src='/images/CommingsoonLogo.png' width='100%')
 				div(class='CommingSoonMent')
 					p(class='OpenMent') Web Page Open
-					p(class='OpenDates') 2016.02.28
+					p(class='OpenDates') 2016.03.01
 				div(class='RegisterButton') 웹 오픈 알림 이벤트
 				div(class='AbsoluteFooter') www.AskCulture.com
 			div(class='DialogIntroduce')
@@ -45,3 +45,11 @@ html(lang='ko')
 						input(type='submit' value='등록하기')
 				p(id='footerMessage') ※ e-mail을 등록하시면 홈페이지 오픈 날 알림 이메일이 발송됩니다.
 		script(text='text/javscript' src='/javascripts/CommingSoonPage.js')
+		div(class='markContent')
+			script function onPopKBAuthMark(){window.open(",KB_AUTHMARK",'height=604, width=648,status=yes,toolbar=no,menubar=no,location=no');document.KB_AUTHMARK_FORM.action="https://okbfex.kbstar.com/quics';document.KB_AUTHMARK_FORM.target='KB_AUTHMARK';document.KB_AUTHMARK_FORM.submit();}
+			form(name="KB_AUTHMARK_FORM" method="get")
+				input(type="hidden" name="page" value="C021590")
+				input(type="hidden" name="cc" value="b034066:b035526")
+				input(type="hidden" name="mHValue" value="9679d7c467996a928fddbbea54da00fb201602031757779")
+			a(href="#" onclick="javascript:onPopKBAuthMark();return false;")
+				img(src="http://img1.kbstar.com/img/escrow/escrowcmark.gif" border="0")

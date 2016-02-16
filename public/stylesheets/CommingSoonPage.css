@@ -1,23 +1,23 @@
 @font-face {
-    src: url(../font/NanumGothic-Regular.ttf);
+    src: url(../../../ServerBackup-0215/html/font/NanumGothic-Regular.ttf);
     font-family: 'Nanum Gothic';
 }
 @font-face {
-    src: url(../font/NanumGothic-ExtraBold.ttf);
+    src: url(../../../ServerBackup-0215/html/font/NanumGothic-ExtraBold.ttf);
     font-family: 'Nanum Gothic-Bold';
 }
 @font-face {
-    src: url(../font/Raleway-Bold.ttf);
+    src: url(../../../ServerBackup-0215/html/font/Raleway-Bold.ttf);
     font-family: 'Raleway-Bold';
 }
 @font-face {
-    src: url(../font/Raleway-Regular.ttf);
+    src: url(../../../ServerBackup-0215/html/font/Raleway-Regular.ttf);
     font-family: 'Raleway-Regular';
 }
 @font-face {
-    src: url(../font/Raleway-Thin.ttf);
+    src: url(../../../ServerBackup-0215/html/font/Raleway-Thin.ttf);
     font-family: 'Raleway-Thin';
-}
+}/*
 @font-face {
     src: url(../font/윤고딕310.ttf);
     font-family: '윤고딕310';
@@ -41,7 +41,7 @@
 @font-face {
     src: url(../font/HANYGO250.ttf);
     font-family: '윤고딕250';
-}
+}*/
 @media screen and (orientation: portait){
 	.smallize{
 		font-size: 15px !important;
@@ -52,8 +52,20 @@
 		font-size: 7px !important;
 	}
 }
+.accentOrange{
+	font-weight: bold;
+}
+.accentOrange::after, .accentOrange::before{
+	content: '\"';
+}
 #footerMessage{
 	margin: 0;
+}
+.markContent{
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	opacity: 0.1;
 }
 body{
 	background-image: url(/images/CommingSoonBackground.png);
@@ -97,7 +109,7 @@ body{
 .RegisterButton{
 	background-color: #ff9800;
 	color: white;
-	font-family: '윤고딕230', 'Raleway-Regular';
+	font-family: 'Nanum Gothic', 'Raleway-Regular';
 	font-weight: bold;
 	text-align: center;
 	border: transparent 4px solid;
@@ -249,7 +261,7 @@ label::before{
 .DialogIntroduce{
 	position: absolute;
 	top: 30px;
-	font-family: '윤고딕230';
+	font-family: 'Nanum Gothic';
 	width: 90%;
 	padding: 3%;
 	margin-left: 5vw;

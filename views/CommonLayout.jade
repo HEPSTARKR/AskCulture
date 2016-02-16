@@ -13,6 +13,7 @@ html(lang='ko')
         script(type="text/javascript" src="/javascripts/materialize.min.js")
         script(type='text/javascript' src='/javascripts/materialize.js')
         script(type='text/javascript' src='/javascripts/wNumb.js')
+        meta(name="google-signin-client_id" content="548124732768-6bb4c44c8lqv2l02hf58q15608tkp1f5.apps.googleusercontent.com")
         block CustomHead
     body
         nav
@@ -44,3 +45,33 @@ html(lang='ko')
                     li 제안하기
                 script $(".button-collapse").sideNav();
         block content
+        footer(class='page-footer')
+            div(class='container')
+                div(class='moreLink-Container')
+            div(class='footer-copyright') AskCulture
+        div(id="status")
+        div(class='backgroundDialog-wrapper' id='loginDialog-wrapper')
+            div(id='loginDialog')
+                div(class='dialogHeader')
+                    span(class='loginHead') 로그인
+                    i(class='material-icons loginDialogCloseButton') close
+                div(class='facebookLogin')
+                    fb:login-button(scope="public_profile,email" onlogin="checkLoginState();" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false" width="384px") Sign in with Facebook Button is not loading... please wait
+                div(class='googlePlusLogin')
+                    div(id='googlePlusLoginButton')
+                div(class='loginDivider')
+                    span or
+                input(type='email' placeholder='이메일 입력')
+                input(type='password' placeholder='비밀번호 입력')
+                div(class='btn orange white-text z-depth-0 loginSubmitButton') 로그인
+                div(class='loginCheckBoxContainer')
+                    input(type='checkbox' id='UserEmailSave')
+                    label(for='UserEmailSave') 아이디 저장
+                    input(type='checkbox' id='AutomaticLogin')
+                    label(for='AutomaticLogin') 자동로그인
+                hr
+                div(class='goSignUp') AskCulture 계정이 없으세요? <a href="#" class="SignUpLink ">회원가입</a>
+        script(type='text/javascript' src='/javascripts/FacebookController.js')
+        script(type='text/javascript' src='/javascripts/GooglePlusController.js')
+        script(src="https://apis.google.com/js/platform.js?onload=renderButton" async defer)
+        script(type='text/javascript' src='/javascripts/userController.js')

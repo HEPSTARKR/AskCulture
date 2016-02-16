@@ -18,32 +18,44 @@
     src: url(../font/Raleway-Thin.ttf);
     font-family: 'Raleway-Thin';
 }
-@font-face {
-    src: url(../font/윤고딕310.ttf);
-    font-family: '윤고딕310';
+@font-face{
+    src: url(../font/NotoSansCJKkr-Black.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Black';
 }
 @font-face {
-    src: url(../font/윤고딕330.ttf);
-    font-family: '윤고딕330';
+    src: url(../font/NotoSansCJKkr-Bold.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Bold';
 }
 @font-face {
-    src: url(../font/윤고딕350.ttf);
-    font-family: '윤고딕350';
+    src: url(../font/NotoSansCJKkr-DemiLight.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans DemiLight';
 }
 @font-face {
-    src: url(../font/HANYGO230.ttf);
-    font-family: '윤고딕230';
+    src: url(../font/NotoSansCJKkr-Light.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Light';
 }
 @font-face {
-    src: url(../font/HANYGO240.ttf);
-    font-family: '윤고딕240';
+    src: url(../font/NotoSansCJKkr-Medium.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Medium';
 }
 @font-face {
-    src: url(../font/HANYGO250.ttf);
-    font-family: '윤고딕250';
+    src: url(../font/NotoSansCJKkr-Regular.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Regular';
+}
+@font-face {
+    src: url(../font/NotoSansCJKkr-Thin.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Thin';
+}
+@font-face {
+    src: url(../font/NotoSansMonoCJKkr-Bold.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Mono Bold';
+}
+@font-face {
+    src: url(../font/NotoSansMonoCJKkr-Regular.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Mono Regular';
 }
 body{
-    font-family: '윤고딕230', 'Nanum Gothic', 'Raleway-Regular', sans-serif;
+    font-family: 'Noto Sans Regular', 'Nanum Gothic', 'Raleway-Regular', sans-serif;
 }
 nav{
     z-index: 999;
@@ -63,7 +75,7 @@ nav .nav_button{
     background: none;
     box-shadow: none !important;
     padding: 0 13px;
-    font-family: 'Nanum Gothic', 'Roboto', sans-serif;
+    font-family: 'Noto Sans Regular' ,'Nanum Gothic', 'Roboto', sans-serif;
 }
 nav .nav_button:hover{
     background: rgba(255,255,255,0.5);
@@ -153,4 +165,104 @@ nav li a{
     padding: 0;
     height: 100%;
     width: 100%;
+}
+.backgroundDialog-wrapper{
+    position: fixed;
+    z-index: 999;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+#loginDialog{
+    background: white;
+    width: 412px;
+    padding: 14px;
+    margin: auto;
+    margin-top: calc(50vh - 185px);
+}
+.loginHead{
+    padding-top: 2px;
+    border-top: 5px solid #ff9800;
+    font-family: 'Noto Sans Bold', 'Nanum Gothic-Bold', 'Raleway-Bold', sans-serif;
+    font-size: 1.3em;
+}
+.dialogHeader i{
+    float: right;
+}
+.dialogHeader i:hover{
+    cursor: pointer;
+}
+
+.fb_iframe_widget iframe{
+    opacity: 0;
+    width: 384px !important;
+    height: 40px !important;
+}
+iframe ._51mz, ._4z_b{
+    width: 384px !important;
+}
+.facebookLogin {
+    width: 384px;
+    height: 40px;
+    background-size: 100% 100%;
+    background-image: url(/images/facebookButton.png);
+    background-repeat: no-repeat;
+}
+#googlePlusLoginButton div{
+    box-shadow: none !important;
+}
+.facebookLogin, .googlePlusLogin{
+    margin: 10px 0;
+}
+.loginDivider span:before, .loginDivider span:after{
+    height: 1px;
+    margin-top: 5px;
+    width: 170px;
+    content: "";
+    position: absolute;
+    background: #8e8e8e;
+    vertical-align: middle;
+}
+.loginDivider span{
+    display: inline-block;
+    position: relative;
+}
+.loginDivider{
+    line-height: 0.5;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.loginDivider span:before{
+    right: 100%;
+    margin-right: 15px;
+}
+.loginDivider span:after{
+    left: 100%;
+    margin-left: 15px;
+}
+#loginDialog input[type=email],#loginDialog input[type=password]{
+    border: 1px solid black;
+    padding: 0 10px;
+    width: calc(100% - 20px);
+    background: white;
+    margin: 5px 0;
+}
+#loginDialog input[type=email]:focus, #loginDialog input[type=password]:focus{
+    box-shadow: none;
+}
+.loginSubmitButton{
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+}
+.goSignUp{
+    text-align: center;
+}
+.loginCheckBoxContainer label{
+    margin-right: 15px;
+}
+.SignUpLink{
+    color: #ff9800;
 }
