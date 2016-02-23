@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
 @font-face {
     src: url(../font/NanumGothic-Regular.ttf);
     font-family: 'Nanum Gothic';
@@ -55,7 +56,7 @@
     font-family: 'Noto Sans Mono Regular';
 }
 body{
-    font-family: 'Noto Sans Regular', 'Nanum Gothic', 'Raleway-Regular', sans-serif;
+    font-family: 'Noto Sans','Noto Sans Regular', 'Nanum Gothic', 'Raleway-Regular', sans-serif;
 }
 nav{
     z-index: 999;
@@ -75,7 +76,7 @@ nav .nav_button{
     background: none;
     box-shadow: none !important;
     padding: 0 13px;
-    font-family: 'Noto Sans Regular' ,'Nanum Gothic', 'Roboto', sans-serif;
+    font-family: 'Noto Sans','Noto Sans Regular' ,'Nanum Gothic', 'Roboto', sans-serif;
 }
 nav .nav_button:hover{
     background: rgba(255,255,255,0.5);
@@ -174,17 +175,18 @@ nav li a{
     height: 100%;
     background: rgba(0,0,0,0.7);
 }
-#loginDialog, #registerTermDialog{
+#loginDialog, #registerTermDialog, #registerEmailDialog{
     background: white;
     width: 412px;
-    padding: 14px;
     margin: auto;
 }
-#loginDialog{
+#loginDialog, #registerEmailDialog{
     margin-top: calc(50vh - 185px);
+    padding: 14px;
 }
 #registerTermDialog{
     margin-top: calc(50vh - 300px);
+    padding: 14px 14px 5px 14px;
 }
 .loginHead, .registerHead{
     padding-top: 2px;
@@ -207,20 +209,20 @@ nav li a{
 iframe ._51mz, ._4z_b{
     width: 384px !important;
 }
-.facebookLogin {
+.facebookLogin, .facebookRegister {
     width: 384px;
     height: 40px;
     background-size: 100% 100%;
     background-image: url(/images/facebookButton.png);
     background-repeat: no-repeat;
 }
-#googlePlusLoginButton div{
+#googlePlusLoginButton div, #googlePlusRegisterButton div{
     box-shadow: none !important;
 }
 .facebookLogin, .googlePlusLogin{
     margin: 10px 0;
 }
-.loginDivider span:before, .loginDivider span:after{
+.loginDivider span:before, .loginDivider span:after, .registerDivider span:after, .registerDivider span:before{
     height: 1px;
     margin-top: 5px;
     width: 170px;
@@ -229,20 +231,20 @@ iframe ._51mz, ._4z_b{
     background: #8e8e8e;
     vertical-align: middle;
 }
-.loginDivider span{
+.loginDivider span, .registerDivider span{
     display: inline-block;
     position: relative;
 }
-.loginDivider{
+.loginDivider, .registerDivider{
     line-height: 0.5;
     text-align: center;
     margin-bottom: 10px;
 }
-.loginDivider span:before{
+.loginDivider span:before, .registerDivider span:before{
     right: 100%;
     margin-right: 15px;
 }
-.loginDivider span:after{
+.loginDivider span:after, .registerDivider span:after{
     left: 100%;
     margin-left: 15px;
 }
@@ -358,11 +360,84 @@ footer .dropdown-button:hover{
     text-align: center;
     color: #ff9800;
     padding: 1%;
+    margin-top: 10px;
     font-family: 'Noto Sans Regular' , 'Nanum Gothic', 'Roboto', sans-serif;
     font-size: 1.3em;
     transition: 0.3s;
 }
 .nextRegisterStepButton:hover{
+    cursor: pointer;
+    background: #ff9800;
+    color: white;
+}
+.facebookRegister, .googlePlusRegister,.registerDivider{
+    margin: 5px 0;
+}
+#registerEmailDialog input{
+    margin-bottom: 0;
+    border: solid 1px #8e8e8e;
+    background: white;
+    color: #8e8e8e;
+    height: auto !important;
+    padding: 10px;
+}
+#registerEmailDialog input:focus{
+    box-shadow: none;
+}
+#registerEmailDialog > div > input{
+    width: calc(100% - 22px);
+}
+#firstName{
+    width: calc(60% - 22px);
+    display: inline;
+}
+#lastName{
+    display: inline;
+    margin-left: 10px;
+    width: calc(40% - 32px);
+}
+.formDataContainer > div, .formDataContainer > input{
+    margin-top: 5px;
+}
+#checkDone{
+    background: green;
+    border-radius: 100%;
+    color: white;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+#checkFail{
+    background: red;
+    border-radius: 100%;
+    color: white;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.rightPassword i{
+    background: green;
+    border-radius: 100%;
+    color: white;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.wrongPassword i{
+    background: red;
+    border-radius: 100%;
+    color: white;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.lastRegisterStepButton{
+    border: solid #ff9800 1px;
+    text-align: center;
+    color: #ff9800;
+    padding: 1%;
+    margin-top: 10px;
+    font-family: 'Noto Sans Regular' , 'Nanum Gothic', 'Roboto', sans-serif;
+    font-size: 1.3em;
+    transition: 0.3s;
+}
+.lastRegisterStepButton:hover{
     cursor: pointer;
     background: #ff9800;
     color: white;

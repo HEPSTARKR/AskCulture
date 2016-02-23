@@ -33,4 +33,28 @@ $(document).ready(function(){
        }
     });
     $(document).click();
+    $('.rightPassword').hide();
+    $('.wrongPassword').hide();
+    $('#password').keyup(function(){
+       var password = $('#password').val();
+       if(6 <= password.length && /[a-z]/.test(password) && /[0-9]/.test(password)){
+           $('#checkDone').show();
+           $('#checkFail').hide();
+       }else{
+           $('#checkDone').hide();
+           $('#checkFail').show();
+       }
+    });
+    $('#password').keyup();
+    $('#passwordConfirm').keyup(function(){
+        var password = $('#password').val();
+        var passwordConfirm = $('#passwordConfirm').val();
+        if(password==passwordConfirm){
+            $('.rightPassword').show();
+            $('.wrongPassword').hide();
+        }else{
+            $('.rightPassword').hide();
+            $('.wrongPassword').show();
+        }
+    });
 });

@@ -40,6 +40,9 @@ input[type=checkbox]:checked + .lever{
     width: 540px;
     display: inline-block;
 }
+.profileIntroduce div{
+    height: 24px;
+}
 .profileIntroduceContent div{
     margin: 15px 0;
     height: 24px;
