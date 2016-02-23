@@ -156,7 +156,6 @@ nav li a{
     background: none !important;
 }
 .contentBox{
-    height: 100vh;
     width: 100%;
     display: block;
     margin: 0;
@@ -175,14 +174,19 @@ nav li a{
     height: 100%;
     background: rgba(0,0,0,0.7);
 }
-#loginDialog{
+#loginDialog, #registerTermDialog{
     background: white;
     width: 412px;
     padding: 14px;
     margin: auto;
+}
+#loginDialog{
     margin-top: calc(50vh - 185px);
 }
-.loginHead{
+#registerTermDialog{
+    margin-top: calc(50vh - 300px);
+}
+.loginHead, .registerHead{
     padding-top: 2px;
     border-top: 5px solid #ff9800;
     font-family: 'Noto Sans Bold', 'Nanum Gothic-Bold', 'Raleway-Bold', sans-serif;
@@ -265,4 +269,101 @@ iframe ._51mz, ._4z_b{
 }
 .SignUpLink{
     color: #ff9800;
+}
+.moreLink-List .moreLink-Item{
+    display: inline;
+}
+.moreLink-List .moreLink-Item img{
+    width: 2em;
+    height: 2em;
+}
+.moreLink-List .moreLink-Item a{
+    width: 4em;
+    display: inline-block;
+    height: 4em;
+    padding: 1em;
+    border-radius: 100%;
+    border: solid white 1px;
+}
+.moreLink-List .moreLink-Item a:hover{
+    border: solid #ff9800 1px;
+}
+.moreLink-Item{
+    margin: 0 15px;
+}
+.moreLink-List{
+    margin: auto;
+}
+.introduceLink-Item{
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+}
+footer{
+    background: url(/images/footer_background.png) left no-repeat;
+    background-size: cover;
+    color: white;
+}
+.introduceLink-Item a{
+    color: white;
+}
+.introduceLink-Item a:hover{
+    color: #ff9800;
+}
+footer .dropdown-button{
+    background: rgba(255,255,255,0.4);
+    color: white;
+    text-align: left;
+    width: 200px;
+    margin: 5px 0;
+    box-shadow: none;
+}
+footer .dropdown-button:hover{
+    background: rgba(255,152,0,0.4);
+}
+.footer-context p{
+    margin: 0;
+    font-size: 0.5em;
+    text-align: center;
+}
+.footer-copyright .container{
+    border-top: 1px solid white;
+    text-align: center;
+    font-size: 2em;
+}
+.footer-context{
+    padding: 2% 0;
+}
+.termsContainer p{
+    margin: 0;
+}
+.termsContainer{
+    margin: 10px 0;
+}
+.termsBox p{
+    word-break: break-all;
+    width: 100%;
+}
+.termsBox{
+    border: solid #8e8e8e 1px;
+    background: #e8e8e8;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 10px 0;
+    height: 50px;
+}
+.nextRegisterStepButton{
+    border: solid #ff9800 1px;
+    text-align: center;
+    color: #ff9800;
+    padding: 1%;
+    font-family: 'Noto Sans Regular' , 'Nanum Gothic', 'Roboto', sans-serif;
+    font-size: 1.3em;
+    transition: 0.3s;
+}
+.nextRegisterStepButton:hover{
+    cursor: pointer;
+    background: #ff9800;
+    color: white;
 }

@@ -20,12 +20,16 @@ $(document).ready(function () {
     $('.submitBubble').hide();
     $('ul.tabs').tabs();
     $('.tabs li a').click(function(){
-        console.log($('.indicator').css('left'))
-        if($('.indicator').css('left')=='0px'){
-            $('.indicator').css('background','rgba(242, 147, 26, 1)','!important')
+        //console.log($('.indicator').css('left'))
+        console.log($(this).parent().index())
+        if($(this).parent().index()==2){
+            $('.indicator').css('background','rgba(223, 98, 37, 1)','!important')
+            console.log($('.indecator').css('background'))
+        }else if($(this).parent().index()==0){
+            $('.indicator').css('background','rgba(25, 189, 196, 1)','!important')
             console.log($('.indecator').css('background'))
         }else{
-            $('.indicator').css('background','rgba(25, 189, 196, 1)','!important')
+            $('.indicator').css('background','rgba(242, 147, 26, 1)','!important')
             console.log($('.indecator').css('background'))
         }
     })

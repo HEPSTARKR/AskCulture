@@ -1,6 +1,5 @@
 .contentBox{
     width: 100vw;
-    height:100vh;
     padding-top: 80px;
 }
 input[type=checkbox]:checked + .lever{
@@ -17,10 +16,19 @@ input[type=checkbox]:checked + .lever{
     background-position: center center;
     background-size: cover;
     width: 190px;
+    overflow: hidden;
     height: 190px;
     display: block;
     margin: auto;
 }
+/*일단 임시로 해둔거 나중에 지워야함*/
+.contentProfileImage video:hover{
+    opacity: 1;
+}
+.contentProfileImage video{
+    opacity: 0;
+}
+/*여기까지*/
 #profileImageContent .btn{
     display: block;
     margin: 20px auto;

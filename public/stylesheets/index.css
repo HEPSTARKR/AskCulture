@@ -10,7 +10,6 @@
         position: fixed;
         z-index: 999;
         background: white;
-        /*background: midnightblue;*/
     }
 }
 #contentHomeBox{
@@ -181,42 +180,8 @@
     font-size: 2vw;
 }
 
-.linkBox img{
-    margin: 5.5px 10px;
-    vertical-align: middle;
-    display: inline-block;
-}
-.linkBox{
-    height: 50px;
-    vertical-align: middle;
-}
-footer{
-    background: #646464 !important;
-}
-.verticalAlignFooter{
-    vertical-align: middle;
-}
-.verticalAlignFooter{
-    border-right: solid 1px white;
-}
 .removeLine{
     border-right: none;
-}
-.dropdown-button{
-    background: none;
-    border: solid 1px white;
-    display: block;
-    width: 150px;
-    margin: 5% auto;
-}
-.footer-copy{
-    width: 95% !important;
-    color: white;
-    text-align: center;
-    font-size: 5px !important;
-}
-footer img {
-    margin: 2% 37.5%;
 }
 .centerBtn{
     color: white;
@@ -283,10 +248,15 @@ footer img {
     margin: 0;
     font-family: 'Raleway-Regular';
 }
+/** sdasd*/
+.introduceContentBox{
+    height:600px;
+}
+/**asdasd*/
 .card{
     display: inline-block;
     vertical-align:  top;
-    width: 30%;
+    width: 27%;
     margin: 15px;
     height: 200px !important;
 }
@@ -299,6 +269,15 @@ footer img {
 }
 .tabs li:nth-child(2) a.grey-text.active{
     color: #ff9800 !important;
+}
+.tabs li:nth-child(3) a.grey-text.active{
+    color: #DF6225 !important;
+}
+#ToBeMypage .circle{
+    background: #DF6225;
+}
+#ToBeMypage .howWorkBoxHeader{
+    color: #DF6225;
 }
 .indicator{
     height: 5px !important;
@@ -326,9 +305,6 @@ footer img {
     font-size: 2vw;
     margin-bottom: 0;
     margin-top: 1vw;
-}
-footer p a{
-    color: white;
 }
 #map{
     height: 100vh;

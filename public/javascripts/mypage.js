@@ -15,3 +15,14 @@ initMap = function(){
     map.setZoom(3);
     map.setCenter({lat:15, lng: 150});
 };
+
+/** 나중에 지워야 하는 임시 코드*/
+$(document).ready(function(){
+    $('video').mouseenter(function(){
+            document.getElementsByTagName("video")[0].play();
+    });
+    $('video').mouseleave(function(){
+            document.getElementsByTagName("video")[0].pause();
+    });
+});
+/** 여기까지 */
