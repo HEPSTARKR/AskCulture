@@ -178,6 +178,100 @@ html(lang='ko')
                         i(class='material-icons') close
                         span 올바르지 않은 비밀번호 입니다.
                     div(class='lastRegisterStepButton') 회원가입
+        div(class='backgroundDialog-wrapper' id='registerInformation-wrapper')
+            div(id='registerInformationDialog')
+                div(class='dialogHeader')
+                    span(class='registerHead') 회원가입
+                    i(class='material-icons registerInformationCloseButton') close
+                div(class='registerBirthdayLabel') 생일
+                div(class='registerBirthdayForm')
+                    select(id='yearsDropdown')
+                        option(disabled selected) 년도
+                    select(id='MonthDropdown')
+                        option(disabled selected) 월
+                    select(id='DayDropdown')
+                        option(disabled selected) 일
+                div(class='registerGenderLabel') 성별
+                div(class='registerGenderForm')
+                    input(name='registerGender' type='radio' class='with-gap' id='male')
+                    label(for='male') 남자
+                    input(name='registerGender' type='radio' class='with-gap' id='female')
+                    label(for='female') 여자
+                div(class='registerLanguageLabel') 언어
+                div(class='registerLanguageForm')
+                    i(class='tiny material-icons dropdown-button' data-activates='languageDropdown') add
+                    ul(id='languageDropdown' class='dropdown-content')
+                        li
+                            a(href='#' language-code='1') 한국어
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='2') English
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='3') 日本語
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='4') 中文
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='5') Español
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='6') català
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='7') اللغة العربية الفصحى
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='8') Русский язык
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='9') Dutch
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='10') français
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='11') Deutsch
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='12') čeština
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='13') Svenska
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='14') suomi
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='15') Türkçe
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='16') português
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='17') Polski
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='18') Italiano
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='19') dansk
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='20') norsk
+                        li(class='divider')
+                        li
+                            a(href='#' language-code='21') Bahasa Indonesia
+        div(class='languageLevelDialog')
+            p 언어숙련도를 설정하세요
+            div(class='levelSettingContainer')
+                i(class='material-icons levelMinus') remove
+                span(class='levelCount tooltipped' data-position='top' data-tooltip='1) Level 1: 더듬더듬 우리 단어로 대화해요.<br>2) Level 2: 문화에 대해 설명해드릴 수 있어요.<br>3) Level 3: 말씀 편하게 하세요.') 1
+                i(class='material-icons levelPlus') add
+            div(class='levelConfirmContainer')
+                span(class='levelConfirmCancleButton') 취소
+                span(class='levelConfirmSettingButton') 확인
         script(type='text/javascript' src='/javascripts/FacebookController.js')
         script(type='text/javascript' src='/javascripts/GooglePlusController.js')
         script(src="https://apis.google.com/js/platform.js?onload=renderButton" async defer)

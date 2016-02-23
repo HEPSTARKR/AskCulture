@@ -175,17 +175,16 @@ nav li a{
     height: 100%;
     background: rgba(0,0,0,0.7);
 }
-#loginDialog, #registerTermDialog, #registerEmailDialog{
+#loginDialog, #registerTermDialog, #registerEmailDialog, #registerInformationDialog{
     background: white;
     width: 412px;
     margin: auto;
+    margin-top: 50px;
 }
-#loginDialog, #registerEmailDialog{
-    margin-top: calc(50vh - 185px);
+#loginDialog, #registerEmailDialog, #registerInformationDialog{
     padding: 14px;
 }
 #registerTermDialog{
-    margin-top: calc(50vh - 300px);
     padding: 14px 14px 5px 14px;
 }
 .loginHead, .registerHead{
@@ -441,4 +440,102 @@ footer .dropdown-button:hover{
     cursor: pointer;
     background: #ff9800;
     color: white;
+}
+#registerInformationDialog .registerBirthdayForm input.select-dropdown{
+    border: solid 1px #8e8e8e;
+    margin: 0;
+    display: inline-block !important;
+    height: auto;
+    line-height: inherit;
+    padding: 1%;
+}
+#registerInformationDialog .registerBirthdayForm .caret{
+    display: none;
+}
+#registerInformationDialog .registerBirthdayForm .select-wrapper{
+    width: 100px;
+    margin-right: 3px;
+    display: inline-block;
+}
+.registerLanguageForm i{
+    border: #ff9800 solid 1px;
+    color: #ff9800;
+    vertical-align: middle;
+    border-radius: 100%;
+    transition: 0.3s;
+}
+.registerLanguageForm i:hover{
+    background: #ff9800;
+    color: white;
+    cursor: pointer;
+}
+.registerLanguageForm span{
+    background: #ff9800;
+    border-radius: 19px;
+    color: white;
+    display: inline-block;
+    width: 76px;
+    text-align: center;
+    transition: 0.3s;
+    padding: 0 10px;
+    margin-right: 10px;
+}
+.languageLevelDialog{
+    top: calc(50% - 55px);
+    padding: 1%;
+    left: calc(50% - 150px);
+    width: 300px;
+    z-index: 999;
+    position: fixed;
+    background: white;
+    display: inline-block;
+    margin: auto;
+}
+.languageLevelDialog .levelSettingContainer i{
+    background: #ff9800;
+    color: white;
+    vertical-align: middle;
+}
+.languageLevelDialog .levelSettingContainer i:hover{
+    cursor: pointer;
+}
+.languageLevelDialog .levelSettingContainer span{
+    width: 24px;
+    text-align: center;
+    display: inline-block;
+}
+.languageLevelDialog .levelSettingContainer{
+    width: 72px;
+    margin: auto;
+}
+.levelConfirmContainer{
+    text-align: right;
+}
+.levelConfirmContainer span{
+    margin: 0 5px;
+}
+.levelConfirmContainer span:hover{
+    cursor: pointer;
+}
+.levelConfirmSettingButton{
+    color: #ff9800;
+}
+.registerLanguageForm span:hover{
+    background: red;
+    cursor: pointer;
+}
+.registerLanguageForm .dropdown-content li a{
+    padding: 7px;
+}
+.registerLanguageForm .dropdown-content li{
+    min-height: auto;
+}
+.material-tooltip span{
+    display: none;
+}
+.material-tooltip div{
+    line-height: 1.8;
+}
+label[for=male]{
+    margin-right: 20px;
 }
