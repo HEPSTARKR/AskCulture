@@ -1,15 +1,7 @@
 /**
  * Created by Astora on 2015-12-04.
  */
-//var backgroundNum = 2;
-//var firstToggle=false;
-//var secondToggle=false;
-//$(document).ready(setInterval(function () {
-//        $('#contentHomeBox').css('background-image', 'url(/images/bg' + backgroundNum + '.png)');
-//        backgroundNum++;
-//        if (backgroundNum > 7)backgroundNum = 1;
-//    }, 3000)
-//);
+
 $(document).ready(function () {
     $('.HowToContentBox').slideToggle();
     $('.brand-logo img').attr('src','/images/logo_white.png');
@@ -20,8 +12,6 @@ $(document).ready(function () {
     $('.submitBubble').hide();
     $('ul.tabs').tabs();
     $('.tabs li a').click(function(){
-        //console.log($('.indicator').css('left'))
-        console.log($(this).parent().index())
         if($(this).parent().index()==2){
             $('.indicator').css('background','rgba(223, 98, 37, 1)','!important')
             console.log($('.indecator').css('background'))
