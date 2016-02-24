@@ -555,11 +555,11 @@ label[for=male]{
     background: transparent;
     transition: 0.3s;
     text-align: center;
+    margin-left: 75%;
     padding: 1%;
 }
 .registerSubmitButton:hover{
     background: #ff9800;
     color: white;
     cursor: pointer;
-    float: right;
 }
