@@ -539,3 +539,27 @@ footer .dropdown-button:hover{
 label[for=male]{
     margin-right: 20px;
 }
+.registerFavoriteGenreForm label{
+    width: 25%;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+.registerFavoriteGenreLabel{
+    border-bottom: 1px solid #8e8e8e;
+    margin-bottom: 15px;
+}
+.registerSubmitButton{
+    width: 25%;
+    border: solid 1px #ff9800;
+    color: #ff9800;
+    background: transparent;
+    transition: 0.3s;
+    text-align: center;
+    padding: 1%;
+}
+.registerSubmitButton:hover{
+    background: #ff9800;
+    color: white;
+    cursor: pointer;
+    float: right;
+}
