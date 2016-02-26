@@ -3,10 +3,11 @@
 extends CommonLayout
 block CustomHead
     link(rel='stylesheet' type='text/css' href='/stylesheets/Suggestions.css')
+    link(rel='stylesheet' type='text/css' href='/stylesheets/mobileSuggestion.css')
     link(rel='stylesheet' type='text/css' href='/stylesheets/nouislider.css')
     link(rel='stylesheet' type='text/css' href='/stylesheets/jquery-ui.min.css')
 block content
-    div(id='map')
+    div(id='map' class='hide-on-med-and-down')
     form(method='post' action='#')
         div(class='searchPlace')
             div(class='searchInputBox')
@@ -17,6 +18,7 @@ block content
             div(class='col s10 m8 l10')
                 div(class='inputForm')
                     div(class='inputList')
+                        hr(class='hide-on-large-only')
                         span(class='inputLabel dateLabel') 날짜
                         input(type='text' id='selectDateCalendarPicker' class='inputFilterLinear' placeholder='희망 날짜를 클릭하세요.')
                     div(class='inputList')
@@ -27,7 +29,7 @@ block content
                                 label(for='sports') 스포츠
                             div(class='CheckBoxContainer')
                                 input(type='checkbox' id='art')
-                                label(for='art') 예술
+                                label(for='art') 예술 
                             div(class='CheckBoxContainer')
                                 input(type='checkbox' id='pashion')
                                 label(for='pashion') 패션
@@ -176,7 +178,9 @@ block content
                                 option 상관없음
                                 option 내국인
                                 option 외국인
-                    div(class='inputList')
+                    div(class='submitButtonBackground hide-on-large-only')
+                        button(class='submitButton') 확인
+                    div(class='inputList hide-on-med-and-down')
                         a(class='btn filterFlipButton') 필터축소
                 div(class='listFilter')
                     ul

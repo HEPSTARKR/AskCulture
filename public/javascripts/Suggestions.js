@@ -2,6 +2,7 @@
  * Created by Sunrin on 2016. 1. 5..
  */
 var CostSlider = document.getElementById("CostSlider");
+var fullWidth = $(window).width();
 $(document).ready(function() {
     $('select').material_select();
     $('#selectDateCalendarPicker').multiDatesPicker();
@@ -44,4 +45,8 @@ $(document).ready(function() {
             postfix : '만'
        })
    })
+   if(fullWidth < 1000)
+   {
+      $('.flipFilter').slideToggle();
+   }
 });

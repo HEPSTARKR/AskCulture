@@ -16,8 +16,8 @@ form{
     position: absolute;
     float: right;
     font-size: 2vw;
-    right: 30.9vw;
-    margin-top: 5px;
+    right: 30.5vw;
+    margin-top: 0.5vw;
 }
 .searchInputBox i:hover{
     cursor: pointer;

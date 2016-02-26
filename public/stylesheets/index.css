@@ -279,12 +279,13 @@
 #ToBeMypage .howWorkBoxHeader{
     color: #DF6225;
 }
+/*
 .indicator{
     height: 5px !important;
     transition: 0.5s;
     background: #19bdc4;
 }
-
+*/
 .howWorkBox .circle{
     width: 10vw;
     margin: auto;
