@@ -76,10 +76,12 @@ nav .nav_button{
     background: none;
     box-shadow: none !important;
     padding: 0 13px;
+    transition: 0.3s;
     font-family: 'Noto Sans','Noto Sans Regular' ,'Nanum Gothic', 'Roboto', sans-serif;
 }
 nav .nav_button:hover{
-    background: rgba(255,255,255,0.5);
+    color: white;
+    background: #ff9800;
 }
 .profileImage{
     border-radius: 100%;
@@ -386,11 +388,11 @@ footer .dropdown-button:hover{
 #registerEmailDialog > div > input{
     width: calc(100% - 22px);
 }
-#firstName{
+#registerFirstName{
     width: calc(60% - 22px);
     display: inline;
 }
-#lastName{
+#registerLastName{
     display: inline;
     margin-left: 10px;
     width: calc(40% - 32px);
@@ -481,13 +483,14 @@ footer .dropdown-button:hover{
     margin-right: 10px;
 }
 .languageLevelDialog{
-    top: calc(50% - 55px);
+    top: calc(30% - 55px);
     padding: 1%;
     left: calc(50% - 150px);
     width: 300px;
     z-index: 999;
     position: fixed;
     background: white;
+    border: 1px solid #ff9800;
     display: inline-block;
     margin: auto;
 }
@@ -524,11 +527,14 @@ footer .dropdown-button:hover{
     background: red;
     cursor: pointer;
 }
-.registerLanguageForm .dropdown-content li a{
+#registerInformationDialog .dropdown-content li a, #registerInformationDialog .dropdown-content li span{
     padding: 7px;
 }
-.registerLanguageForm .dropdown-content li{
+#registerInformationDialog .dropdown-content li{
     min-height: auto;
+}
+#registerInformationDialog .dropdown-content{
+    height: 180px;
 }
 .material-tooltip span{
     display: none;
@@ -562,4 +568,12 @@ label[for=male]{
     background: #ff9800;
     color: white;
     cursor: pointer;
+}
+.registerStateForm .select-wrapper{
+    width: 100px;
+    word-break: break-all;
+}
+.registerInformationLabel{
+    font-weight: bold;
+    margin-top: 10px;
 }

@@ -13,6 +13,7 @@ html(lang='ko')
         script(type="text/javascript" src="/javascripts/materialize.min.js")
         script(type='text/javascript' src='/javascripts/materialize.js')
         script(type='text/javascript' src='/javascripts/wNumb.js')
+        script(type='text/javascript' src="https://js.braintreegateway.com/v2/braintree.js")
         meta(name="google-signin-client_id" content="548124732768-6bb4c44c8lqv2l02hf58q15608tkp1f5.apps.googleusercontent.com")
         block CustomHead
     body
@@ -28,19 +29,26 @@ html(lang='ko')
                 a(href='#' data-activates='mobile_menu' class='button-collapse')
                     i(class='material-icons') menu
                 ul(class='right hide-on-med-and-down')
-                    li
+                    li(class='signedUserContent nav_userProfileContent')
                         a(href='/mypage')
                             div(class='profileImage' style='background: url(/images/tempProfile.jpg);')
-                    li(class='nav_name') yeji Jeon
-                    li
-                        div(class='btn nav_button') 요청하기
-                    li
+                    li(class='signedUserContent nav_name nav_userProfileContent') yeji Jeon
+                    li(class='unsignedUserContent')
+                        a(href='#')
+                            div(class='btn nav_button nav_loginButton') 로그인
+                    li(class='unsignedUserContent')
+                        a(href='#')
+                            div(class='btn nav_button nav_registerButton') 회원가입
+                    li(class='signedUserContent')
+                        a(href='#')
+                            div(class='btn nav_button') 요청하기
+                    li(class='signedUserContent')
                         a(href='/UploadAsk')
                             div(class='btn nav_button') 제안하기
                 ul(class='side-nav' id='mobile_menu')
                     li
-                        div(class='profileImage' style='background: url(/images/myProfile.png);')
-                        div(class='nav_name') yeji Jeon
+                        div(class='signedUserContent profileImage' style='background: url(/images/myProfile.png);')
+                        div(class='signedUserContent nav_name') yeji Jeon
                     li 요청하기
                     li 제안하기
                 script $(".button-collapse").sideNav();
@@ -114,8 +122,8 @@ html(lang='ko')
                     div(id='googlePlusLoginButton')
                 div(class='loginDivider')
                     span or
-                input(type='email' placeholder='이메일 입력')
-                input(type='password' placeholder='비밀번호 입력')
+                input(type='email' placeholder='이메일 입력' id='loginFormEmail')
+                input(type='password' placeholder='비밀번호 입력' id='loginFormPassword')
                 div(class='btn orange white-text z-depth-0 loginSubmitButton') 로그인
                 div(class='loginCheckBoxContainer')
                     input(type='checkbox' id='UserEmailSave')
@@ -162,15 +170,15 @@ html(lang='ko')
                     span or
                 div(class='formDataContainer')
                     div(class='nameFormLinear')
-                        input(type='text' id='firstName' placeholder='first name')
-                        input(type='text' id='lastName' placeholder='last name')
-                    input(type='email' id='email' placeholder='이메일 입력')
-                    input(type='password' id='password' placeholder='비밀번호 입력')
+                        input(type='text' id='registerFirstName' placeholder='first name')
+                        input(type='text' id='registerLastName' placeholder='last name')
+                    input(type='email' id='registerEmail' placeholder='이메일 입력')
+                    input(type='password' id='registerPassword' placeholder='비밀번호 입력')
                     div(class='checkPassword')
                         i(class='material-icons' id='checkDone') done
                         i(class='material-icons' id='checkFail') close
                         span 숫자/영문(대,소문자) 최소 6자리
-                    input(type='password' id='passwordConfirm' placeholder='비밀번호 확인')
+                    input(type='password' id='registerPasswordConfirm' placeholder='비밀번호 확인')
                     div(class='rightPassword')
                         i(class='material-icons') done
                         span 올바른 비밀번호 입니다.
@@ -183,7 +191,7 @@ html(lang='ko')
                 div(class='dialogHeader')
                     span(class='registerHead') 회원가입
                     i(class='material-icons registerInformationCloseButton') close
-                div(class='registerBirthdayLabel') 생일
+                div(class='registerBirthdayLabel registerInformationLabel') 생일
                 div(class='registerBirthdayForm')
                     select(id='yearsDropdown')
                         option(disabled selected) 년도
@@ -191,13 +199,13 @@ html(lang='ko')
                         option(disabled selected) 월
                     select(id='DayDropdown')
                         option(disabled selected) 일
-                div(class='registerGenderLabel') 성별
+                div(class='registerGenderLabel registerInformationLabel') 성별
                 div(class='registerGenderForm')
-                    input(name='registerGender' type='radio' class='with-gap' id='male')
+                    input(name='registerGender' value='true' type='radio' class='with-gap' id='male')
                     label(for='male') 남자
-                    input(name='registerGender' type='radio' class='with-gap' id='female')
+                    input(name='registerGender' value='false' type='radio' class='with-gap' id='female')
                     label(for='female') 여자
-                div(class='registerLanguageLabel') 언어
+                div(class='registerLanguageLabel registerInformationLabel') 언어
                 div(class='registerLanguageForm')
                     i(class='tiny material-icons dropdown-button' data-activates='languageDropdown') add
                     ul(id='languageDropdown' class='dropdown-content')
@@ -263,12 +271,261 @@ html(lang='ko')
                         li(class='divider')
                         li
                             a(href='#' language-code='21') Bahasa Indonesia
-                div(class='registerStateLabel') 국가
+                div(class='registerStateLabel registerInformationLabel') 국가
                 div(class='registerStateForm')
-                    select
-                        option(disabled selected value="") 국가를 선택하세요
-                div(class='registerFavoriteGenreLabel') 관심분야(중복가능)
+                    select(id='registerStateCode')
+                        option(disabled selected value="") 국가
+                        option(value="0") Afghanistan
+                        option(value="1") Albania
+                        option(value="2") Algeria
+                        option(value="3") American Samoa
+                        option(value="4") Andorra
+                        option(value="5") Angola
+                        option(value="6") Anguilla
+                        option(value="7") Antigua &amp; Barbuda
+                        option(value="8") Argentina
+                        option(value="9") Armenia
+                        option(value="10") Aruba
+                        option(value="11") Australia
+                        option(value="12") Austria
+                        option(value="13") Azerbaijan
+                        option(value="14") Bahamas
+                        option(value="15") Bahrain
+                        option(value="16") Bangladesh
+                        option(value="17") Barbados
+                        option(value="18") Belarus
+                        option(value="19") Belgium
+                        option(value="20") Belize
+                        option(value="21") Benin
+                        option(value="22") Bermuda
+                        option(value="23") Bhutan
+                        option(value="24") Bolivia
+                        option(value="25") Bonaire
+                        option(value="26") Bosnia &amp; Herzegovina
+                        option(value="27") Botswana
+                        option(value="28") Brazil
+                        option(value="29") British Indian Ocean Ter
+                        option(value="30") Brunei
+                        option(value="31") Bulgaria
+                        option(value="32") Burkina Faso
+                        option(value="33") Burundi
+                        option(value="34") Cambodia
+                        option(value="35") Cameroon
+                        option(value="36") Canada
+                        option(value="37") Canary Islands
+                        option(value="38") Cape Verde
+                        option(value="39") Cayman Islands
+                        option(value="40") Central African Republic
+                        option(value="41") Chad
+                        option(value="42") Channel Islands
+                        option(value="43") Chile
+                        option(value="44") China
+                        option(value="45") Christmas Island
+                        option(value="46") Cocos Island
+                        option(value="47") Colombia
+                        option(value="48") Comoros
+                        option(value="49") Congo
+                        option(value="50") Cook Islands
+                        option(value="51") Costa Rica
+                        option(value="52") Cote D'Ivoire
+                        option(value="53") Croatia
+                        option(value="54") Cuba
+                        option(value="55") Curacao
+                        option(value="56") Cyprus
+                        option(value="57") Czech Republic
+                        option(value="58") Denmark
+                        option(value="59") Djibouti
+                        option(value="60") Dominica
+                        option(value="61") Dominican Republic
+                        option(value="62") East Timor
+                        option(value="63") Ecuador
+                        option(value="64") Egypt
+                        option(value="65") El Salvador
+                        option(value="66") Equatorial Guinea
+                        option(value="67") Eritrea
+                        option(value="68") Estonia
+                        option(value="69") Ethiopia
+                        option(value="70") Falkland Islands
+                        option(value="71") Faroe Islands
+                        option(value="72") Fiji
+                        option(value="73") Finland
+                        option(value="74") France
+                        option(value="75") French Guiana
+                        option(value="76") French Polynesia
+                        option(value="77") French Southern Ter
+                        option(value="78") Gabon
+                        option(value="79") Gambia
+                        option(value="80") Georgia
+                        option(value="81") Germany
+                        option(value="82") Ghana
+                        option(value="83") Gibraltar
+                        option(value="84") Great Britain
+                        option(value="85") Greece
+                        option(value="86") Greenland
+                        option(value="87") Grenada
+                        option(value="88") Guadeloupe
+                        option(value="89") Guam
+                        option(value="90") Guatemala
+                        option(value="91") Guinea
+                        option(value="92") Guyana
+                        option(value="93") Haiti
+                        option(value="94") Hawaii
+                        option(value="95") Honduras
+                        option(value="96") Hong Kong
+                        option(value="97") Hungary
+                        option(value="98") Iceland
+                        option(value="99") India
+                        option(value="100") Indonesia
+                        option(value="101") Iran
+                        option(value="102") Iraq
+                        option(value="103") Ireland
+                        option(value="104") Isle of Man
+                        option(value="105") Israel
+                        option(value="106") Italy
+                        option(value="107") Jamaica
+                        option(value="108") Japan
+                        option(value="109") Jordan
+                        option(value="110") Kazakhstan
+                        option(value="111") Kenya
+                        option(value="112") Kiribati
+                        option(value="113") Korea North
+                        option(value="114") Korea South
+                        option(value="115") Kuwait
+                        option(value="116") Kyrgyzstan
+                        option(value="117") Laos
+                        option(value="118") Latvia
+                        option(value="119") Lebanon
+                        option(value="120") Lesotho
+                        option(value="121") Liberia
+                        option(value="122") Libya
+                        option(value="123") Liechtenstein
+                        option(value="124") Lithuania
+                        option(value="125") Luxembourg
+                        option(value="126") Macau
+                        option(value="127") Macedonia
+                        option(value="128") Madagascar
+                        option(value="129") Malaysia
+                        option(value="130") Malawi
+                        option(value="131") Maldives
+                        option(value="132") Mali
+                        option(value="133") Malta
+                        option(value="134") Marshall Islands
+                        option(value="135") Martinique
+                        option(value="136") Mauritania
+                        option(value="137") Mauritius
+                        option(value="138") Mayotte
+                        option(value="139") Mexico
+                        option(value="140") Midway Islands
+                        option(value="141") Moldova
+                        option(value="142") Monaco
+                        option(value="143") Mongolia
+                        option(value="144") Montserrat
+                        option(value="145") Morocco
+                        option(value="146") Mozambique
+                        option(value="147") Myanmar
+                        option(value="148") Nambia
+                        option(value="149") Nauru
+                        option(value="150") Nepal
+                        option(value="151") Netherland Antilles
+                        option(value="152") Netherlands (Holland, Europe)
+                        option(value="153") Nevis
+                        option(value="154") New Caledonia
+                        option(value="155") New Zealand
+                        option(value="156") Nicaragua
+                        option(value="157") Niger
+                        option(value="158") Nigeria
+                        option(value="159") Niue
+                        option(value="160") Norfolk Island
+                        option(value="161") Norway
+                        option(value="162") Oman
+                        option(value="163") Pakistan
+                        option(value="164") Palau Island
+                        option(value="165") Palestine
+                        option(value="166") Panama
+                        option(value="167") Papua New Guinea
+                        option(value="168") Paraguay
+                        option(value="169") Peru
+                        option(value="170") Philippines
+                        option(value="171") Pitcairn Island
+                        option(value="172") Poland
+                        option(value="173") Portugal
+                        option(value="174") Puerto Rico
+                        option(value="175") Qatar
+                        option(value="176") Republic of Montenegro
+                        option(value="177") Republic of Serbia
+                        option(value="178") Reunion
+                        option(value="179") Romania
+                        option(value="180") Russia
+                        option(value="181") Rwanda
+                        option(value="182") St Barthelemy
+                        option(value="183") St Eustatius
+                        option(value="184") St Helena
+                        option(value="185") St Kitts-Nevis
+                        option(value="186") St Lucia
+                        option(value="187") St Maarten
+                        option(value="188") St Pierre &amp; Miquelon
+                        option(value="189") St Vincent &amp; Grenadines
+                        option(value="190") Saipan
+                        option(value="191") Samoa
+                        option(value="192") Samoa American
+                        option(value="193") San Marino
+                        option(value="194") Sao Tome &amp; Principe
+                        option(value="195") Saudi Arabia
+                        option(value="196") Senegal
+                        option(value="197") Serbia
+                        option(value="198") Seychelles
+                        option(value="199") Sierra Leone
+                        option(value="200") Singapore
+                        option(value="201") Slovakia
+                        option(value="202") Slovenia
+                        option(value="203") Solomon Islands
+                        option(value="204") Somalia
+                        option(value="205") South Africa
+                        option(value="206") Spain
+                        option(value="207") Sri Lanka
+                        option(value="208") Sudan
+                        option(value="209") Suriname
+                        option(value="210") Swaziland
+                        option(value="211") Sweden
+                        option(value="212") Switzerland
+                        option(value="213") Syria
+                        option(value="214") Tahiti
+                        option(value="215") Taiwan
+                        option(value="216") Tajikistan
+                        option(value="217") Tanzania
+                        option(value="218") Thailand
+                        option(value="219") Togo
+                        option(value="220") Tokelau
+                        option(value="221") Tonga
+                        option(value="222") Trinidad &amp; Tobago
+                        option(value="223") Tunisia
+                        option(value="224") Turkey
+                        option(value="225") Turkmenistan
+                        option(value="226") Turks &amp; Caicos Is
+                        option(value="227") Tuvalu
+                        option(value="228") Uganda
+                        option(value="229") Ukraine
+                        option(value="230") United Arab Emirates
+                        option(value="231") United Kingdom
+                        option(value="232") United States of America
+                        option(value="233") Uruguay
+                        option(value="234") Uzbekistan
+                        option(value="235") Vanuatu
+                        option(value="236") Vatican City State
+                        option(value="237") Venezuela
+                        option(value="238") Vietnam
+                        option(value="239") Virgin Islands (Brit)
+                        option(value="240") Virgin Islands (USA)
+                        option(value="241") Wake Island
+                        option(value="242") Wallis &amp; Futana Is
+                        option(value="243") Yemen
+                        option(value="244") Zaire
+                        option(value="245") Zambia
+                        option(value="246") Zimbabwe
+                div(class='registerFavoriteGenreLabel registerInformationLabel') 관심분야(중복가능)
                 div(class='registerFavoriteGenreForm')
+                    input(type='checkbox' id='registerGenreCheckAll' onchange='onChangeSelectAll()')
+                    label(for='registerGenreCheckAll') 모두 선택
                     input(type='checkbox' id='registerGenreArt')
                     label(for='registerGenreArt') 미술
                     input(type='checkbox' id='registerGenreButty')
@@ -305,8 +562,10 @@ html(lang='ko')
             div(class='levelConfirmContainer')
                 span(class='levelConfirmCancleButton') 취소
                 span(class='levelConfirmSettingButton') 확인
+        div(id='paypal-container')
         script(type='text/javascript' src='/javascripts/FacebookController.js')
         script(type='text/javascript' src='/javascripts/GooglePlusController.js')
         script(src="https://apis.google.com/js/platform.js?onload=renderButton" async defer)
         script(type='text/javascript' src='/javascripts/userController.js')
         script(type='text/javascript' src='/javascripts/common.js')
+        script(type='text/javascript' src='/javascripts/paymentController.js')

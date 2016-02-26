@@ -3,6 +3,7 @@
  */
 
 $(document).ready(function () {
+    $('nav .nav_button').attr('border-type','white');
     $('.HowToContentBox').slideToggle();
     $('.brand-logo img').attr('src','/images/logo_white.png');
     $('nav').css('color', '#ffffff');
@@ -22,13 +23,14 @@ $(document).ready(function () {
             $('.indicator').css('background','rgba(242, 147, 26, 1)','!important')
             console.log($('.indecator').css('background'))
         }
-    })
+    });
     $('.tabs li a').click()
     $('.searchInputBox input').focus(function(){
         $('nav').css('box-shadow','0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)');
         $('.submitBubble').show()
         $("nav").css('background','rgba(255,255,255,1)','!important')
         $('#map').css('z-index',200);
+        $('nav .nav_button').attr('border-type','orange');
         $('.brand-logo img').attr('src','/images/logo.png');
         $('nav').css('color', '#ff9800');
         $('nav .nav_button').css({'color': '#ff9800','border':'solid 1px #ff9800'});
@@ -38,7 +40,8 @@ $(document).ready(function () {
         if($('.searchInputBox input').val()==''){
             $("nav").css('background','none','!important')
             $('#map').css('z-index',-10);
-            $('nav').css('box-shadow','none')
+            $('nav').css('box-shadow','none');
+            $('nav .nav_button').attr('border-type','white');
             $('.brand-logo img').attr('src','/images/logo_white.png');
             $('nav').css('color', '#ffffff');
             $('nav .nav_button').css({'color': '#ffffff','border':'solid 1px #ffffff'});

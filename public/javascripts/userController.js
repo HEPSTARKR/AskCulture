@@ -46,11 +46,13 @@ $(document).ready(function(){
         $('#loginDialog-wrapper').hide();
     });
     $('.registerDialogCloseButton').click(function(){
+        $('#firstRequired').prop('checked',false);
+        $('#secondRequired').prop('checked',false);
+        $('#thirdRequired').prop('checked',false);
         $('#registerTerms-wrapper').hide();
     });
     $('.registerEmailDialogCloseButton').click(function(){
-        $('#registerEmailDialog-wrapper').hide();        $('#registerTerms-wrapper').hide();
-
+        $('#registerEmailDialog-wrapper').hide();
     });
     $('.registerInformationCloseButton').click(function(){
         $('#registerInformation-wrapper').hide();
@@ -60,7 +62,7 @@ $(document).ready(function(){
     /** 다이얼로그를 닫혀진 상태로 시작하기 위한 부분 */
     $('#loginDialog-wrapper').hide();
     $('#registerTerms-wrapper').hide();
-    $('#registerTerms-wrapper').hide();
+    $('#registerEmailDialog-wrapper').hide();
     $('#registerInformation-wrapper').hide();
     /** 다이얼로그를 닫혀진 상태로 시작하기 위한 부분 */
 
@@ -85,8 +87,8 @@ $(document).ready(function(){
     /** 비밀번호 라이브 체킹 및 정규식 */
     $('.rightPassword').hide();
     $('.wrongPassword').hide();
-    $('#password').keyup(function(){
-       var password = $('#password').val();
+    $('#registerPassword').keyup(function(){
+       var password = $('#registerPassword').val();
        if(6 <= password.length && /[a-z]/.test(password) && /[0-9]/.test(password)){
            $('#checkDone').show();
            $('#checkFail').hide();
@@ -95,10 +97,10 @@ $(document).ready(function(){
            $('#checkFail').show();
        }
     });
-    $('#password').keyup();
-    $('#passwordConfirm').keyup(function(){
-        var password = $('#password').val();
-        var passwordConfirm = $('#passwordConfirm').val();
+    $('#registerPassword').keyup();
+    $('#registerPasswordConfirm').keyup(function(){
+        var password = $('#registerPassword').val();
+        var passwordConfirm = $('#registerPasswordConfirm').val();
         if(password==passwordConfirm){
             $('.rightPassword').show();
             $('.wrongPassword').hide();
@@ -141,6 +143,13 @@ $(document).ready(function(){
             }
         }
         $('.languageLevelDialog').show();
+        $('.levelCount').mouseenter();
+        var durationTooltip = 5000;
+        var tempInterval = setInterval(intervalCallback,durationTooltip);
+        function intervalCallback(){
+            $('.levelCount').mouseleave();
+            clearInterval(tempInterval);
+        }
     });
     $('.levelMinus').click(function(){ //언어레벨 인터페이스
         var level = parseInt($('.levelCount').text());
@@ -169,11 +178,138 @@ $(document).ready(function(){
     $('.levelConfirmSettingButton').click(function(){ //언어 선택 최종 적용
         var dataLevel = $('.levelCount').text();
         var dataText = languageShort[selectedLanguage]+'·'+'LV'+dataLevel;
-        $('.registerLanguageForm').prepend('<span>'+dataText+'</span>');
+        $('.registerLanguageForm').prepend('<span language-code="'+selectedLanguage+'" language-level="'+dataLevel+'">'+dataText+'</span>');
         $('.levelCount').text('1');
         SetLanguageButton();
         $('.languageLevelDialog').hide();
     });
     /** 단계별 언어능력 추가 시스템 */
 
+    /** 비로그인 상태 처리 */
+    $.post('/getuser',{},function(data){
+        console.log(data);
+    });
+    $('.signedUserContent').hide();
+    /** 비로그인 상태 처리 */
+
+    $('.nav_registerButton').click(function(){
+        $('#registerTerms-wrapper').show();
+    });
+    $('.SignUpLink').click(function(){
+        $('#loginDialog-wrapper').hide();
+        $('#registerTerms-wrapper').show();
+    });
+    $('.nav_loginButton').click(function(){
+        $('#loginDialog-wrapper').show();
+    });
+
+    /** 약관 동의 체크 및 다이얼로그 전환 처리 */
+    $('.nextRegisterStepButton').click(function(){
+        var firstTermsGate = $('#firstRequired').is(':checked');
+        var secondTermsGate = $('#secondRequired').is(':checked');
+        var result = firstTermsGate&&secondTermsGate;
+        if(!result){
+            alert('필수 약관에 동의해야 합니다.');
+            return;
+        }
+        $('#registerTerms-wrapper').hide();
+        $('#registerEmailDialog-wrapper').show();
+    });
+    /** 약관 동의 체크 및 다이얼로그 전환 처리 */
+
+    /** 애스크 컬쳐 회원가입 아이디 비밀번호 검사 및 다이얼로그 전환 처리 */
+    $('.lastRegisterStepButton').click(function(){
+        if($('#registerEmail').val()==''){
+            alert('이메일을 입력해주세요.');
+            return;
+        }
+        if($('#registerFirstName').val()==''){
+            alert('First Name을 입력해주세요.');
+            return;
+        }
+        if($('#registerLastName').val()==''){
+            alert('Last Name을 입력해주세요.');
+            return;
+        }
+        if($('#registerPassword').val()==''){
+            alert('비밀번호를 입력해주세요.');
+            return;
+        }
+        if($('#registerPasswordConfirm').val()==''){
+            alert('비밀번호 확인을 입력해주세요.');
+            return;
+        }
+        if($('#registerEmail').val().indexOf('@')==-1||$('#registerEmail').val().indexOf('.')==-1){
+            alert('이메일 형식이 옳지않습니다.');
+            return;
+        }
+        if($('#checkFail').css('display')!='none'){
+            alert('비밀번호는 반드시 숫자와 영문자를 혼합하여 6자리 이상이여야 합니다');
+            return;
+        }
+        if($('.wrongPassword').css('display')!='none'){
+            alert('비밀번호가 일치하지 않습니다.');
+            return;
+        }
+        $('#registerEmailDialog').hide();
+        $('#registerInformation-wrapper').show();
+    });
+    /** 애스크 컬쳐 회원가입 아이디 비밀번호 검사 및 다이얼로그 전환 처리 */
+
+    /** 최종 회원가입 최종 전송 */
+    $('.registerSubmitButton').click(function(){
+        var formObject = new Object();
+        formObject.noti = $('#thirdRequired').is(':checked').toString();
+        formObject.email = $('#registerEmail').val();
+        formObject.family = $('#registerLastName').val();
+        formObject.first = $('#registerFirstName').val();
+        var birthdayYear = $('#yearsDropdown').val();
+        var birthdayMonth = $('#MonthDropdown').val();
+        var birthdayDay = $('#DayDropdown').val();
+        formObject.birth = new Date(birthdayYear+'-'+birthdayMonth+'-'+birthdayDay);
+        var registerInterest = new Array();
+        var InterestArray = $('.registerFavoriteGenreForm input').toArray();
+        for(var i=1;i<InterestArray.length;i++){
+            if($(InterestArray[i]).is(':checked')){
+                registerInterest.push(i-1);
+            }
+        }
+        formObject.interest = registerInterest.join(',');
+        var registerLanguageArray = new Array();
+        var registerLanguageLevel = new Array();
+        var registerLanguageObject = $('.registerLanguageForm span').toArray();
+        for(var i=0;i<registerLanguageObject.length;i++){
+            console.log($(registerLanguageObject[i]).attr("language-code"));
+            registerLanguageArray.push(parseInt($(registerLanguageObject[i]).attr("language-code")));
+            registerLanguageLevel.push(parseInt($(registerLanguageObject[i]).attr("language-level")));
+        }
+        formObject.language=registerLanguageArray.join(',');
+        formObject.skill=registerLanguageLevel.join(',');
+        formObject.country=$('#registerStateCode').val();
+        formObject.password=$('#registerPassword').val();
+        formObject.sex=$('input[name=registerGender]:radio:checked').val();
+        $.post('/register',formObject,function(data){
+            console.log(data);
+        });
+    });
+    /** 최종 회원가입 최종 전송 */
+
+    $('.loginSubmitButton').click(function(){
+        var loginFormEmail = $('#loginFormEmail').val();
+        var loginFormPasswork = $('#loginFormPassword').val();
+        var loginFormObject = new Object();
+        loginFormObject.email = loginFormEmail;
+        loginFormObject.password = loginFormPasswork;
+        $.post('/login',loginFormObject,function(data){
+            if(data!='good'){
+                alert(data);
+            }
+        });
+    });
 });
+/** 관심분야 모두 선택 처리 */
+function onChangeSelectAll(){
+    var booleanSelectAll = $('#registerGenreCheckAll').is(':checked');
+    $('.registerFavoriteGenreForm input').prop('checked', booleanSelectAll);
+}
+/** 관심분야 모두 선택 처리 */
