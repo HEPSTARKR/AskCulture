@@ -1,0 +1,110 @@
+//
+   Created by Sunrin on 2016. 1. 7..
+
+extends CommonLayout
+block CustomHead
+    link(rel='stylesheet' type='text/css' href='/stylesheets/Ask.css' )
+block content
+    div(class='HeaderCoverBox')
+        div(class='CoverContentBox')
+            div(class='ProfileBox circle')
+            p(class='ProfileName') Espressoapsdasd
+            div
+                img(class='dropdown-button btn' href='#' data-activates='CoverBackgroundDropdown' src='/images/CoverChangeButton.png')
+                ul(id='CoverBackgroundDropdown' class='dropdown-content')
+                    li
+                        a(href='#!') 커버 사진 업데이트
+                    li(class='divider')
+                    li
+                        a(href='#!') 커버 사진 삭제
+    div(class='row')
+        div(class='col s12 l12 m12 tabBox')
+            ul(class='tabs')
+                li(class='tab col s4 m4 l4')
+                    a(href='#profileTab' class='active')
+                        img(src='/images/ic_formTab1.png' height='50%')
+                        span Profile
+                li(class='tab col s4 m4 l4')
+                    a(href='#SuggestTab')
+                        img(src='/images/ic_formTab2.png' height='50%')
+                        span Suggest
+                li(class='tab col s4 m4 l4')
+                    a(href='#ChecklistTab')
+                        img(src='/images/ic_formTab3.png' height='50%')
+                        span Checklist
+        div(id='profileTab' class='openTab')
+            div(class='PostUserStatus')
+                p(class='PostUserName') Espressoapsdasd
+                p(class='PostUserPlace') Queens, New York, USA
+            div(class='profileIntroduce')
+                div(class='Gender')
+                    i(class='material-icons') face
+                    span 성별/나이
+                div(class='Place')
+                    i(class='material-icons') location_on
+                    span 주요활동지역
+                div(class='Language')
+                    i(class='material-icons') language
+                    span 사용가능언어
+                div(class='Interest')
+                    i(class='material-icons') favorite_border
+                    span 관심분야
+                div(class='Hobby')
+                    i(class='material-icons') bookmark
+                    span 취미
+            div(class='profileIntroduceContent')
+                div(class='GenderContent contentProfileLinear')
+                    span 16(여)
+                div(class='PlaceContent contentProfileLinear')
+                    span 영국
+                div(class='LanguageContent contentProfileLinear')
+                    span KOR
+                    span ENG
+                    span JPN
+                    span +
+                div(class='InterestContent contentProfileLinear')
+                    span 요리, 문화, 예절
+                div(class='HobbyContent contentProfileLinear')
+                    span 운동, 노래
+            div(class='linearContent simpleIntroduce')
+                div
+                    i(class='material-icons') mode_edit
+                    span 한줄소개
+                p 한식이라면 자신있어요! 김치찌개, 삼겹살, 닭볶음탕! Ask만 하세요! 저랑 함께 만들어봐요!^^
+            div(class='profileIntroduce')
+                div(class='Visited')
+                    i(class='material-icons') check
+                    span 방문했던 나라
+                div(class='Wanted')
+                    i(class='material-icons') touch_app
+                    span 방문희망 나라
+            div(class='profileIntroduceContent')
+                div(class='contentProfileLinear VisitedContent')
+                    span 일본, 중국, 한국, 모로코, 인도
+                div(class='contentProfileLinear WantedContent')
+                    span 러시아, 영국
+            div(id='profileMap')
+        div(id='SuggestTab' class='openTab')
+            div(class='linearContent TitleLinear')
+                i(class='material-icons') description
+                span(class='SuggestTabHead') 제목
+                input(type='text' class='TitleInput')
+            div(class='PostTextLinear')
+                span(class='PostTextHead') 내용
+                textarea(class='PostTextLinearInput')
+            div(class='SuggestImage')
+                input(type='file' multiple accept='image/*' onchange='OnChangeImages(event)')
+                div(class='navImgBefore')
+                    span(class='material-icons navImgBefore') navigate_before
+                div(class='navImgNext')
+                    span(class='material-icons navImgNext') navigate_next
+                img(src='/images/tempSuggestImage.png' height='100%')
+            div(class='ImageNavBar')
+                div(class='ImagePreView' onclick='OnIndexClicked(0)')
+                div(class='ImagePreView' onclick='OnIndexClicked(1)')
+                div(class='ImagePreView' onclick='OnIndexClicked(2)')
+                div(class='ImagePreView' onclick='OnIndexClicked(3)')
+                div(class='ImagePreView' onclick='OnIndexClicked(4)')
+    script(type='text/javascript' async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCJHwCqCkJ7C9_ecZihe0qmiKoHF4LrY&libraries=places&callback=initMap&language=En&region=En")
+    script(type='text/javascript' src='/javascripts/mypage.js')
+    script(type='text/javascript' src='/javascripts/Ask.js')

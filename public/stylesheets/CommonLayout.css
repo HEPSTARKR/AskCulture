@@ -1,0 +1,369 @@
+@font-face {
+    src: url(../font/NanumGothic-Regular.ttf);
+    font-family: 'Nanum Gothic';
+}
+@font-face {
+    src: url(../font/NanumGothic-ExtraBold.ttf);
+    font-family: 'Nanum Gothic-Bold';
+}
+@font-face {
+    src: url(../font/Raleway-Bold.ttf);
+    font-family: 'Raleway-Bold';
+}
+@font-face {
+    src: url(../font/Raleway-Regular.ttf);
+    font-family: 'Raleway-Regular';
+}
+@font-face {
+    src: url(../font/Raleway-Thin.ttf);
+    font-family: 'Raleway-Thin';
+}
+@font-face{
+    src: url(../font/NotoSansCJKkr-Black.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Black';
+}
+@font-face {
+    src: url(../font/NotoSansCJKkr-Bold.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Bold';
+}
+@font-face {
+    src: url(../font/NotoSansCJKkr-DemiLight.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans DemiLight';
+}
+@font-face {
+    src: url(../font/NotoSansCJKkr-Light.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Light';
+}
+@font-face {
+    src: url(../font/NotoSansCJKkr-Medium.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Medium';
+}
+@font-face {
+    src: url(../font/NotoSansCJKkr-Regular.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Regular';
+}
+@font-face {
+    src: url(../font/NotoSansCJKkr-Thin.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Thin';
+}
+@font-face {
+    src: url(../font/NotoSansMonoCJKkr-Bold.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Mono Bold';
+}
+@font-face {
+    src: url(../font/NotoSansMonoCJKkr-Regular.otf#iefix) format('embedded-opentype');
+    font-family: 'Noto Sans Mono Regular';
+}
+body{
+    font-family: 'Noto Sans Regular', 'Nanum Gothic', 'Raleway-Regular', sans-serif;
+}
+nav{
+    z-index: 999;
+    color: #ff9800;
+}
+.nav_name{
+    width: 150px;
+    height: 46px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+nav .nav_button{
+    border-radius: 0.2vw !important;
+    border: solid 1px #ff9800;
+    color: #ff9800;
+    background: none;
+    box-shadow: none !important;
+    padding: 0 13px;
+    font-family: 'Noto Sans Regular' ,'Nanum Gothic', 'Roboto', sans-serif;
+}
+nav .nav_button:hover{
+    background: rgba(255,255,255,0.5);
+}
+.profileImage{
+    border-radius: 100%;
+}
+.brand-logo{
+    height: 40px;
+    margin-top: 12px;
+}
+@media screen and (orientation: landscape) {
+    .brand-logo{
+        margin-left: 15px;
+    }
+
+}
+.profileImage{
+    margin-top: 10px;
+    height: 44px;
+    width: 44px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+nav li{
+    margin: 0 8px;
+}
+nav{
+    background: rgba(255,255,255,1);
+    position: absolute;
+}
+.side-nav .profileImage{
+    display: inline-block;
+    vertical-align: middle;
+}
+.side-nav .profileImage + div{
+    display: inline-block;
+    line-height: 44px;
+    vertical-align: middle;
+    padding-left: 10px;
+    margin-top: 6px;
+}
+.brand-logo + ul{
+    margin-left: 120px;
+}
+.brand-logo + ul input{
+    width: 20vw;
+    border: solid 1px #ff9800 !important;
+    height: 33px !important;
+    padding-left: 12px !important;
+    border-radius: 0.2vw !important;
+}
+.brand-logo + ul input:focus{
+    box-shadow: none !important;
+}
+.side-nav{
+    color: #ff9800 !important;
+    border: none !important;
+}
+.brand-logo + ul i{
+    border-radius: 0.2vw;
+    border: 1px solid #ff9800;
+    height: 35px;
+    width: 35px;
+    margin-top: 14px;
+    line-height: 35px;
+    margin-left: -10px;
+}
+nav .material-icons{
+    color: #ff9800;
+    margin-left: 10px;
+}
+nav li a{
+    padding: 0px !important;
+}
+.hide-on-med-and-down li:hover{
+    background: none !important;
+}
+.contentBox{
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+.contentBox .col{
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.backgroundDialog-wrapper{
+    position: fixed;
+    z-index: 999;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+#loginDialog, #registerTermDialog{
+    background: white;
+    width: 412px;
+    padding: 14px;
+    margin: auto;
+}
+#loginDialog{
+    margin-top: calc(50vh - 185px);
+}
+#registerTermDialog{
+    margin-top: calc(50vh - 300px);
+}
+.loginHead, .registerHead{
+    padding-top: 2px;
+    border-top: 5px solid #ff9800;
+    font-family: 'Noto Sans Bold', 'Nanum Gothic-Bold', 'Raleway-Bold', sans-serif;
+    font-size: 1.3em;
+}
+.dialogHeader i{
+    float: right;
+}
+.dialogHeader i:hover{
+    cursor: pointer;
+}
+
+.fb_iframe_widget iframe{
+    opacity: 0;
+    width: 384px !important;
+    height: 40px !important;
+}
+iframe ._51mz, ._4z_b{
+    width: 384px !important;
+}
+.facebookLogin {
+    width: 384px;
+    height: 40px;
+    background-size: 100% 100%;
+    background-image: url(/images/facebookButton.png);
+    background-repeat: no-repeat;
+}
+#googlePlusLoginButton div{
+    box-shadow: none !important;
+}
+.facebookLogin, .googlePlusLogin{
+    margin: 10px 0;
+}
+.loginDivider span:before, .loginDivider span:after{
+    height: 1px;
+    margin-top: 5px;
+    width: 170px;
+    content: "";
+    position: absolute;
+    background: #8e8e8e;
+    vertical-align: middle;
+}
+.loginDivider span{
+    display: inline-block;
+    position: relative;
+}
+.loginDivider{
+    line-height: 0.5;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.loginDivider span:before{
+    right: 100%;
+    margin-right: 15px;
+}
+.loginDivider span:after{
+    left: 100%;
+    margin-left: 15px;
+}
+#loginDialog input[type=email],#loginDialog input[type=password]{
+    border: 1px solid black;
+    padding: 0 10px;
+    width: calc(100% - 20px);
+    background: white;
+    margin: 5px 0;
+}
+#loginDialog input[type=email]:focus, #loginDialog input[type=password]:focus{
+    box-shadow: none;
+}
+.loginSubmitButton{
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+}
+.goSignUp{
+    text-align: center;
+}
+.loginCheckBoxContainer label{
+    margin-right: 15px;
+}
+.SignUpLink{
+    color: #ff9800;
+}
+.moreLink-List .moreLink-Item{
+    display: inline;
+}
+.moreLink-List .moreLink-Item img{
+    width: 2em;
+    height: 2em;
+}
+.moreLink-List .moreLink-Item a{
+    width: 4em;
+    display: inline-block;
+    height: 4em;
+    padding: 1em;
+    border-radius: 100%;
+    border: solid white 1px;
+}
+.moreLink-List .moreLink-Item a:hover{
+    border: solid #ff9800 1px;
+}
+.moreLink-Item{
+    margin: 0 15px;
+}
+.moreLink-List{
+    margin: auto;
+}
+.introduceLink-Item{
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+}
+footer{
+    background: url(/images/footer_background.png) left no-repeat;
+    background-size: cover;
+    color: white;
+}
+.introduceLink-Item a{
+    color: white;
+}
+.introduceLink-Item a:hover{
+    color: #ff9800;
+}
+footer .dropdown-button{
+    background: rgba(255,255,255,0.4);
+    color: white;
+    text-align: left;
+    width: 200px;
+    margin: 5px 0;
+    box-shadow: none;
+}
+footer .dropdown-button:hover{
+    background: rgba(255,152,0,0.4);
+}
+.footer-context p{
+    margin: 0;
+    font-size: 0.5em;
+    text-align: center;
+}
+.footer-copyright .container{
+    border-top: 1px solid white;
+    text-align: center;
+    font-size: 2em;
+}
+.footer-context{
+    padding: 2% 0;
+}
+.termsContainer p{
+    margin: 0;
+}
+.termsContainer{
+    margin: 10px 0;
+}
+.termsBox p{
+    word-break: break-all;
+    width: 100%;
+}
+.termsBox{
+    border: solid #8e8e8e 1px;
+    background: #e8e8e8;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 10px 0;
+    height: 50px;
+}
+.nextRegisterStepButton{
+    border: solid #ff9800 1px;
+    text-align: center;
+    color: #ff9800;
+    padding: 1%;
+    font-family: 'Noto Sans Regular' , 'Nanum Gothic', 'Roboto', sans-serif;
+    font-size: 1.3em;
+    transition: 0.3s;
+}
+.nextRegisterStepButton:hover{
+    cursor: pointer;
+    background: #ff9800;
+    color: white;
+}

@@ -1,0 +1,94 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'flipsnap',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.21
+3 info using node@v0.10.25
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'flipsnap', null ]
+6 verbose cache add name=undefined spec="flipsnap" args=["flipsnap",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'flipsnap',
+7 verbose parsed url   path: 'flipsnap',
+7 verbose parsed url   href: 'flipsnap' }
+8 silly lockFile 6842892a-flipsnap flipsnap
+9 verbose lock flipsnap /home/hepstarkr/.npm/6842892a-flipsnap.lock
+10 silly lockFile 6842892a-flipsnap flipsnap
+11 silly lockFile 6842892a-flipsnap flipsnap
+12 verbose addNamed [ 'flipsnap', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 4cb189ee-flipsnap flipsnap@
+15 verbose lock flipsnap@ /home/hepstarkr/.npm/4cb189ee-flipsnap.lock
+16 silly addNameRange { name: 'flipsnap', range: '*', hasData: false }
+17 verbose request where is /flipsnap
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 80a9c27a6a667510
+20 verbose url raw /flipsnap
+21 verbose url resolving [ 'https://registry.npmjs.org/', './flipsnap' ]
+22 verbose url resolved https://registry.npmjs.org/flipsnap
+23 verbose request where is https://registry.npmjs.org/flipsnap
+24 info trying registry request attempt 1 at 22:03:55
+25 http GET https://registry.npmjs.org/flipsnap
+26 http 200 https://registry.npmjs.org/flipsnap
+27 silly registry.get cb [ 200,
+27 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 silly registry.get     etag: '"6IX5EEM1Q2YJQYM84QEP5GB8Y"',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=300',
+27 silly registry.get     'content-length': '2910',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     date: 'Wed, 24 Feb 2016 13:03:56 GMT',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     connection: 'keep-alive',
+27 silly registry.get     'x-served-by': 'cache-nrt6122-NRT',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1456319035.843591,VS0,VE783',
+27 silly registry.get     vary: 'Accept' } ]
+28 silly addNameRange number 2 { name: 'flipsnap', range: '*', hasData: true }
+29 silly addNameRange versions [ 'flipsnap', [ '0.6.2', '0.6.3' ] ]
+30 verbose addNamed [ 'flipsnap', '0.6.3' ]
+31 verbose addNamed [ '0.6.3', '0.6.3' ]
+32 silly lockFile d5f33702-flipsnap-0-6-3 flipsnap@0.6.3
+33 verbose lock flipsnap@0.6.3 /home/hepstarkr/.npm/d5f33702-flipsnap-0-6-3.lock
+34 silly lockFile 2c7efdc8--org-flipsnap-flipsnap-0-6-3-tgz https://registry.npmjs.org/flipsnap/-/flipsnap-0.6.3.tgz
+35 verbose lock https://registry.npmjs.org/flipsnap/-/flipsnap-0.6.3.tgz /home/hepstarkr/.npm/2c7efdc8--org-flipsnap-flipsnap-0-6-3-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/flipsnap/-/flipsnap-0.6.3.tgz',
+36 verbose addRemoteTarball   '54b2603eb11d054333e0c1afb9f173d78bada11a' ]
+37 info retry fetch attempt 1 at 22:03:56
+38 verbose fetch to= /tmp/npm-22389-DUE0nV6M/registry.npmjs.org/flipsnap/-/flipsnap-0.6.3.tgz
+39 http GET https://registry.npmjs.org/flipsnap/-/flipsnap-0.6.3.tgz
+40 http 400 https://registry.npmjs.org/flipsnap/-/flipsnap-0.6.3.tgz
+41 error fetch failed https://registry.npmjs.org/flipsnap/-/flipsnap-0.6.3.tgz
+42 silly lockFile 2c7efdc8--org-flipsnap-flipsnap-0-6-3-tgz https://registry.npmjs.org/flipsnap/-/flipsnap-0.6.3.tgz
+43 silly lockFile 2c7efdc8--org-flipsnap-flipsnap-0-6-3-tgz https://registry.npmjs.org/flipsnap/-/flipsnap-0.6.3.tgz
+44 silly lockFile d5f33702-flipsnap-0-6-3 flipsnap@0.6.3
+45 silly lockFile d5f33702-flipsnap-0-6-3 flipsnap@0.6.3
+46 silly lockFile 4cb189ee-flipsnap flipsnap@
+47 silly lockFile 4cb189ee-flipsnap flipsnap@
+48 error Error: 400 Bad Request
+48 error     at WriteStream.<anonymous> (/usr/share/npm/lib/utils/fetch.js:58:12)
+48 error     at WriteStream.EventEmitter.emit (events.js:117:20)
+48 error     at evalmachine.<anonymous>:1601:14
+48 error     at /usr/lib/nodejs/graceful-fs/graceful-fs.js:102:5
+48 error     at Object.oncomplete (evalmachine.<anonymous>:107:15)
+49 error If you need help, you may report this *entire* log,
+49 error including the npm and node versions, at:
+49 error     <http://github.com/npm/npm/issues>
+50 error System Linux 4.2.0-27-generic
+51 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "flipsnap" "--save"
+52 error cwd /home/hepstarkr/clone/tmp/AskCulture-Astora
+53 error node -v v0.10.25
+54 error npm -v 1.4.21
+55 verbose exit [ 1, true ]

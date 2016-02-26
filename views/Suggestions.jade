@@ -1,0 +1,369 @@
+//
+   Created by Sunrin on 2015. 12. 28..
+extends CommonLayout
+block CustomHead
+    link(rel='stylesheet' type='text/css' href='/stylesheets/Suggestions.css')
+    link(rel='stylesheet' type='text/css' href='/stylesheets/nouislider.css')
+    link(rel='stylesheet' type='text/css' href='/stylesheets/jquery-ui.min.css')
+block content
+    div(id='map')
+    form(method='post' action='#')
+        div(class='searchPlace')
+            div(class='searchInputBox')
+                i(class="large material-icons") search
+                input(type='text' name='place' id='autocomplete' onfocus='geolocate()' placeholder='어디로 여행을 떠나세요?')
+            input(type='hidden' id='realValue' name='realPlace' value='')
+        div(class='row')
+            div(class='col s10 m8 l10')
+                div(class='inputForm')
+                    div(class='inputList')
+                        span(class='inputLabel dateLabel') 날짜
+                        input(type='text' id='selectDateCalendarPicker' class='inputFilterLinear' placeholder='희망 날짜를 클릭하세요.')
+                    div(class='inputList')
+                        span(class='inputLabel categoryLabel') 분야
+                        div(class='categoryCheckboxList')
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='sports')
+                                label(for='sports') 스포츠
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='art')
+                                label(for='art') 예술
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='pashion')
+                                label(for='pashion') 패션
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='beauty')
+                                label(for='beauty') 미용
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='entertainment')
+                                label(for='entertainment') 엔터테이먼트
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='tradition')
+                                label(for='tradition') 전통문화
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='education')
+                                label(for='education') 교육
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='experience')
+                                label(for='experience') 체험
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='cooking')
+                                label(for='cooking') 요리
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='history')
+                                label(for='history') 역사
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='shopping')
+                                label(for='shopping') 쇼핑
+                        i(class='material-icons categoryFolderButton') arrow_drop_down
+                    div(class='inputList')
+                        span(class='inputLabel languageLabel') 언어
+                        div(class='languageCheckboxList')
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='KOR')
+                                label(for='KOR') 한국어
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='ENG')
+                                label(for='ENG') English
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='JAP')
+                                label(for='JAP') 日本語
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='CHI')
+                                label(for='CHI') 中文 
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='ESP')
+                                label(for='ESP') Español
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='CAT')
+                                label(for='CAT') català
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='ARA')
+                                label(for='ARA') اللغة العربية الفصحى
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='RUS')
+                                label(for='RUS') Русский язык
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='DUT')
+                                label(for='DUT') Dutch
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='FRA')
+                                label(for='FRA') français
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='DEU')
+                                label(for='DEU') Deutsch
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='CZE')
+                                label(for='CZE') čeština
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='SVE')
+                                label(for='SVE') Svenska
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='FIN')
+                                label(for='FIN') suomi
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='TUR')
+                                label(for='TUR') Türkçe
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='POR')
+                                label(for='POR') português
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='POL')
+                                label(for='POL') Polski
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='ITA')
+                                label(for='ITA') Italiano
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='DAN')
+                                label(for='DAN') dansk
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='NOR')
+                                label(for='NOR') norsk
+                            div(class='CheckBoxContainer')
+                                input(type='checkbox' id='IND')
+                                label(for='IND') Bahasa Indonesia
+                        i(class='material-icons languageFolderButton') arrow_drop_down
+                    div(class='inputList')
+                        span(class='inputLabel costLabel') 가치
+                        div(id='CostSlider')
+                    div(class='flipFilter')
+                        div(class='inputList')
+                            span(class='inputLabel humanLabel') 인원
+                            select
+                                option 상관없음
+                                option 1명
+                                option 2명
+                                option 3명 이상
+                        div(class='inputList')
+                            span(class='inputLabel combineLabel') 조합
+                            select
+                                option 상관없음
+                                option 싱글
+                                option 커플
+                                option 가족
+                                option 친구
+                        div(class='inputList')
+                            span(class='inputLabel timeLabel') 소요시간
+                            select
+                                option 상관없음
+                                option 1시간 이하
+                                option 1시간~2시간
+                                option 2시간~3시간
+                                option 3시간~4시간
+                                option 4시간~5시간
+                                option 5시간 이상
+                        div(class='inputList')
+                            span(class='inputLabel genderLabel') 희망성별
+                            select
+                                option 상관없음
+                                option 동성만
+                        div(class='inputList')
+                            span(class='inputLabel pickupLabel') 공항픽업
+                            select
+                                option 상관없음
+                                option 있음
+                                option 없음
+                        div(class='inputList')
+                            span(class='inputLabel pickupLabel') 이동수단
+                            select
+                                option 상관없음
+                                option 대중교통
+                                option 도보
+                                option 자가용
+                        div(class='inputList')
+                            span(class='inputLabel pickupLabel') 내/외국인
+                            select
+                                option 상관없음
+                                option 내국인
+                                option 외국인
+                    div(class='inputList')
+                        a(class='btn filterFlipButton') 필터축소
+                div(class='listFilter')
+                    ul
+                        li(class='selectFilter') 평점순
+                        li 신상순
+                        li 가치순
+                        li 후기순
+                div(class='ResultContentBox')
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempCardImage.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p Seoul 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempChina.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile2.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p China 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempTurkey.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile3.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p Turkey 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempTokyo.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile4.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p 東京 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempNewyork.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile5.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p Newyork 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempLondon.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile6.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p London 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempCardImage.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p Seoul 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempChina.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile2.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p China 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempTurkey.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile3.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p Turkey 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempTokyo.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile4.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p 東京 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempNewyork.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile5.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p Newyork 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempLondon.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile6.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p London 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempCardImage.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p Seoul 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempChina.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile2.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p China 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempTurkey.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile3.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p Turkey 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempTokyo.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile4.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p 東京 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempNewyork.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile5.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p Newyork 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempLondon.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile6.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p London 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempCardImage.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p Seoul 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempChina.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile2.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p China 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempTurkey.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile3.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p Turkey 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempTokyo.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile4.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p 東京 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempNewyork.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile5.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p Newyork 
+                                i(class="material-icons") more_vert
+                    div(class='card')
+                        div(class='card-image')
+                            img(src='/images/tempLondon.jpg' height='100%')
+                            div(style='background:url(/images/tempProfile6.jpg)' class='card-title circle-clipper')
+                        div(class='card-content')
+                            p London 
+                                i(class="material-icons") more_vert
+            div(class='col s2 m4 l2')
+                p(class='SuggestButtonSubtitle orange-text') 함께하고 싶은 문화를<br>직접 제안해보세요.
+                div(class='btn SuggestButton orange') Suggest
+                div(class='recommendContainer')
+                    i(class='medium material-icons') info
+                    div(class='infoContent') 방문자와 함께 할 문화가<br>생각나지 않는다면<br>AskCulture가 도와드립니다.
+    script(type='text/javascript' src='/javascripts/jquery-ui.min.js')
+    script(type='text/javascript' src='/javascripts/jquery-ui.multidatespicker.js')
+    script(type='text/javascript' src='/javascripts/nouislider.js')
+    script(type='text/javascript' src='/javascripts/autoComplete.js')
+    script(type="text/javascript" src='/javascripts/initMap.js')
+    script(type='text/javascript' src='/javascripts/Suggestions.js')
+    //script(src='/javascripts/initSingleCalendar.js' type='text/javascript')
+    script(type='text/javascript' async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCJHwCqCkJ7C9_ecZihe0qmiKoHF4LrY&libraries=places&callback=initMap&language=En&region=En")

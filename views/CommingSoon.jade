@@ -1,0 +1,55 @@
+doctype html
+html(lang='ko')
+	head
+		meta(charset='utf-8')
+		title CommingSoon
+		script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
+		link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+		link(href='/stylesheets/materialize.css' media='screen,projection' type='text/css' rel='stylesheet')
+		link(href='/stylesheets/materialize.min.css' media='screen,projection' type='text/css' rel='stylesheet')
+		link(href='/stylesheets/CommingSoonPage.css' type='text/css' rel='stylesheet')
+		script(type="text/javascript" src="/javascripts/materialize.min.js")
+		script(type='text/javascript' src='/javascripts/materialize.js')
+	body
+		div(class='BackgroundFilter')
+			img(src='/images/logo_white.png' width='100px' class='logo_white')
+			div(class='ContentContainer')
+				img(src='/images/CommingsoonLogo.png' width='100%')
+				div(class='CommingSoonMent')
+					p(class='OpenMent') Web Page Open
+					p(class='OpenDates') 2016.03.01
+				div(class='RegisterButton') 웹 오픈 알림 이벤트
+				div(class='AbsoluteFooter') www.AskCulture.com
+			div(class='DialogIntroduce')
+				i(class='material-icons small dialogCloseButton') close
+				div(class='DialogTitle')
+					span 웹 오픈 알림 이벤트
+				div(class='DialogContent')
+					p(class='DialogIntroduceMent') AskCulture에 <span class='accentOrange'>우선 등록</span>하신 분들에게 웹 오픈 알림 메세지와 함께 다양한 <span class='accentOrange'>무료 혜택</span>을 선사합니다!
+					div(class='IntroduceList')
+						div(class='listBox')
+							p(class='listHeader') <span>■</span> 문화 추천 서비스
+							p(class='listContent') "문화 공유 서비스에 참여하고 싶지만 무엇을 해야할 지 모르겠어요."<br>라고 생각하는 분들에게 '연령대', '성별', '외국어 활용도', '취미', '관심사'에 따라 외국인들과 교류할 수 있는 문화와 일정을 추천해드립니다!
+					div(class='IntroduceList')
+						div(class='listBox')
+							p(class='listHeader') <span>■</span> 번역 서비스
+							p(class='listContent') "외국인 친구를 사귀고, 문화를 공유하고 싶지만 외국어에는 자신이 없어요!"<br>라는 분들을 위하여 AskCulture가 직접 번역 서비스를 제공해드립니다!<br><span class='smallize'> ※ 1인당 5회에 한하여 번역서비스를 제공합니다. </span>
+					div(class='IntroduceList')
+						div(class='listBox')
+							p(class='listHeader') <span>■</span> 스냅샷 서비스
+							p(class='listContent') "외국인과 함께 문화를 공유하고, 그 추억을 멋진 사진으로 간직하고 싶어요!"<br>AskCulture의 전문 사진작가가 찾아가 평생 잊지 못 할 추억을 사진과 영상으로 담아드립니다!<br><span class='smallize'>※ 6월 30일 이전에 한국에서 매칭되는 '한국 문화 공유 서비스'에 한합니다.</span><br><br>
+					input(type='checkbox' required name='Agree' id='AgreeCheckbox')
+					label(for='AgreeCheckbox') AskCulture e-mail 및 뉴스레터 수신에 동의합니다.
+					div(class='SignUpButton') 
+						input(type='email' id='emailInput' required name='email' placeholder='이메일을 입력해주세요.')
+						input(type='submit' value='등록하기')
+				p(id='footerMessage') ※ e-mail을 등록하시면 홈페이지 오픈 날 알림 이메일이 발송됩니다.
+		script(text='text/javscript' src='/javascripts/CommingSoonPage.js')
+		div(class='markContent')
+			script function onPopKBAuthMark(){window.open(",KB_AUTHMARK",'height=604, width=648,status=yes,toolbar=no,menubar=no,location=no');document.KB_AUTHMARK_FORM.action="https://okbfex.kbstar.com/quics';document.KB_AUTHMARK_FORM.target='KB_AUTHMARK';document.KB_AUTHMARK_FORM.submit();}
+			form(name="KB_AUTHMARK_FORM" method="get")
+				input(type="hidden" name="page" value="C021590")
+				input(type="hidden" name="cc" value="b034066:b035526")
+				input(type="hidden" name="mHValue" value="9679d7c467996a928fddbbea54da00fb201602031757779")
+			a(href="#" onclick="javascript:onPopKBAuthMark();return false;")
+				img(src="http://img1.kbstar.com/img/escrow/escrowcmark.gif" border="0")

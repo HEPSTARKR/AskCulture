@@ -1,0 +1,436 @@
+.HeaderCoverBox{
+    width: 100%;
+    background: url(/images/DefaultCover.png);
+    background-size: cover;
+    background-position: center center;
+    height: 60vh;
+}
+.CheckHeaderLinear span{
+    color: #b4b4b4;
+    margin: 0 5px;
+    width: 30px;
+}
+.CheckListFormData{
+    margin-left: 15px;
+    display: inline-block;
+    width: 70%;
+}
+.CheckListFormHeaders{
+    width: 100px;
+    display: inline-block;
+    border-right: 1px solid #b4b4b4;
+}
+.CheckListInputForm .TitleLinear:nth-child(odd){
+    border: none;
+}
+.CheckListFormData input, .CheckListFormData .select-wrapper{
+    margin: 0 !important;
+    height: 20px !important;
+    font-size: 8px !important;
+    line-height: 20px !important;
+}
+.caret{
+    visibility: hidden;
+}
+.CheckHeaderLinear img{
+    vertical-align: middle;
+}
+.linearContent p span{
+    margin: 0 5px;
+    padding: 3px;
+    font-size: 1vw;
+    padding: 0 5px;
+    color: white;
+    display: inline-block;
+    border-radius: 1vw;
+    background: #ff9800;
+}
+
+.linearContent p span:last-child{
+    font-size: 1vw;
+    width: 1.4vw;
+    height: 1.4vw;
+    padding: 0 !important;
+    cursor: pointer;
+    background: none;
+    color: #ff9800;
+    line-height: 1.4vw;
+    border: 1px solid #ff9800;
+    border-radius: 100%;
+    vertical-align: middle;
+    transition: 0.5s;
+}
+.linearContent p span:last-child:hover{
+    background: #ff9800;
+    color: white;
+}
+.HeaderCoverBox .CoverContentBox .dropdown-button.btn{
+    background: none !important;
+    border-radius: 0 !important;
+    margin: 15px;
+    box-shadow: none !important;
+    padding:0pt 7pt;
+    float: left;
+    position: absolute;
+    bottom : 41vh;
+    left: 15px;
+    opacity: 0.5;
+    font-size : 14pt;
+    font-weight: bold;
+}
+.HeaderCoverBox .CoverContentBox .dropdown-button.btn:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+.openTab{
+    padding-top: 5%;
+}
+.CoverContentBox{
+    width: 100%;
+    padding-top: 10%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+.PostUserStatus{
+    color: #646464;
+    padding: 15px;
+    font-size: 1vw;
+    border-bottom: 1px solid #646464;
+    margin: 25px 0;
+}
+.PostUserStatus p:first-child{
+    font-size: 2vw;
+}
+.linearContent img{
+     vertical-align: middle;
+}
+.linearContent .linearHead{
+    color: #646464;
+    margin: 0 15px;
+    width: 20%;
+    display: inline-block;
+    border-right: 1px solid #646464;
+    font-weight: bold;
+}
+.simpleIntroduce i{
+    color: #ff9800;
+    vertical-align: middle;
+}
+.simpleIntroduce span{
+    color: #ff9800;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.simpleIntroduce{
+    border : 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+}
+.simpleIntroduce p:before{
+    content: "\" ";
+}
+.simpleIntroduce p:after{
+    content: " \"";
+}
+.simpleIntroduce p{
+    display: block !important;
+    text-align: center;
+    margin: 10px auto;
+}
+.linearContent p{
+    display: inline-block;
+    text-align: center;
+}
+#profileMap{
+    width: 100%;
+    border: solid 1px #e0e0e0;
+    border-radius: 4px;
+    height: 300px;
+}
+.PostUserStatus p{
+    margin: 0;
+}
+.openTab{
+    width: 60%;
+    margin-left: 20%;
+    padding-top: 100px;
+}
+.dropdown-content{
+    width: 200px !important;
+}
+.TitleLinear i{
+    vertical-align: middle;
+}
+.indicator{
+    height: 5px !important;
+    background: #636363 !important;
+}
+.ProfileName{
+    text-align: center;
+    color: #dcdcdc;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 17pt;
+    font-family: 'Raleway-Regular';
+}
+.ProfileBox.circle:hover{
+    border-radius: 0 !important;
+}
+.ProfileBox.circle video{
+    opacity: 0;
+    transition: 0.2s;
+}
+.ProfileBox.circle video:hover{
+    opacity: 1;
+}
+.ProfileBox.circle{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin: auto;
+    transition: 0.2s;
+    border-radius: 100%;
+    background: url(/images/tempProfile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: solid 8px white;;
+}
+.tab a span{
+    color: #b4b4b4 !important;
+}
+.disabled a span{
+    color: #ebebeb !important;
+}
+.disabled a img{
+    opacity: 0.3;
+}
+.tab a img{
+    vertical-align: middle;
+    margin: 10px
+}
+.tabBox{
+    padding: 0 !important;
+}
+.tabs .tab a{
+    margin-top: 10px;
+}
+.tabs{
+    height: 68px !important;
+}
+.SuggestImage{
+    margin-top: 5%;
+    background: black;
+    width: 100%;
+    overflow: hidden;
+    height:35vw;
+    border: solid 1px #e6e6e6
+}
+.SuggestImage img{
+    margin: auto;
+    display: block;
+}
+.SuggestImage i{
+    display: inline-block;
+    line-height: 350px;
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+    font-size: 55pt !important;
+    height: 100%;
+    float: left;
+}
+.SuggestImage i:last-child{
+    float: right;
+}
+.navIndex{
+    margin: auto;
+    position: relative;
+    width: 120px;
+    display: inline-block;
+    top: 320px;
+    left: 30%;
+}
+.TitleLinear i, .TitleLinear span{
+    position: absolute;
+}
+.TitleLinear span{
+    margin-left: 30px;
+}
+.TitleInput{
+    border: 1px solid #e0e0e0 !important;
+    display: inline-block !important;
+    border-radius: 5px !important;
+    width: calc(100% - 100px) !important;
+    padding-left : 20px !important;
+    margin-left: 80px !important;
+    height: 25px !important;
+}
+.TitleInput:focus{
+    box-shadow: none !important;
+}
+.TitleLinear{
+    margin: 30px 0;
+    border: 1px solid #e0e0e0;
+    border-right: none;
+    padding-top: 15px;
+    border-left: none;
+}
+.SuggestImage i:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.indexCircle{
+    width: 15px;
+    margin: 3px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: bottom;
+    background: white;
+    border-radius: 100%;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.indexCircle:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.SuggestTabHead{
+    margin: 0 10px;
+}
+.PostTextHead{
+    margin-left: 30px;
+    position: absolute;
+    vertical-align: top;
+}
+input[type=file]{
+    width: 60vw;
+    opacity: 0;
+    position: absolute;
+    height: 35vw;
+}
+input[type=file]:hover{
+    cursor: pointer;
+}
+.PostTextLinearInput{
+    width: calc(100% - 80px);
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    margin: 0 15px;
+    margin-left: 80px;
+    height: 300px;
+    vertical-align: bottom;
+}
+.profileIntroduce div{
+    margin: 10px 0;
+}
+.profileIntroduce i, .profileIntroduce span{
+    vertical-align: middle;
+}
+.profileIntroduce span{
+    margin-left: 10px;
+}
+.profileIntroduce{
+    border-right: 1px solid #6e6e6e;
+    display: inline-block;
+    margin: 20px 0;
+    padding-right: 20px;
+}
+.profileIntroduce div:first-child, .profileIntroduce div:last-child{
+    margin: 0 !important;
+}
+.LanguageContent span:last-child{
+    font-size: 1vw;
+    width: 1.4vw;
+    height: 1.4vw;
+    padding: 0 !important;
+    cursor: pointer;
+    background: none;
+    color: #ff9800;
+    line-height: 1.4vw;
+    border: 1px solid #ff9800;
+    border-radius: 100%;
+    text-align: center;
+    vertical-align: middle;
+    transition: 0.5s;
+}
+.LanguageContent span:last-child:hover{
+    background: #ff9800;
+    color: white;
+}
+.profileIntroduceContent div:first-child{
+    margin: 0;
+}
+.profileIntroduceContent .contentProfileLinear{
+    vertical-align: middle;
+}
+.profileIntroduceContent{
+    margin: 20px 0;
+    vertical-align: top;
+    width: 35vw;
+    display: inline-block;
+}
+.profileIntroduceContent div{
+    margin: 10px 0;
+    height: 24px;
+    padding-left: 10px;
+    font-size: 14.5px;
+}
+.LanguageContent span{
+    margin: 0 5px;
+    padding: 3px;
+    font-size: 1vw;
+    padding: 0 5px;
+    color: white;
+    display: inline-block;
+    border-radius: 1vw;
+    background: #ff9800;
+}
+.Wanted{
+    padding-top: 10px;
+}
+.SuggestImage div{
+    height: 35vw;
+    width: 7vw;
+    position: absolute;
+    z-index: 800;
+    display: inline-block;
+    opacity: 0;
+}
+.SuggestImage div span{
+    line-height: 35vw;
+    color: white;
+    font-size: 7vw;
+}
+.navImgNext{
+    float: right;
+    right: 20vw;
+}
+.SuggestImage div:hover{
+    opacity: 1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.ImageNavBar{
+    width: 100%;
+    height: 10vw;
+    background: black;
+    margin-top: 5px;
+    padding: 5px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    overflow-y: hidden;
+}
+.ImagePreView{
+    height: 100%;
+    width: 16vw;
+    background: none;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    display: inline-block;
+    margin-right: 5px;
+}
+.ImagePreView:last-child{
+    margin-right: 0;
+}

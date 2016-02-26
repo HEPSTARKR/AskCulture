@@ -1,0 +1,327 @@
+@font-face {
+    src: url(../../../ServerBackup-0215/html/font/NanumGothic-Regular.ttf);
+    font-family: 'Nanum Gothic';
+}
+@font-face {
+    src: url(../../../ServerBackup-0215/html/font/NanumGothic-ExtraBold.ttf);
+    font-family: 'Nanum Gothic-Bold';
+}
+@font-face {
+    src: url(../../../ServerBackup-0215/html/font/Raleway-Bold.ttf);
+    font-family: 'Raleway-Bold';
+}
+@font-face {
+    src: url(../../../ServerBackup-0215/html/font/Raleway-Regular.ttf);
+    font-family: 'Raleway-Regular';
+}
+@font-face {
+    src: url(../../../ServerBackup-0215/html/font/Raleway-Thin.ttf);
+    font-family: 'Raleway-Thin';
+}/*
+@font-face {
+    src: url(../font/윤고딕310.ttf);
+    font-family: '윤고딕310';
+}
+@font-face {
+    src: url(../font/윤고딕330.ttf);
+    font-family: '윤고딕330';
+}
+@font-face {
+    src: url(../font/윤고딕350.ttf);
+    font-family: '윤고딕350';
+}
+@font-face {
+    src: url(../font/HANYGO230.ttf);
+    font-family: '윤고딕230';
+}
+@font-face {
+    src: url(../font/HANYGO240.ttf);
+    font-family: '윤고딕240';
+}
+@font-face {
+    src: url(../font/HANYGO250.ttf);
+    font-family: '윤고딕250';
+}*/
+@media screen and (orientation: portait){
+	.smallize{
+		font-size: 15px !important;
+	}
+}
+@media screen and (orientation: landscape){
+	.smallize{
+		font-size: 7px !important;
+	}
+}
+.accentOrange{
+	font-weight: bold;
+}
+.accentOrange::after, .accentOrange::before{
+	content: '\"';
+}
+#footerMessage{
+	margin: 0;
+}
+.markContent{
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	opacity: 0.1;
+}
+body{
+	background-image: url(/images/CommingSoonBackground.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+@media screen and (orientation: portrait){
+	body{
+		background-image: url(/images/m_CommingSoonBackground.png);
+	}
+}
+.ContentContainer{
+	width: 400px;
+	margin: auto;
+}
+
+.ContentContainer img, .CommingSoonMent, .RegisterButton{
+	margin: 10% 0;
+}
+.ContentContainer img{
+	margin-top: 30%;
+}
+.CommingSoonMent{
+	width: 50%;
+	border-top: solid 8px white;
+	margin: auto;
+	font-size: 25px;
+	color: white;
+	text-align: center;
+	font-family: 'Raleway-Regular';
+}
+.CommingSoonMent p{
+	margin: 0;
+}
+.BackgroundFilter{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.4);
+}
+.RegisterButton{
+	background-color: #ff9800;
+	color: white;
+	font-family: 'Nanum Gothic', 'Raleway-Regular';
+	font-weight: bold;
+	text-align: center;
+	border: transparent 4px solid;
+	font-size: 25px;
+	transition: 0.2s;
+	padding: 1%;
+}
+.logo_white{
+	opacity: 0.7;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+.RegisterButton:hover{
+	cursor: pointer;
+	border: 4px solid white;
+}
+.AbsoluteFooter{
+	color: white;
+	width: 100%;
+	font-size: 20px;
+	font-family: 'Raleway-Regular';
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+	bottom: 5px;
+	left: 0;
+}
+@media screen and (orientation: portrait){
+	.ContentContainer{
+		width: 90%;
+		margin: auto;
+	}
+	.ContentContainer img, .CommingSoonMent, .RegisterButton{
+		margin: 20% 0;
+	}
+	.CommingSoonMent{
+		width: 60%;
+		margin: auto;
+	}
+}
+.dialogCloseButton{
+	position: absolute;
+	display: block;
+	top : 10px;
+	right: 10px;
+}
+.dialogCloseButton:hover{
+	cursor: pointer;
+	color: #989898;
+}
+.DialogIntroduceMent .accentOrange{
+	color: #ff9800;
+}
+.DialogContent{
+	padding: 3%;
+}
+.DialogTitle{
+	border-top: solid 8px #ff9800;
+	padding: 5px 5px;
+	font-size: 1.4rem;
+	display: inline-block;
+}
+.listNumber{
+	font-size: 3rem;
+	margin: 0 10px;
+	vertical-align: top;
+}
+.SignUpButton{
+	border: solid 1px #ff9800;
+	font-size: 1.3rem;
+	height: 40px;
+	text-align: center;
+	color: #ff9800;
+	margin: auto;
+	margin-top: 20px;
+	transition: 0.2s;
+}
+
+@media screen and (orientation: landscape){
+	.SignUpButton{
+		width: 60%;
+	}
+	.listBox{
+		margin: 1% 0;
+	}
+	.listHeader span{
+		color: #ff9800 !important;
+		font-size: 0.6rem;
+		line-height: 1.2rem;
+		vertical-align: middle;
+	}
+	.listContent{
+		margin-left: 32px !important;
+	}
+}
+.listBox p{
+	margin: 0;
+}
+.SignUpButton input[type=email]{
+	width: calc(100% - 105px) !important;
+	border: none !important;
+	margin: 0;
+	height: 40px !important;
+	padding-left: 5px;
+}
+label, label::before{
+	color: #ff9800 !important;
+	margin: 5px auto;
+	vertical-align: top;
+}
+input[type=checkbox]:checked + label::before{
+	border-left: none !important;
+	border-top:  none !important;
+}
+label::before{
+	border-color: #ff9800 !important;
+}
+
+.SignUpButton input[type=email]{
+	border: none !important;
+	box-shadow: none !important;
+}
+.SignUpButton input[type=submit]{
+	width: 100px;
+	border-radius: none !important;
+	background-color: #ff9800;
+	color: white;
+	vertical-align: top;
+	transition: 0.2s;
+	border: solid #ff9800 1px;
+	border-left: solid #ff9800 2px;
+	height: 38px;
+}
+.SignUpButton input[type=submit]:hover{
+	background-color: white;
+	color: #ff9800;
+}
+.listHeader{
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+.listBox{
+	display: inline-block;
+	margin-top: 0;
+	vertical-align: top;
+	width: calc(100% - 50px);
+}
+.DialogIntroduce{
+	position: absolute;
+	top: 30px;
+	font-family: 'Nanum Gothic';
+	width: 90%;
+	padding: 3%;
+	margin-left: 5vw;
+	background-color: rgba(255,255,255,0.95);
+}
+@media screen and (orientation: portrait){
+	label::before{
+		width: 25px !important;
+		height: 25px !important;
+	}
+	input[type=checkbox]:checked + label::before{
+		width: 19px !important;
+		height: 31px !important:
+	}
+	.SignUpButton{
+		width: 90%;
+	}
+	.listBox{
+	margin: 5% 0;
+	}
+	.listBox p{
+		font-size: 3vw !important;
+	}
+	.DialogIntroduceMent, .DialogTitle, p, body, label, div, span{
+		font-size: 3vw !important;
+	}
+	.SignUpButton{
+		height: 80px;
+		font-size: 3vw !important;
+	}
+	.SignUpButton input[type=email]{
+		width: calc(100% - 155px) !important;
+		font-size: 3vw;
+		height: 80px !important;
+		line-height: 80px;
+	}
+	.SignUpButton input[type=submit]{
+		height: 80px !important;
+		width: 150px !important;
+	}
+	.listContent{
+		margin-left: 32px !important;
+	}
+	.CommingSoonMent p{
+		font-size: 6vw !important;
+	}
+	.listHeader span{
+		color: #ff9800 !important;
+		font-size: 0.6rem;
+		line-height: 1.2rem;
+		vertical-align: middle;
+	}
+	.RegisterButton{
+		font-size: 5vw !important;
+	}
+	.CommingSoonMent{
+		border-top: 10px solid white;
+	}
+	.DialogTitle span{
+		font-size: 4vw !important;
+	}
+}
+

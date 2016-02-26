@@ -1,0 +1,211 @@
+//
+   Created by Sunrin on 2015. 12. 25..
+
+extends CommonLayout
+block CustomHead
+    link(rel='stylesheet' type='text/css' href='/stylesheets/index.css')
+block content
+    div(class='row contentBox' id='contentHomeBox')
+        div(id='map')
+        div(class='filter')
+            div(class='mainComment')
+                p Share the Korean Culture
+                p With AskCulture
+        form(method='post' action='#')
+            div(class='BubbleVisitor submitBubble')
+                p Survise to Visitors
+                p ASK
+            div(class='BubbleLocal submitBubble')
+                p Service to locals
+                p Suggest
+            div(class='searchPlace')
+                div(class='searchInputBox')
+                    i(class="large material-icons") search
+                    input(type='text' name='place' id='autocomplete' onfocus='geolocate()' placeholder='Where do you take a trip ?')
+                input(type='hidden' id='realValue' name='realPlace' value='')
+        script(type='text/javascript' src='/javascripts/index.js')
+    div(class='row contentBox')
+        div(class='col s12 l12 m12')
+            div(class='introduceHeader btn-large center-align white-text') What is AskCulture?
+            div(id='introduceService') AskCulture forms a new paradigm in travel.<br>Only with Ask Culture can you directly select <br><br>which experiences you wish to have. Look for your cultural experience today!
+            iframe(id='introduceVideo' width="60%" height="50%" src="https://www.youtube.com/embed/5YtmSuIOTO8" frameborder="0" allowfullscreen)
+    div(class='row contentBox HowToVisitor')
+        div(class='col s12 l12 m12')
+            p(class='HowitWorkHeader') How it Works
+            ul(class='tabs')
+                li(class='tab col s3 m3 l3')
+                    a(class='active grey-text' href='#ToBeAVisitor') To Be A Visitor
+                li(class='tab col s3 m3 l3')
+                    a(href='#ToBeALocal' class='grey-text') To Be A Local
+            div(class='row' id='ToBeAVisitor')
+                div(class='howWorkBox col s4 l4 m4')
+                    div(class='circle valign-wrapper')
+                        img(height='60%' class='center-align valign' src='/images/ic_visitorHow1.png')
+                    p(class='howWorkBoxHeader') Looking for locals
+                    p(class='howWorkBoxBody') We are looking for locals that can participate and recommend local experiences to foreigners. through ask culture many fun experiences and wonderful connections can be made. 
+                div(class='howWorkBox col s4 l4 m4')
+                    div(class='circle valign-wrapper')
+                        img(height='60%' class='center-align valign' src='/images/ic_visitorHow2.png')
+                    p(class='howWorkBoxHeader') Ask
+                    p(class='howWorkBoxBody') If your desired activity does not appear on the list of contents you can request it directly. Do not hesitate to request your desired experience in the area which you will be staying. Ask culture will make any participants wishes a reality.
+                div(class='howWorkBox col s4 l4 m4')
+                    div(class='circle valign-wrapper')
+                        img(height='60%' class='center-align valign' src='/images/ic_visitorHow3.png')
+                    p(class='howWorkBoxHeader') Registration
+                    p(class='howWorkBoxBody') Ask culture ensures that a list of various activities will be confirmed and updated regularly. You will not have to choose an experience blindly, either. Certifications, reviews and pictures are all available to confirm that each experience is a good fit for your persona needs. Once an experience is chosen, you can easily contact your local and make a reservation. 
+            div(class='row' id='ToBeALocal')
+                div(class='howWorkBox col s4 l4 m4')
+                    div(class='circle valign-wrapper')
+                        img(height='60%' class='center-align valign' src='/images/ic_localHow1.png')
+                    p(class='howWorkBoxHeader') Finding a visitor
+                    p(class='howWorkBoxBody') Need help finding a visitor coming to your are?. Are you not sure what services you have to offer a visitor? Using our filter tool you can narrow down the selection until you find what fits your specific situation. 
+
+                div(class='howWorkBox col s4 l4 m4')
+                    div(class='circle valign-wrapper')
+                        img(height='60%' class='center-align valign' src='/images/ic_localHow2.png')
+                    p(class='howWorkBoxHeader') Making an offer
+                    p(class='howWorkBoxBody') "I've made an offer but no visitors have requested my service". If this happens we recommend to first publish your offer and simply wait for your friends from around the world to become aware of your service.
+                div(class='howWorkBox col s4 l4 m4')
+                    div(class='circle valign-wrapper')
+                        img(height='60%' class='center-align valign' src='/images/ic_localHow3.png')
+                    p(class='howWorkBoxHeader') Confirming your reservation
+                    p(class='howWorkBoxBody') "A visitor has requested my service". Confirm the time and address of the activity and look forward to meeting your new friend! Ask culture will always assist you in whatever you may need.
+
+    div(class='row contentBox suggestContent')
+        div(class='col s12 l12 m12')
+            div(class='ContentBlockHeader SuggestHeader') How this cultural experience?
+            p(class='subhead') Experience local culture proposed
+            div(class='card')
+                div(class='card-image')
+                    img(src='/images/tempCardImage.jpg' height='100%')
+                    div(style='background:url(/images/tempProfile.jpg)' class='card-title circle-clipper')
+                div(class='card-content')
+                    p Seoul 
+                        i(class="material-icons") more_vert
+            div(class='card')
+                div(class='card-image')
+                    img(src='/images/tempChina.jpg' height='100%')
+                    div(style='background:url(/images/tempProfile2.jpg)' class='card-title circle-clipper')
+                div(class='card-content')
+                    p China 
+                        i(class="material-icons") more_vert
+            div(class='card')
+                div(class='card-image')
+                    img(src='/images/tempTurkey.jpg' height='100%')
+                    div(style='background:url(/images/tempProfile3.jpg)' class='card-title circle-clipper')
+                div(class='card-content')
+                    p Turkey 
+                        i(class="material-icons") more_vert
+            div(class='card')
+                div(class='card-image')
+                    img(src='/images/tempTokyo.jpg' height='100%')
+                    div(style='background:url(/images/tempProfile4.jpg)' class='card-title circle-clipper')
+                div(class='card-content')
+                    p 東京 
+                        i(class="material-icons") more_vert
+            div(class='card')
+                div(class='card-image')
+                    img(src='/images/tempNewyork.jpg' height='100%')
+                    div(style='background:url(/images/tempProfile5.jpg)' class='card-title circle-clipper')
+                div(class='card-content')
+                    p Newyork 
+                        i(class="material-icons") more_vert
+            div(class='card')
+                div(class='card-image')
+                    img(src='/images/tempLondon.jpg' height='100%')
+                    div(style='background:url(/images/tempProfile6.jpg)' class='card-title circle-clipper')
+                div(class='card-content')
+                    p London 
+                        i(class="material-icons") more_vert
+    div(class='row contentBox suggestContent')
+        div(class='col s12 l12 m12')
+            div(class='ContentBlockHeader RequestHeader') I want to experience this culture!
+            p(class='subhead') Culture visitors are requested
+            div(class='card')
+                div(class='card-image')
+                    img(src='/images/tempCardImage.jpg' height='100%')
+                    div(style='background:url(/images/tempProfile.jpg)' class='card-title circle-clipper')
+                div(class='card-content')
+                    p Seoul 
+                        i(class="material-icons") more_vert
+            div(class='card')
+                div(class='card-image')
+                    img(src='/images/tempChina.jpg' height='100%')
+                    div(style='background:url(/images/tempProfile2.jpg)' class='card-title circle-clipper')
+                div(class='card-content')
+                    p China 
+                        i(class="material-icons") more_vert
+            div(class='card')
+                div(class='card-image')
+                    img(src='/images/tempTurkey.jpg' height='100%')
+                    div(style='background:url(/images/tempProfile3.jpg)' class='card-title circle-clipper')
+                div(class='card-content')
+                    p Turkey 
+                        i(class="material-icons") more_vert
+            div(class='card')
+                div(class='card-image')
+                    img(src='/images/tempTokyo.jpg' height='100%')
+                    div(style='background:url(/images/tempProfile4.jpg)' class='card-title circle-clipper')
+                div(class='card-content')
+                    p 東京 
+                        i(class="material-icons") more_vert
+            div(class='card')
+                div(class='card-image')
+                    img(src='/images/tempNewyork.jpg' height='100%')
+                    div(style='background:url(/images/tempProfile5.jpg)' class='card-title circle-clipper')
+                div(class='card-content')
+                    p Newyork 
+                        i(class="material-icons") more_vert
+            div(class='card')
+                div(class='card-image')
+                    img(src='/images/tempLondon.jpg' height='100%')
+                    div(style='background:url(/images/tempProfile6.jpg)' class='card-title circle-clipper')
+                div(class='card-content')
+                    p London 
+                        i(class="material-icons") more_vert
+    div
+        div(class='ContentBlockHeader linkBox')
+            img(src='/images/ic_kakaoStory.png' height='25px')
+            img(src='/images/ic_faceBook.png' height='25px')
+            img(src='/images/ic_naverBlog.png' height='25px')
+            img(src='/images/ic_instargram.png' height='25px')
+            img(src='/images/ic_twitter.png' height='25px')
+    footer(class='page-footer')
+        div(class='container')
+            div(class='row')
+                div(class='col l6 s6 m6')
+                    div(class='verticalAlignFooter')
+                        a(class='dropdown-button btn' href='#' data-activates='dropdownLanguage') 한국어
+                        ul(id='dropdownLanguage' class='dropdown-content')
+                            li
+                                a(href='/') 한국어
+                            li(class='divider')
+                            li
+                                a(href='/indexENG') English
+                            li(class='divider')
+                            li
+                                a(href='#') 中國語
+                        a(class='dropdown-button btn' href='#' data-activates='dropdownExc') KRW₩
+                        ul(id='dropdownExc' class='dropdown-content')
+                            li
+                                a(href='#') KRW₩
+                            li(class='divider')
+                            li
+                                a(href='#') USD$
+                            li(class='divider')
+                            li
+                                a(href='#') CNY¥
+                div(class='col l6 m6 s6')
+                    div(class='verticalAlignFooter removeLine')
+                        p(class='centerBtn')
+                            a(href='#') Privacy Statement
+                        p(class='centerBtn')
+                            a(href='#') Terms of Use
+                        p(class='centerBtn')
+                            a(href='#') Service center
+            div(class='container footer-copy')
+                p Business name Corporation 애스크컬쳐 (AskCulture) | CEO 홍선기 | Personal Information Officer 강민구 |<br> Company Registration Number 210-13-32526 <br>서울창조경제혁신센터 (서울시 종로구 종로6 5F-7) (주) 애스크컬쳐 (AskCukture)<br>TEL 02 - 372 - 1439 | EMAIL askculture@askculture.com | 자사는 서울특별시관광협회 공제영업보증보험에 가입되어 있습니다.
+                img(src='/images/nav_logo.png' width='25%')
+    script(type='text/javascript' async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCJHwCqCkJ7C9_ecZihe0qmiKoHF4LrY&libraries=places&callback=initMap&language=En&region=En")
+    script(type='text/javascript' src='/javascripts/initMap.js')
+    script(type='text/javascript' src='/javascripts/autoComplete.js')

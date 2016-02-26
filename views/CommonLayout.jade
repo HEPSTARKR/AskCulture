@@ -1,0 +1,159 @@
+//
+   Created by Sunrin on 2015. 12. 25..
+doctype html
+html(lang='ko')
+    head
+        meta(charset='utf-8')
+        title AskCulture
+        script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        link(href='/stylesheets/materialize.css' media='screen,projection' type='text/css' rel='stylesheet')
+        link(href='/stylesheets/materialize.min.css' media='screen,projection' type='text/css' rel='stylesheet')
+        link(rel='stylesheet' type='text/css' href='/stylesheets/CommonLayout.css')
+        script(type="text/javascript" src="/javascripts/materialize.min.js")
+        script(type='text/javascript' src='/javascripts/materialize.js')
+        script(type='text/javascript' src='/javascripts/wNumb.js')
+        meta(name="google-signin-client_id" content="548124732768-6bb4c44c8lqv2l02hf58q15608tkp1f5.apps.googleusercontent.com")
+        block CustomHead
+    body
+        nav
+            div(class='nav-wrapper')
+                a(href='/' class='brand-logo')
+                    img(src='/images/logo.png' height='40px')
+                ul(class='searchNav hide-on-med-and-down')
+                    li
+                        input(type='text' placeholder='지역을 검색해보세요')
+                    li
+                        i(class='material-icons') search
+                a(href='#' data-activates='mobile_menu' class='button-collapse')
+                    i(class='material-icons') menu
+                ul(class='right hide-on-med-and-down')
+                    li
+                        a(href='/mypage')
+                            div(class='profileImage' style='background: url(/images/tempProfile.jpg);')
+                    li(class='nav_name') yeji Jeon
+                    li
+                        div(class='btn nav_button') 요청하기
+                    li
+                        a(href='/UploadAsk')
+                            div(class='btn nav_button') 제안하기
+                ul(class='side-nav' id='mobile_menu')
+                    li
+                        div(class='profileImage' style='background: url(/images/myProfile.png);')
+                        div(class='nav_name') yeji Jeon
+                    li 요청하기
+                    li 제안하기
+                script $(".button-collapse").sideNav();
+        block content
+        footer(class='page-footer')
+            div(class='container')
+                div(class='moreLink-Container')
+                    ul(class='moreLink-List center')
+                        li(class='moreLink-Item')
+                            a(href='#')
+                                img(src='/images/ic_instaLink.png')
+                        li(class='moreLink-Item')
+                            a(href='#')
+                                img(src='/images/ic_fbLink.png')
+                        li(class='moreLink-Item')
+                            a(href='#')
+                                img(src='/images/ic_twitterLink.png')
+                        li(class='moreLink-Item')
+                            a(href='#')
+                                img(src='/images/ic_blogLink.png')
+                div(class='introduceLink-Container')
+                    ul(class='introduceLink-List')
+                        li(class='introduceLink-Item')
+                            a(href='#') 회사소개
+                        li(class='introduceLink-Item')
+                            a(href='#') 이용방법
+                        li(class='introduceLink-Item')
+                            a(href='#') 공지사항
+                        li(class='introduceLink-Item')
+                            a(href='#') 고객센터
+                        li(class='introduceLink-Item')
+                            a(href='#') 약관및정책
+                div(class='languageContainer')
+                    a(class='btn dropdown-button' href='#' data-activates='dropdownLanguage') 한국어
+                    ul(id='dropdownLanguage' class='dropdown-content')
+                        li
+                            a(href='#') 한국어
+                        li(class='divider')
+                        li
+                            a(href='#') English
+                        li(class='divider')
+                        li
+                            a(href='#') 中國語
+                div(class='excContainer')
+                    a(class='btn dropdown-button' href='#' data-activates='dropdownExc') KRW₩
+                    ul(id='dropdownExc' class='dropdown-content')
+                        li
+                            a(href='#') KRW₩
+                        li(class='divider')
+                        li
+                            a(href='#') USD$
+                        li(class='divider')
+                        li
+                            a(href='#') CNY¥
+                div(class='footer-context')
+                    hr
+                    p 상호명 주식회사 애스크컬쳐(AskCulture) ｜ 대표이사 홍선기 ｜ 개인정보책임자 강민구 
+                    p 사업자등록번호 178-81-00262 ｜ 통신판매업신고번호 제 2016-서울종로-0174 호
+                    p 서울시 종로구 종로6 서울창조경제혁신센터 5F
+                    p Tel +82 2 6280 1439 ｜ E-mail askculture@askculture.com
+                    p 애스크컬쳐는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 
+                    p 따라서 애스크컬쳐는 상품·거래정보 및 거래에 대하여 책임을 지지 않습니다.
+            div(class='footer-copyright hide-on-med-and-down')
+                div(class='container') AskCulture
+        div(id="status")
+        div(class='backgroundDialog-wrapper' id='loginDialog-wrapper')
+            div(id='loginDialog')
+                div(class='dialogHeader')
+                    span(class='loginHead') 로그인
+                    i(class='material-icons loginDialogCloseButton') close
+                div(class='facebookLogin')
+                    fb:login-button(scope="public_profile,email" onlogin="checkLoginState();" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false" width="384px") Sign in with Facebook Button is not loading... please wait
+                div(class='googlePlusLogin')
+                    div(id='googlePlusLoginButton')
+                div(class='loginDivider')
+                    span or
+                input(type='email' placeholder='이메일 입력')
+                input(type='password' placeholder='비밀번호 입력')
+                div(class='btn orange white-text z-depth-0 loginSubmitButton') 로그인
+                div(class='loginCheckBoxContainer')
+                    input(type='checkbox' id='UserEmailSave')
+                    label(for='UserEmailSave') 아이디 저장
+                    input(type='checkbox' id='AutomaticLogin')
+                    label(for='AutomaticLogin') 자동로그인
+                hr
+                div(class='goSignUp') AskCulture 계정이 없으세요? <a href="#" class="SignUpLink ">회원가입</a>
+        div(class='backgroundDialog-wrapper' id='registerTerms-wrapper')
+            div(id='registerTermDialog')
+                div(class='dialogHeader')
+                    span(class='registerHead') 회원가입
+                    i(class='material-icons registerDialogCloseButton') close
+                div(class='termsContainer')
+                    p AskCulture 필수약관 동의(필수)
+                    div(class='termsBox')
+                        p asdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasd
+                    div(class='agreeContainer right-align')
+                        input(type='checkbox' id='firstRequired')
+                        label(for='firstRequired') 위 약관에 동의 합니다.
+                    p AskCulture 개인정보 취급 약관 동의(필수)
+                    div(class='termsBox')
+                        p asdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasd
+                    div(class='agreeContainer right-align')
+                        input(type='checkbox' id='secondRequired')
+                        label(for='secondRequired') 위 약관에 동의 합니다.
+                    p 뉴스 및 이메일 정보 수신 동의(선택)
+                    div(class='termsBox')
+                        p asdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasdasdvasdasd
+                    div(class='agreeContainer right-align')
+                        input(type='checkbox' id='thirdRequired')
+                        label(for='thirdRequired') 위 정보 수신에 동의 합니다.
+                    div(class='nextRegisterStepButton') 다음
+        script(type='text/javascript' src='/javascripts/FacebookController.js')
+        script(type='text/javascript' src='/javascripts/GooglePlusController.js')
+        script(src="https://apis.google.com/js/platform.js?onload=renderButton" async defer)
+        script(type='text/javascript' src='/javascripts/userController.js')
+        script(type='text/javascript' src='/javascripts/common.js')

@@ -1,0 +1,755 @@
+@media screen and (orientation: landscape) {
+    nav {
+        background: none;
+        box-shadow: none;
+        position: absolute;
+    }
+}
+@media screen and (orientation: portrait){
+    nav{
+        position: fixed;
+        z-index: 999;
+        background: white;
+    }
+}
+#contentHomeBox{
+    background-image: url(/images/IMG_3037.JPG);
+    background-size: cover;
+    background-position: center;
+    transition: 3s;
+}
+@media screen and (orientation: landscape) {
+    .introduceHeader{
+        margin-top: 5% !important;
+        font-size: 2.5vw;
+        text-transform: none !important;
+    }
+    #introduceService {
+        border: 1px solid #9e9e9e;
+        border-radius: 0.3vw;
+        width: 60%;
+        font-size: 1.2vw;
+        text-align: center;
+        margin: 2% auto;
+        margin-top: 2%;
+        padding: 1% 0;
+    }
+
+    #introduceVideo {
+        margin: auto;
+        margin-left: 20%;
+    }
+}
+
+@media screen and (orientation: portrait){
+    #introduceService {
+        border: 1px solid #9e9e9e;
+        border-radius: 0.3vw;
+        width: 80%;
+        font-size: 2vh;
+        text-align: center;
+        margin: 2% auto;
+        margin-top: 20%;
+    }
+    #introduceVideo {
+        margin: auto;
+        width: 80% !important;
+        height: 40% !important;
+        margin-left: 10%;
+    }
+}
+#HomeBoxMenu{
+    bottom: 0px;
+    height: 30%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
+
+#HomeBoxOffSet{
+    height: 70%;
+    width: 100%;
+}
+.ServiceBox{
+    display: inline-block;
+    width: 50%;
+}
+.ContentBlockHeader{
+    border-radius: 0.2vw;
+    text-align: center;
+    width: 80%;
+    font-size: 1vw;
+    margin: 3% auto;
+    padding: 0.5%;
+    font-weight: bold;
+    color: #7e7e7e;
+}
+@media screen and (orientation: landscape) {
+    .ServiceMent {
+        margin-top: 3vw;
+        font-size: 1.7vw;
+        text-align: center;
+    }
+    .ServiceButton{
+        display: inline-block;
+        background: none;
+        border: solid 1px white;
+        border-radius: 0.6vw;
+        margin: 0 20%;
+        width: 60%;
+        font-size: 1.9vw;
+        height: 5vw !important;
+        line-height: 5vw;
+        padding: 0 10px;
+    }
+}
+@media screen and (orientation: portrait) {
+    .ServiceMent {
+        margin-top: 30%;
+        font-size: 2vh;
+        text-align: center;
+    }
+    .ServiceButton{
+        display: inline-block;
+        background: none;
+        border: solid 1px white;
+        border-radius: 0.6vw;
+        margin: 0 5%;
+        width: 90%;
+        font-size: 1.8vh;
+        height: 5vh !important;
+        line-height: 5vh;
+        padding: 0 5px;
+    }
+}
+.suggestContent .ContentBlockHeader{
+    margin-bottom: 1%;
+}
+.subhead{
+    text-align: center;
+    font-size: 1vw;
+    margin: 0 auto;
+    font-weight: bold;
+    color: #636363;
+    margin-bottom: 2%;
+}
+@media screen and (orientation: portrait) {
+    .SuggestBox {
+        display: inline-block;
+        margin: 1%;
+        width: 37vw;
+        border-radius: 0.5vw;
+        height: 37vw;
+        border: 1px solid #e0e0e0;
+    }
+    .suggestContent .col{
+        padding: 0 10% !important;
+    }
+    .ContentBlockHeader{
+        margin-top: 30%;
+    }
+    .suggestContent{
+        height: 120vh;
+    }
+    .moreView{
+        font-size: 3vw !important;
+        line-height: 37vw !important;
+    }
+}
+@media screen and (orientation: landscape) {
+    .SuggestBox {
+        display: inline-block;
+        margin: 1%;
+        width: 18vw;
+        border-radius: 0.5vw;
+        height: 18vw;
+        border: 1px solid #5e5e5e;
+    }
+    .moreView{
+        line-height: 18vw;
+    }
+}
+.suggestContent .col{
+    padding: 0 10%;
+}
+.moreView{
+    background: #5e5e5e;
+    color: white;
+    vertical-align: top;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.removeLine{
+    border-right: none;
+}
+.centerBtn{
+    color: white;
+    font-size: 1vw;
+    text-align: center;
+}
+.howWorkBox p{
+    text-align: center;
+}
+.howWorkBoxBody{
+    padding: 0vw 5vw;
+    color: #c4c4c4;
+    font-size: 1vw;
+}
+.HowitWorkHeader{
+    text-align: center;
+    font-family: 'Raleway-Thin';
+    font-weight: bold;
+    color: #636363;
+    font-size: 4vw;
+    margin: 0;
+    margin-top: 3vw;
+}
+.tabs{
+    width: 50vw !important;
+    margin-bottom: 6vw;
+}
+.tabs li a{
+    color: #828282;
+}
+.tabs li:first-child a.grey-text.active{
+    color: #19bdc4 !important;
+}
+.SuggestHeader{
+    background: #19bdc4;
+    font-weight: bold;
+    padding: 0.5vw 0;
+    font-size: 1.5vw;
+    color: white;
+}
+.card-title.circle-clipper{
+    border-radius: 100vw;
+    width: 4vw;
+    position: relative;
+    margin-bottom: -2vw;
+    margin-left:1vw;
+    height: 4vw;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 0 !important;
+}
+.card-image{
+    height: 80%;
+}
+.card-content{
+    height: auto;
+    padding: 0 !important;
+}
+.card-content p{
+    padding-left: 6vw;
+    font-size: 1.8vw;
+    font-weight: bold;
+    vertical-align: middle;
+    margin: 0;
+    font-family: 'Raleway-Regular';
+}
+/** sdasd*/
+.introduceContentBox{
+    height:1000px;
+}
+/**asdasd*/
+.card{
+    display: inline-block;
+    vertical-align:  top;
+    width: 27%;
+    margin: 15px;
+    height: 200px !important;
+}
+.RequestHeader{
+    background: #ff9800;
+    font-weight: bold;
+    font-size: 1.5vw;
+    padding: 0.5vw 0;
+    color: white;
+}
+.tabs li:nth-child(2) a.grey-text.active{
+    color: #ff9800 !important;
+}
+.tabs li:nth-child(3) a.grey-text.active{
+    color: #DF6225 !important;
+}
+#ToBeMypage .circle{
+    background: #DF6225;
+}
+#ToBeMypage .howWorkBoxHeader{
+    color: #DF6225;
+}
+.indicator{
+    height: 5px !important;
+    transition: 0.5s;
+    background: #19bdc4;
+}
+
+.howWorkBox .circle{
+    width: 10vw;
+    margin: auto;
+    background: #19bdc4;
+    height:10vw;
+}
+#ToBeALocal .circle{
+    background: #ff9800;
+}
+#ToBeALocal .howWorkBoxHeader{
+    color: #ff9800;
+}
+.circle img{
+    margin: auto;
+}
+.howWorkBoxHeader{
+    font-family: 'Nanum Gothic-Bold', 'Roboto', sans-serif;
+    color: #19bdc4;
+    font-size: 2vw;
+    margin-bottom: 0;
+    margin-top: 1vw;
+}
+#map{
+    height: 100vh;
+    z-index: -100;
+    width: 100%;
+}
+.filter{
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    padding-top: 30vh;
+}
+.mainComment p:first-child{
+    font-size: 5vw;
+    font-family: 'Raleway-Bold';
+    color: white;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+.mainComment p:last-child{
+    font-size: 3vw;
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-family: 'Raleway-Regular';
+}
+.mainComment{
+    margin: auto;
+}
+.searchPlace{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 60vh;
+    z-index: 100;
+}
+.searchInputBox i{
+    color: white;
+    font-size: 3em;
+    right: 30.9vw;
+    margin-top: 10px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    line-height: 1.5;
+}
+.searchInputBox i:hover{
+    cursor: pointer;
+}
+.BubbleVisitor{
+    border: 20px solid transparent;
+    border-right: 40px;
+    border-image-source: url(/images/Bubble1.png);
+    border-image-repeat: stretch;
+    background-position: center;
+    border-image-slice: 40 95 40 40;
+    position: absolute;
+    width: 20vw;
+    z-index: 201;
+    background: white;
+    background-clip: padding-box;
+    top: 43vh;
+    right: 50vw;
+    transition: 0.5s;
+}
+.BubbleVisitor:hover{
+    transform: scale(1.2);
+}
+.introduceHeader{
+    background: #19bdc4;
+    margin: auto;
+    width: 60vw !important;
+    font-size: 1.5vw;
+    margin-left: 20% !important;
+    font-family: 'Raleway-Regular';
+}
+.introduceHeader:hover{
+    cursor: default !important;
+}
+
+.BubbleLocal{
+    border: 20px solid transparent;
+    border-left: 40px;
+    border-image-source: url(/images/Bubble2.png);
+    border-image-repeat: stretch;
+    background-position: center;
+    border-image-slice: 40 40 40 95;
+    position: absolute;
+    width: 20vw;
+    z-index: 201;
+    background: white;
+    background-clip: padding-box;
+    top: 43vh;
+    left: 50vw;
+    transition: 0.5s;
+}
+.BubbleLocal:hover{
+    transform: scale(1.2);
+}
+.BubbleVisitor p{
+    color: #19bdc4;
+    margin: 0;
+    transform: translateX(-5px);
+    text-align: center;
+}
+.BubbleLocal p{
+    color: #ff9800;
+    margin: 0;
+    transform: translateX(5px);
+    text-align: center;
+}
+.BubbleVisitor p:first-child, .BubbleLocal p:first-child{
+    font-size: 1vw;
+}
+.BubbleVisitor p:last-child, .BubbleLocal p:last-child{
+    font-size: 2vw;
+    font-weight: bold;
+}
+.searchPlace .searchInputBox{
+    width: 40% !important;
+    margin-left: 30%;
+    color: black;
+    margin-top: 1%;
+    vertical-align: middle;
+    padding-left: 2%;
+    overflow: hidden;
+    height: 4em !important;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 0.1vw;
+}
+.card-content p i{
+    float: right;
+    line-height: 3vw;
+}
+.searchInputBox input{
+    border: none !important;
+    height: 4em !important;
+    transition: 0.3s;
+    box-shadow: none !important;
+    width: calc(100% - 4em) !important;
+}
+.pac-container{
+    border : 1px solid #6EDDDC !important;
+    border-top: 2px solid #19bdc4 !important;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.searchButton{
+    background-color: #ff9800;
+    position: absolute;
+    height: 4em;
+    display: inline-block;
+    width: 6em;
+}
+@media screen and (min-width:1000px) {
+.howWorkBox {
+        display: inline-block !important;
+        width: 33.333333%;
+    }
+}
+@media screen and (min-width:501px) and (max-width:999px) {
+/**
+* tablet style css
+*/
+    .tabs{
+        font-size: 3em;
+        width: 100% !important;
+    }
+    #ToBeAVisitor, #ToBeALocal, #ToBeMypage {
+        height: 800px;
+        /*
+        overflow-x: scroll;
+        white-space: nowrap;
+        overflow-y: hidden;
+        */
+    }
+    #ToBeAVisitor .circle, #ToBeALocal .circle, #ToBeMypage .circle {
+        margin-top: 20px;
+    }
+    .howWorkBox {
+        /*width: 80% !important;*/
+        border: 1px solid gray;
+        display: inline-block !important;
+        box-shadow: 1px 1px 3px #888;
+        height: 750px !important;
+        padding: 10px;
+        margin: 10px calc(10vw - 20px);
+        float: left;
+    }
+    .howWorkBox p {
+        font-size: 4vw;
+    }
+    .howWorkBoxHeader {
+        font-size: 5vw !important;
+    }
+    .howWorkBox .circle{
+        width: 15vw;
+        height:15vw;
+    }
+    .viewport {
+        overflow: hidden;
+        width: 100vw;
+    } 
+    .FlipsnapAVisitor, .FlipsnapALocal, .FlipsnapMypage {
+        width: 290vw;
+    } 
+    .item {
+        float: left;
+        width: 80vw;
+    }
+    .pointer {
+        text-align: center;
+    }
+    .pointer span{
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        background: #8E8E8E;
+        margin: 2vw;
+    }
+    .current {
+        background: #FC0 !important;
+    }
+    .HowitWorkHeader {
+        font-size: 8vw;
+        margin-bottom: 3vw;
+    }
+    .searchPlace .searchInputBox {
+        width: 80% !important;
+        margin-left: 10% !important;
+        height: 4em !important;
+    }
+    .searchInputBox input {
+        height: 4em !important;
+    }
+    .searchButton {
+        height: 4em;
+        width: 7em;
+        margin-left: -4vw;
+    }
+    .searchInputBox i {
+        line-height: 1.4;
+    }
+    .introduceHeader {
+        margin-top: 3vw;
+        font-size: 2vw;
+        width: 80vw !important;
+        margin-left: 10% !important;
+    }
+    #introduceService {
+        margin-top : 3vw;
+    }
+    #introduceVideo {
+        padding-top: 1vw;
+    }
+    .introduceLink-Item {
+        font-size: 2em;
+        font-weight: bold;
+    }
+    footer .dropdown-button {
+        width: 80vw;
+        height: 6vw;
+        font-size: 2em;
+        font-weight: bold;
+        line-height: 2;
+    }
+    .footer-context {
+        font-size: 2em;
+    }
+    .suggestContent {
+        height: 45vh;
+    }
+    footer.page-footer {
+        margin-top: 10vw;
+    }
+    .RequestHeader {
+        font-size: 2vw;
+    }
+    .subhead {
+        font-size: 2vw;
+    }
+    .ContentBlockHeader {
+        width: 100%;
+        font-size: 2vw;
+    }
+    #introduceVideo {
+        height: 60% !important;
+    }
+    .introduceContentBox {
+        height: 800px;
+    }
+    .ContentBlockHeader {
+        margin-top: 7%;
+    }
+    .move {
+        margin-top: 3vw;
+    }
+    .SuggestHeader {
+        padding: 0.5vw 0;
+    }
+}
+@media screen and (max-width:500px) {
+    /**
+    * mobile style css
+    */
+    .tabs{
+        font-size: 3em;
+        width: 100% !important;
+    }
+    #ToBeAVisitor, #ToBeALocal, #ToBeMypage {
+        height: 800px;
+        /*
+        overflow-x: scroll;
+        white-space: nowrap;
+        overflow-y: hidden;
+        */
+    }
+    #ToBeAVisitor .circle, #ToBeALocal .circle, #ToBeMypage .circle {
+        margin-top: 20px;
+    }
+    .howWorkBox {
+        /*width: 80% !important;*/
+        border: 1px solid gray;
+        display: inline-block !important;
+        box-shadow: 1px 1px 3px #888;
+        height: 750px !important;
+        padding: 10px;
+        margin: 10px calc(10vw - 20px);
+        float: left;
+    }
+    .howWorkBox p {
+        font-size: 4vw;
+    }
+    .howWorkBoxHeader {
+        font-size: 5vw !important;
+    }
+    .howWorkBox .circle{
+        width: 15vw;
+        height:15vw;
+    }
+    .viewport {
+        overflow: hidden;
+        width: 100vw;
+    } 
+    .FlipsnapAVisitor, .FlipsnapALocal, .FlipsnapMypage {
+        width: 290vw;
+    } 
+    .item {
+        float: left;
+        width: 80vw;
+    }
+    .pointer {
+        text-align: center;
+    }
+    .pointer span{
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        margin: 2vw;
+        background: #8E8E8E;
+    }
+    .current {
+        background: #FC0 !important;
+    }
+    .HowitWorkHeader {
+        font-size: 8vw;
+        margin-bottom: 3vw;
+    }
+    .searchPlace .searchInputBox {
+        width: 80% !important;
+        margin-left: 10% !important;
+        height: 4em !important;
+    }
+    .searchInputBox input {
+        height: 4em !important;
+    }
+    .searchButton {
+        height: 4em;
+        width: 7em;
+        margin-left: -4vw;
+    }
+    .searchInputBox i {
+        line-height: 1.4;
+    }
+    .introduceHeader {
+        margin-top: 3vw;
+        font-size: 2vw;
+        width: 80vw !important;
+        margin-left: 10% !important;
+    }
+    #introduceService {
+        margin-top : 3vw;
+    }
+    #introduceVideo {
+        padding-top: 1vw;
+    }
+    .introduceLink-Item {
+        font-size: 2em;
+        font-weight: bold;
+    }
+    footer .dropdown-button {
+        width: 80vw;
+        height: 6vw;
+        font-size: 2em;
+        font-weight: bold;
+        line-height: 2;
+    }
+    .footer-context {
+        font-size: 2em;
+    }
+    .suggestContent {
+        height: 45vh;
+    }
+    footer.page-footer {
+        margin-top: 10vw;
+    }
+    .RequestHeader {
+        font-size: 2vw;
+    }
+    .subhead {
+        font-size: 2vw;
+    }
+    .ContentBlockHeader {
+        width: 100%;
+        font-size: 2vw;
+    }
+    #introduceVideo {
+        height: 60% !important;
+    }
+    .introduceContentBox {
+        height: 800px;
+    }
+    .ContentBlockHeader {
+        margin-top: 7%;
+    }
+    .move {
+        margin-top: 3vw;
+    }
+    .SuggestHeader {
+        padding: 0.5vw 0;
+    }
+}

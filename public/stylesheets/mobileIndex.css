@@ -1,0 +1,383 @@
+@media screen and (min-width:1000px) {
+.howWorkBox {
+        display: inline-block !important;
+        width: 33.333333%;
+    }
+}
+@media screen and (min-width:501px) and (max-width:999px) {
+/**
+* tablet style css
+*/
+    .tabs{
+        font-size: 3em;
+        width: 100% !important;
+    }
+    #ToBeAVisitor, #ToBeALocal, #ToBeMypage {
+        height: 800px;
+        /*
+        overflow-x: scroll;
+        white-space: nowrap;
+        overflow-y: hidden;
+        */
+    }
+    #ToBeAVisitor .circle, #ToBeALocal .circle, #ToBeMypage .circle {
+        margin-top: 20px;
+    }
+    .howWorkBox {
+        /*width: 80% !important;*/
+        border: 1px solid gray;
+        display: inline-block !important;
+        box-shadow: 1px 1px 3px #888;
+        height: 730px !important;
+        padding: 10px;
+        margin: 10px calc(10vw - 20px);
+        float: left;
+    }
+    .howWorkBox p {
+        font-size: 3.5vw;
+    }
+    .howWorkBoxHeader {
+        font-size: 5vw !important;
+    }
+    .howWorkBox .circle{
+        width: 15vw;
+        height:15vw;
+    }
+    .viewport {
+        overflow: hidden;
+        width: 100vw;
+    } 
+    .FlipsnapAVisitor, .FlipsnapALocal, .FlipsnapMypage {
+        width: 290vw;
+    } 
+    .item {
+        float: left;
+        width: 80vw;
+    }
+    .pointer {
+        text-align: center;
+    }
+    .pointer span{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        background: #F5F5F5;
+        margin: 2vw;
+    }
+    .current {
+        background: #FC0 !important;
+    }
+    .HowitWorkHeader {
+        font-size: 8vw;
+        margin-bottom: 3vw;
+    }
+    .searchPlace .searchInputBox {
+        width: 80% !important;
+        margin-left: 10% !important;
+        height: 4em !important;
+    }
+    .searchInputBox input {
+        height: 4em !important;
+    }
+    .searchButton {
+        height: 4em;
+        width: 7em;
+        margin-left: -4vw;
+    }
+    .searchInputBox i {
+        line-height: 1.4;
+    }
+    .introduceHeader {
+        margin-top: 3vw;
+        font-size: 2vw;
+        width: 80vw !important;
+        margin-left: 10% !important;
+    }
+    #introduceService {
+        margin-top : 3vw;
+    }
+    #introduceVideo {
+        padding-top: 1vw;
+    }
+    .introduceLink-Item {
+        font-size: 2em;
+        font-weight: bold;
+    }
+    footer .dropdown-button {
+        width: 80vw;
+        height: 6vw;
+        font-size: 2em;
+        font-weight: bold;
+        line-height: 2;
+        margin-left: 2vw;
+    }
+    .footer-context {
+        font-size: 2.3em;
+    }
+    .suggestContent {
+        height: 45vh;
+    }
+    footer.page-footer {
+        margin-top: 20vw;
+    }
+    .RequestHeader {
+        font-size: 2vw;
+        padding: 1vw 0;
+        font-weight: bold;
+    }
+    .SuggestHeader {
+        padding: 1vw 0;
+    }
+    .subhead {
+        font-size: 2vw;
+    }
+    .ContentBlockHeader {
+        width: 100%;
+        font-size: 2vw;
+        font-family: 'Noto Sans Bold', 'Nanum Gothic-Bold', 'Raleway-Bold', sans-serif;
+    }
+    #introduceVideo {
+        height: 60% !important;
+    }
+    .introduceContentBox {
+        height: 800px;
+    }
+    .ContentBlockHeader {
+        margin-top: 7%;
+    }
+    .move {
+        margin-top: 3vw;
+    }
+    .mainComment p:first-child {
+        font-size: 6vw;
+    }
+    .mainComment p:last-child {
+        font-size: 4vw;
+    }
+    .languageContainer {
+        margin-top: 5vw;
+    }
+    .footer-context {
+        margin-top: 5vw;
+    }
+    .introduceLink-Container {
+        margin-top: 5vw;
+    }
+    .moreLink-Container {
+        margin-top: 2vw;
+    }
+    .moreLink-Item {
+        margin: 0 22.5px;
+    }
+    .indicator {
+        height: 10px !important;
+    }
+    .tabs .tab a {
+        font-size: 3.5vw;
+        font-weight: bold;
+    }
+    .tabs .tab {
+        height: 70px;
+        line-height: 50px;
+    }
+    .tabs {
+        height: 7vw;
+    }
+    footer {
+        background-position: right;
+    }
+    footer {
+        background: url(/images/Footer.png) left no-repeat;
+        background-size: cover;
+        color: white;
+        background-position-x: -25vw;
+    }
+}
+@media screen and (max-width:500px) {
+    /**
+    * mobile style css
+    */
+    .tabs{
+        font-size: 3em;
+        width: 100% !important;
+    }
+    #ToBeAVisitor, #ToBeALocal, #ToBeMypage {
+        height: 800px;
+        /*
+        overflow-x: scroll;
+        white-space: nowrap;
+        overflow-y: hidden;
+        */
+    }
+    #ToBeAVisitor .circle, #ToBeALocal .circle, #ToBeMypage .circle {
+        margin-top: 20px;
+    }
+    .howWorkBox {
+        /*width: 80% !important;*/
+        border: 1px solid gray;
+        display: inline-block !important;
+        box-shadow: 1px 1px 3px #888;
+        height: 730px !important;
+        padding: 10px;
+        margin: 10px calc(10vw - 20px);
+        float: left;
+    }
+    .howWorkBox p {
+        font-size: 3.5vw;
+    }
+    .howWorkBoxHeader {
+        font-size: 5vw !important;
+    }
+    .howWorkBox .circle{
+        width: 15vw;
+        height:15vw;
+    }
+    .viewport {
+        overflow: hidden;
+        width: 100vw;
+    } 
+    .FlipsnapAVisitor, .FlipsnapALocal, .FlipsnapMypage {
+        width: 290vw;
+    } 
+    .item {
+        float: left;
+        width: 80vw;
+    }
+    .pointer {
+        text-align: center;
+    }
+    .pointer span{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        margin: 2vw;
+        background: #F5F5F5;
+    }
+    .current {
+        background: #FC0 !important;
+    }
+    .HowitWorkHeader {
+        font-size: 8vw;
+        margin-bottom: 3vw;
+    }
+    .searchPlace .searchInputBox {
+        width: 80% !important;
+        margin-left: 10% !important;
+        height: 4em !important;
+    }
+    .searchInputBox input {
+        height: 4em !important;
+    }
+    .searchButton {
+        height: 4em;
+        width: 7em;
+        margin-left: -4vw;
+    }
+    .searchInputBox i {
+        line-height: 1.4;
+    }
+    .introduceHeader {
+        margin-top: 3vw;
+        font-size: 2vw;
+        width: 80vw !important;
+        margin-left: 10% !important;
+    }
+    #introduceService {
+        margin-top : 3vw;
+    }
+    #introduceVideo {
+        padding-top: 1vw;
+    }
+    .introduceLink-Item {
+        font-size: 2em;
+        font-weight: bold;
+    }
+    footer .dropdown-button {
+        width: 80vw;
+        height: 6vw;
+        font-size: 2em;
+        font-weight: bold;
+        line-height: 2;
+        margin-left: 2vw;
+    }
+    .footer-context {
+        font-size: 2.3em;
+    }
+    .suggestContent {
+        height: 45vh;
+    }
+    footer.page-footer {
+        margin-top: 20vw;
+    }
+    .RequestHeader {
+        font-size: 2vw;
+        padding: 1vw 0;
+        font-weight: bold;
+    }
+    .SuggestHeader {
+        padding: 1vw 0;
+    }
+    .subhead {
+        font-size: 2vw;
+    }
+    .ContentBlockHeader {
+        width: 100%;
+        font-size: 2vw;
+        font-family: 'Noto Sans Bold', 'Nanum Gothic-Bold', 'Raleway-Bold', sans-serif;
+    }
+    #introduceVideo {
+        height: 60% !important;
+    }
+    .introduceContentBox {
+        height: 800px;
+    }
+    .ContentBlockHeader {
+        margin-top: 7%;
+    }
+    .move {
+        margin-top: 3vw;
+    }
+    .mainComment p:first-child {
+        font-size: 6vw;
+    }
+    .mainComment p:last-child {
+        font-size: 4vw;
+    }
+    .languageContainer {
+        margin-top: 5vw;
+    }
+    .footer-context {
+        margin-top: 5vw;
+    }
+    .introduceLink-Container {
+        margin-top: 5vw;
+    }
+    .moreLink-Container {
+        margin-top: 2vw;
+    }
+    .moreLink-Item {
+        margin: 0 22.5px;
+    }
+    .indicator {
+        height: 10px !important;
+    }
+    .tabs .tab a {
+        font-size: 3.5vw;
+        font-weight: bold;
+    }
+    .tabs .tab {
+        height: 70px;
+        line-height: 50px;
+    }
+    .tabs {
+        height: 7vw;
+    }
+    footer {
+        background: url(/images/Footer.png) left no-repeat;
+        background-size: cover;
+        color: white;
+        background-position-x: -25vw;
+    }
+}
