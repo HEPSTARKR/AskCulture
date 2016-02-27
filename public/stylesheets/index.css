@@ -193,7 +193,7 @@
 }
 .howWorkBoxBody{
     padding: 0vw 5vw;
-    color: #c4c4c4;
+    color: #636363;
     font-size: 1vw;
 }
 .HowitWorkHeader{
@@ -210,7 +210,7 @@
     margin-bottom: 6vw;
 }
 .tabs li a{
-    color: #828282;
+    color: #636363 !important;
 }
 .tabs li:first-child a.grey-text.active{
     color: #19bdc4 !important;
@@ -248,11 +248,9 @@
     margin: 0;
     font-family: 'Raleway-Regular';
 }
-/** sdasd*/
 .introduceContentBox{
     height:1000px;
 }
-/**asdasd*/
 .card{
     display: inline-block;
     vertical-align:  top;
@@ -279,13 +277,11 @@
 #ToBeMypage .howWorkBoxHeader{
     color: #DF6225;
 }
-/*
 .indicator{
     height: 5px !important;
     transition: 0.5s;
     background: #19bdc4;
 }
-*/
 .howWorkBox .circle{
     width: 10vw;
     margin: auto;

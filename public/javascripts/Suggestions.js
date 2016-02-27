@@ -4,7 +4,6 @@
 var CostSlider = document.getElementById("CostSlider");
 var fullWidth = $(window).width();
 $(document).ready(function() {
-    $('select').material_select();
     $('#selectDateCalendarPicker').multiDatesPicker();
     $('.searchNav').hide();
     $('.languageFolderButton').click(function(){

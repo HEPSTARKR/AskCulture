@@ -9,3 +9,7 @@ $('.moreLink-Item a').mouseleave(function(){
     var path=$(this).children().attr('src').replace('LinkActive','Link');
     $(this).children().attr('src',path);
 });
+$(document).ready(function(){
+	$('select').material_select();
+	$('ul.tabs').tabs();
+});

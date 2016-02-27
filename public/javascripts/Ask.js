@@ -4,8 +4,6 @@
 var ImageArray;
 var currentAnchor=0;
 $(document).ready(function(){
-    $('ul.tabs').tabs();
-    $('select').material_select();
     $('video').mouseenter(function(){
         document.getElementsByTagName("video")[0].play();
     });
