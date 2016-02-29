@@ -46,6 +46,16 @@ $(document).ready(function() {
    })
    if(fullWidth < 1000)
    {
-      $('.flipFilter').slideToggle();
+      $('.inputForm').hide();
+      $('.filterButton').click(function(){
+        /*$('.inputForm').css('z-index','999');*/
+        $('.inputForm').show();
+        $('.flipFilter').slideToggle();
+      });
+      $('.suggestionsFilterConfirmButton').click(function(){
+        $('.flipFilter').slideToggle();
+        $('.inputForm').hide();
+        /*$('.inputForm').css('z-index','-1');*/
+      });
    }
 });

@@ -4,11 +4,10 @@
 @media screen and (min-width:501px) and (max-width:999px) {
 	/* Tablet CSS */
 	.inputForm {
-		
 		position: absolute;
 		background: white;
-		z-index: 999;
 		width: 92%;
+		z-index: 900;
 		padding: 4vw;
 		margin-top: 10vw;
 		margin-left: 2.5vw;
@@ -29,7 +28,7 @@
 		text-align: center;
 		margin-top: 2.5vw;
 	}
-	.submitButton {
+	.suggestionsFilterConfirmButton {
 		background-color: #FFF;
 		border: 3px solid #2DA3B5;
 		text-align: center;
@@ -73,55 +72,70 @@
 	.dropdown-content li>a, .dropdown-content li>span {
 		font-size: 2vw;
 	}
-	footer {
-        background-position: right;
-    }
-    footer {
-        background: url(/images/Footer.png) left no-repeat;
-        background-size: cover;
-        color: white;
-        background-position-x: -25vw;
-    }
+	/*
     footer.page-footer {
         margin-top: 20vw;
     }
-    footer .dropdown-button {
-        width: 80vw;
-        height: 6vw;
-        font-size: 2em;
-        font-weight: bold;
-        line-height: 2;
-        margin-left: 2vw;
+    */
+    .searchPlace {
+    	position: absolute;
+    	top: 8vw;
     }
-    .footer-context {
-        font-size: 2.3em;
+    .ResultContentBox {
+    	padding-top: 18vw !important;
+    	width: 100vw;
     }
-    .languageContainer {
-        margin-top: 5vw;
+    .searchInputBox input {
+    	height: 6vw !important;
+    	width: 80% !important;
+    	font-size: 1.5em;
     }
-    .footer-context {
-        margin-top: 5vw;
+    .searchInputBox i {
+    	margin-top: 1vw;
+    	right: 23.5vw;
+    	font-size: 4vw;
     }
-    .introduceLink-Container {
-        margin-top: 5vw;
+    .searchPlace .searchInputBox {
+    	width: 60% !important;
+    	margin-left: 20% !important;
     }
-    .moreLink-Container {
-        margin-top: 2vw;
+    .filterButton {
+    	float: right;
+    	width: 35vw;
+    	margin-right: 2vw;
+    	margin-top: 4vw;
+    	height: 5vw;
+    	margin-bottom: -2vw;
+    	background-color: #f5f5f5;
+    	color: #2DA3B5;
+    	border: 3px solid #2DA3B5;
+    	font-size: 2em;
+    	font-wieght: bold;
     }
-    .moreLink-Item {
-        margin: 0 22.5px;
+    .askButton {
+    	width: 100vw;
+    	height: 8vw;
+    	margin-top: 5vw;
+    	background-color: #2DA3B5;
+    	color: #FFF;
+    	font-size: 2.8em;
+    	border: 0px;
+    	font-weight: bold;
     }
-    .introduceLink-Item {
-        font-size: 2em;
-        font-weight: bold;
+    form {
+    	overflow: hidden;
     }
+    .askButtonForm {
+    	background-color: #f5f5f5;
+    }
+
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 	/* Mobile CSS */
 	.inputForm {	
 		position: absolute;
 		background: white;
-		z-index: 999;
+		z-index: -1;
 		width: 92%;
 		padding: 4vw;
 		margin-top: 10vw;
@@ -143,7 +157,7 @@
 		text-align: center;
 		margin-top: 2.5vw;
 	}
-	.submitButton {
+	.suggestionsFilterConfirmButton {
 		background-color: #FFF;
 		border: 3px solid #2DA3B5;
 		text-align: center;
@@ -186,4 +200,64 @@
 	.dropdown-content li>a, .dropdown-content li>span {
 		font-size: 2.6vw;
 	}
+	footer.page-footer {
+		margin-top: 0vw;
+	}
+	.searchPlace {
+    	position: absolute;
+    	top: 8.5vw;
+    }
+    .ResultContentBox {
+    	padding-top: 20vw !important;
+    	width: 100vw;
+    }
+    .searchInputBox input {
+    	height: 8vw !important;
+    	width: 85% !important;
+    	font-size: 2.5em;
+    	color: black;
+    }
+    .searchInputBox i {
+    	margin-top: 2vw;
+    	right: 18vw;
+    	font-size: 4vw;
+    }
+    .searchPlace .searchInputBox {
+    	width: 70% !important;
+    	margin-left: 15% !important;
+    }
+    .filterButton {
+    	float: right;
+    	width: 35vw;
+    	margin-right: 2vw;
+    	margin-top: 4vw;
+    	height: 7vw;
+    	margin-bottom: -2vw;
+    	background-color: #f5f5f5;
+    	color: #2DA3B5;
+    	border: 3px solid #2DA3B5;
+    	font-size: 3em;
+    	font-wieght: bold;
+    }
+    .askButton {
+    	width: 100vw;
+    	height: 11vw;
+    	margin-top: 5vw;
+    	background-color: #2DA3B5;
+    	color: #FFF;
+    	font-size: 4.5em;
+    	border: 0px;
+    	font-weight: bold;
+    }
+    form {
+    	overflow: hidden;
+    }
+    .askButtonForm {
+    	background-color: #f5f5f5;
+    }
+    .pac-item {
+    	height: 6vw;
+    	line-height:2.5;
+    	font-size: 2em;
+    }
 }

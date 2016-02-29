@@ -26,8 +26,6 @@ $(document).ready(function () {
     $('.nav-wrapper .material-icons').css('color','#fff');
     var fullWidth = $(window).width();
 
-    $('.tabs li:first-child a').click()
-
     $('.searchInputBox input').focus(function(){
         $('nav').css('box-shadow','0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)');
         $('.submitBubble').show()
@@ -76,39 +74,53 @@ $(document).ready(function () {
                 $('.nav-wrapper .material-icons').css('color','#fff');
             }
         })
+        $('.tabs li a').click(function(){
+            if($(this).parent().index()==2){
+                $('#ToBeMypage').css('display','block');
+                var $pointerMypage = $('.pointerMypage span');
+                var flipsnapMypage = Flipsnap('.FlipsnapMypage');
+                flipsnapMypage.element.addEventListener('fspointmove', function() {
+                $pointerMypage.filter('.current').removeClass('current');
+                $pointerMypage.eq(flipsnapMypage.currentPoint).addClass('current');
+                }, false);
+                $('.indicator').css('background','rgba(223, 98, 37, 1)','!important');
+            }else if($(this).parent().index()==0){
+                $('#ToBeAVisitor').css('display','block');
+                var $pointerVisitor = $('.pointerAVisitor span');
+                var flipsnapVisitor = Flipsnap('.FlipsnapAVisitor');
+                flipsnapVisitor.element.addEventListener('fspointmove', function() {
+                $pointerVisitor.filter('.current').removeClass('current');
+                $pointerVisitor.eq(flipsnapVisitor.currentPoint).addClass('current');
+                }, false);
+                $('.indicator').css('background','rgba(25, 189, 196, 1)','!important');
+            }else{
+                $('#ToBeALocal').css('display','block');
+                var $pointerLocal = $('.pointerALocal span');
+                var flipsnapLocal = Flipsnap('.FlipsnapALocal');
+                flipsnapLocal.element.addEventListener('fspointmove', function() {
+                $pointerLocal.filter('.current').removeClass('current');
+                $pointerLocal.eq(flipsnapLocal.currentPoint).addClass('current');
+                }, false);
+                $('.indicator').css('background','rgba(242, 147, 26, 1)','!important');
+            }
+        });
+        $('.tabs li:eq(0) a').click();
     }
     else
     {
         $('.tabs li a').click(function(){
-        if($(this).parent().index()==2){
-            $('#ToBeMypage').css('display','block');
-            var $pointerMypage = $('.pointerMypage span');
-            var flipsnapMypage = Flipsnap('.FlipsnapMypage');
-            flipsnapMypage.element.addEventListener('fspointmove', function() {
-            $pointerMypage.filter('.current').removeClass('current');
-            $pointerMypage.eq(flipsnapMypage.currentPoint).addClass('current');
-            }, false);
-            $('.indicator').css('background','rgba(223, 98, 37, 1)','!important')
-        }else if($(this).parent().index()==0){
-            $('#ToBeAVisitor').css('display','block');
-            var $pointerVisitor = $('.pointerAVisitor span');
-            var flipsnapVisitor = Flipsnap('.FlipsnapAVisitor');
-            flipsnapVisitor.element.addEventListener('fspointmove', function() {
-            $pointerVisitor.filter('.current').removeClass('current');
-            $pointerVisitor.eq(flipsnapVisitor.currentPoint).addClass('current');
-            }, false);
-            $('.indicator').css('background','rgba(25, 189, 196, 1)','!important');
-        }else{
-            $('#ToBeALocal').css('display','block');
-            var $pointerLocal = $('.pointerALocal span');
-            var flipsnapLocal = Flipsnap('.FlipsnapALocal');
-            flipsnapLocal.element.addEventListener('fspointmove', function() {
-            $pointerLocal.filter('.current').removeClass('current');
-            $pointerLocal.eq(flipsnapLocal.currentPoint).addClass('current');
-            }, false);
-            $('.indicator').css('background','rgba(242, 147, 26, 1)','!important');
-        }
-    });
+            if($(this).parent().index()==2){
+                $('#ToBeMypage').css('display','block');
+                $('.indicator').css('background','rgba(223, 98, 37, 1)','!important');
+            }else if($(this).parent().index()==0){
+                $('#ToBeAVisitor').css('display','block');
+                $('.indicator').css('background','rgba(25, 189, 196, 1)','!important');
+            }else{
+                $('#ToBeALocal').css('display','block');
+                $('.indicator').css('background','rgba(242, 147, 26, 1)','!important');
+            }
+        });
     }
+    $('.tabs li:eq(0) a').click();
 });
 
