@@ -69,20 +69,20 @@
 		height: 5vw !important;
 		margin-bottom: 1.5vw !important;
 	}
+	/*
 	.dropdown-content li>a, .dropdown-content li>span {
 		font-size: 2vw;
 	}
-	/*
     footer.page-footer {
         margin-top: 20vw;
     }
     */
     .searchPlace {
     	position: absolute;
-    	top: 8vw;
+    	top: 18vw;
     }
     .ResultContentBox {
-    	padding-top: 18vw !important;
+    	padding-top: 31vw !important;
     	width: 100vw;
     }
     .searchInputBox input {
@@ -135,7 +135,7 @@
 	.inputForm {	
 		position: absolute;
 		background: white;
-		z-index: -1;
+		z-index: 999;
 		width: 92%;
 		padding: 4vw;
 		margin-top: 10vw;
@@ -197,18 +197,20 @@
 		height: 6vw !important;
 		margin-bottom: 1.5vw !important;
 	}
+	/*
 	.dropdown-content li>a, .dropdown-content li>span {
 		font-size: 2.6vw;
 	}
+	*/
 	footer.page-footer {
 		margin-top: 0vw;
 	}
 	.searchPlace {
     	position: absolute;
-    	top: 8.5vw;
+    	top: 18vw;
     }
     .ResultContentBox {
-    	padding-top: 20vw !important;
+    	padding-top: 5vw !important;
     	width: 100vw;
     }
     .searchInputBox input {
@@ -254,10 +256,23 @@
     }
     .askButtonForm {
     	background-color: #f5f5f5;
+    	margin-top: 30vw;
     }
     .pac-item {
     	height: 6vw;
     	line-height:2.5;
     	font-size: 2em;
+    }
+    .pac-item-query {
+    	font-size: 1.2em;
+    }
+    .ui-datepicker {
+    	width: 60% !important;
+    }
+    .ui-datepicker table {
+    	font-size: 2em !important;
+    }
+    .ui-datepicker .ui-datepicker-header {
+    	font-size: 1.8em;
     }
 }

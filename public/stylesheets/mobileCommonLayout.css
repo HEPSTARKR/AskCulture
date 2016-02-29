@@ -46,6 +46,45 @@
         font-size: 2em;
         font-weight: bold;
     }
+    .dropdown-content li>a, .dropdown-content li>span {
+        font-size: 4vw;
+        font-weight: bold;
+        padding: 35px 16px;
+    }
+    #dropdownExc, #dropdownLanguage {
+        margin-left: 2vw;
+        margin-top: 8vw;
+    }
+    .nav-wrapper img {
+        height: 7vh;
+        margin-top: 0.5vh;
+    }
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        line-height: 1.1;
+        height: 10vh;
+    }
+    nav .button-collapse i {
+        font-size: 8rem;
+    }
+    .profileImage {
+        margin-top: 4vw;
+        height: 25vw;
+        width: 25vw;
+        margin-bottom: 2vw;
+        margin-left: 2.5vw;
+    }
+    .side-nav .profileImage + div {
+        font-size: 3.5em;
+        margin-bottom: 3vw;
+        width: 100%;
+    }
+    .side-nav {
+        width: 35%;
+        left: -100vw;
+    }
+    .mobile {
+        font-size: 2.5em;
+    }
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     footer {
@@ -58,12 +97,12 @@
         margin-top: 20vw;
     }
     footer .dropdown-button {
-        width: 80vw;
-        height: 6vw;
-        font-size: 2em;
-        font-weight: bold;
-        line-height: 2;
-        margin-left: 2vw;
+        width: 80vw !important;
+        height: 10vw !important;
+        font-size: 2.8em !important;
+        font-weight: bold !important;
+        line-height: 2.5 !important;
+        margin-left: 2vw !important;
     }
     .footer-context {
         margin-top: 5vw;
@@ -84,5 +123,45 @@
     .moreLink-Item {
         margin: 0 22.5px;
     }
-
+    .dropdown-content li>a, .dropdown-content li>span {
+        font-size: 4.5vw;
+        font-weight: bold;
+        padding: 40px 16px;
+    }
+    #dropdownExc, #dropdownLanguage {
+        margin-left: 2vw;
+        margin-top: 10vw;
+    }
+    .nav-wrapper img {
+        height: 7vh;
+        margin-top: 0.5vh;
+    }
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        line-height: 1.25;
+        top: 0px;
+        float: fixed;
+        height: 10vh;
+    }
+    nav .button-collapse i {
+        font-size: 8rem;
+    }
+    .profileImage {
+        margin-top: 4vw;
+        height: 25vw;
+        width: 25vw;
+        margin-left: 2.5vw;
+        margin-bottom: 2vw;
+    }
+    .side-nav .profileImage + div {
+        font-size: 3.5em;
+        margin-bottom: 3vw;
+        width: 100%;
+    }
+    .side-nav {
+        width: 35%;
+        left: -100vw;
+    }
+    .mobile {
+        font-size: 2.5em;
+    }
 }
