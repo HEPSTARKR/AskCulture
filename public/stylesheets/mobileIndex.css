@@ -91,9 +91,11 @@
         width: 7em;
         margin-left: -4vw;
     }
+    /*
     .searchInputBox i {
-        line-height: 1.4;
+        line-height: 0.8;
     }
+    */
     .introduceHeader {
         margin-top: 3vw;
         font-size: 2vw;
@@ -198,6 +200,9 @@
     /**
     * mobile style css
     */
+    body {
+        overflow: hidden;
+    }
     .tabs{
         font-size: 3em;
         width: 100% !important;
@@ -383,7 +388,8 @@
         text-transform: none;
     }
     .move {
-        margin-top: 180vw;
+        margin-top: 190vw;
+        z-index: 100;
     }
     .suggestContent {
         padding-bottom: 75vw;
@@ -405,7 +411,7 @@
         height: 50vw;
     }
     footer.page-footer {
-        margin-top: 370vw;
+        margin-top: 385vw;
     }
     .culture-image {
         height: 43vw;
@@ -434,5 +440,32 @@
         height: 12vw;
         bottom: 3vw;
         top: -7.5vw;
+    }
+    .cultureCardEx .cardFilter p {
+        left: 0;
+    }
+    .cardFilter {
+        margin-bottom: -32vw;
+    }
+    .Ready {
+        /*background-image: url('/images/bg5.png');*/
+        background-color: rgba(0,0,0,1);
+        background-position: center center;
+        position: fixed;
+        text-shadow:0px 0px 5px black, 0px 0px 5px white;
+        height: 100%;
+        width: 100vw;
+        text-align: center;
+        top: 0;
+        z-index: 9999;
+    }
+    .Ready p {
+        margin-top: 60%;
+        font-size: 6em;
+        font-weight: bold;
+        color: white;
+    }
+    body {
+        overflow-x: hidden !important;
     }
 }

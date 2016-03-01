@@ -122,5 +122,11 @@ $(document).ready(function () {
         });
     }
     $('.tabs li:eq(0) a').click();
+
+    /* MOBILE READY CODE */
+    (window).scroll(function(){
+        window.scrollTop(0,0);
+    });
+    /* END */
 });
 

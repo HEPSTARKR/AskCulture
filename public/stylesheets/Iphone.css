@@ -7,9 +7,12 @@
 body {
     text-rendering: optimizeLegibility !important;
 }
-.tabs, .ContentBlockHeader, .subhead, footer, .cultureCard {
+body, .tabs, .ContentBlockHeader, .subhead, footer, .cultureCard {
     font-family: 'Raleway-Thin' !important;
 }
 .footer-context {
     font-size: 4em !important;
+}
+.searchInputBox i {
+    line-height: 1.4;
 }
