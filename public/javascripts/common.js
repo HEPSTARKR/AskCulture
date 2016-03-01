@@ -12,4 +12,9 @@ $(document).ready(function(){
 	});
 	$('select').material_select();
 	$('ul.tabs').tabs();
+
+	if ((navigator.userAgent.match(/iPhone/)) ) {
+		$('head').append('<link rel="stylesheet" type="text/css" href="/stylesheets/Iphone.css">');
+	}
+
 });

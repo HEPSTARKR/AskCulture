@@ -1,5 +1,6 @@
 @font-face {
-    src: url(../font/NanumGothic-Regular.ttf);
+    src: url(../font/NanumGothic-Regular.ttf),
+    url('../font/NanumGothic-Regular.woff') format('woff');
     font-family: 'Nanum Gothic';
 }
 @font-face {
@@ -11,11 +12,12 @@
     font-family: 'Raleway-Bold';
 }
 @font-face {
-    src: url(../font/Raleway-Regular.ttf);
+    src: url(../font/Raleway-Regular.ttf),
+    url('../font/Raleway-Regular.woff') format('woff');
     font-family: 'Raleway-Regular';
 }
 @font-face {
-    src: url(../font/Raleway-Thin.ttf);
+    src: url(../font/Raleway-Thin.ttf), url(../font/Raleway-Thin.woff) format ('woff');
     font-family: 'Raleway-Thin';
 }
 @font-face{
@@ -23,7 +25,8 @@
     font-family: 'Noto Sans Black';
 }
 @font-face {
-    src: url(../font/NotoSansCJKkr-Bold.otf#iefix) format('embedded-opentype');
+    src: url(../font/NotoSansCJKkr-Bold.otf#iefix) format('embedded-opentype'),
+    url('../font/NotoSansCJKkr-Bold.woff') format('woff');
     font-family: 'Noto Sans Bold';
 }
 @font-face {
@@ -39,7 +42,8 @@
     font-family: 'Noto Sans Medium';
 }
 @font-face {
-    src: url(../font/NotoSansCJKkr-Regular.otf#iefix) format('embedded-opentype');
+    src: url(../font/NotoSansCJKkr-Regular.otf#iefix) format('embedded-opentype'),
+    url('../font/NotoSansCJKkr-Regular.woff') format('woff');
     font-family: 'Noto Sans Regular';
 }
 @font-face {
@@ -366,4 +370,97 @@ footer .dropdown-button:hover{
     cursor: pointer;
     background: #ff9800;
     color: white;
+}
+.culture-image{
+    height: 160px;
+    width: 100%;
+    background-size: cover;
+}
+.cultureCard{
+    width: 350px;
+    display: inline-block;
+    height: 200px;
+    margin: 5px;
+    border: 1px solid #8e8e8e;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.cultureTitle-wrapper .cultureTitle{
+    color: white;
+    background: rgba(0,0,0,0.5);
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.4em;
+    height: 1.4em;
+}
+.cultureTitle-wrapper{
+    padding: 10px;
+    height: 1.4em;
+    text-overflow: ellipsis;
+}
+.cultureInterfaceBox{
+    position: absolute;
+    width: 350px;
+    height: 40px;
+}
+.culture-profile{
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    border-radius: 100%;
+    border: 3px solid white;
+    left: 5px;
+    position: absolute;
+    bottom: 10px;
+}
+.suggestKind{
+    background: #00acc1;
+}
+.cultureKindBox{
+    width: 100px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    bottom: 45px;
+    right: 5px;
+}
+.cultureEditBox{
+    width: 100px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    bottom: 70px;
+    right: 5px;
+    background: #ec6321;
+}
+.culturePlace-Name{
+    margin-left: 70px;
+}
+.culture-content{
+    background: rgb(250, 248, 248);
+    height: 40px;
+    font-size: 14px;
+}
+.culturePlace-Name{
+    width: 68px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+}
+.culture-content i{
+    vertical-align: middle;
+}
+.culture-content span{
+    line-height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.cardContainer{
+    margin: auto;
+}
+.yellow-text {
+    color: yellow;
 }

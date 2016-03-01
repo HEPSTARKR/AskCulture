@@ -173,6 +173,26 @@
     .btn, .btn-large, .btn-flat {
         text-transform: none;
     }
+    .move {
+        margin-top: 15vw;
+    }
+    .suggestContent {
+        padding-bottom: 165vw;
+    }
+    .cultureCard {
+        width: 100%;
+    }
+    .cultureKindBox, .cultureEditBox {
+        left: 68vw;
+        right: 0;
+    }
+    .cultureCard {
+        height: 45vw;
+        marign-bottom: 5vw;
+    }
+    footer.page-footer {
+        margin-top: 30vw;
+    }
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /**
@@ -248,7 +268,7 @@
     .HowitWorkHeader {
         font-size: 8vw;
         margin-bottom: 3vw;
-        margin-top: 10vw;
+        margin-top: 14vw;
     }
     .searchPlace .searchInputBox {
         width: 80% !important;
@@ -256,6 +276,7 @@
         height: 8em !important;
     }
     .searchInputBox input {
+        text-align: center;
         height: 3em !important;
         font-size: 2.8em;
     }
@@ -361,17 +382,57 @@
     .btn, .btn-large, .btn-flat {
         text-transform: none;
     }
-}
-@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
-    /* IPHONE */
-    .mainComment p:first-child {
-        font-size: 4.8em;
+    .move {
+        margin-top: 180vw;
     }
-    .mainComment p:last-child {
-        font-size: 5vw;
+    .suggestContent {
+        padding-bottom: 75vw;
     }
-    body {
-        text-rendering: optimizeLegibility;
+    .cultureCard {
+        width: 100%;
+        margin-bottom: 10vw;
     }
-
+    .cultureKindBox, .cultureEditBox {
+        left: 60vw;
+        right: 0;
+        font-size: 1.2em;
+        width: 20vw;
+        margin-bottom: 5vw;
+        height: 5vw;
+        margin-left: -3vw;
+    }
+    .cultureCard {
+        height: 50vw;
+    }
+    footer.page-footer {
+        margin-top: 370vw;
+    }
+    .culture-image {
+        height: 43vw;
+    }
+    .culture-content {
+        margin-bottom: -4vw;
+        height: 7vw;
+        font-size: 1.8em;
+        font-weight: bold;
+        padding-top: 1vw;
+    }
+    .cultureEditBox {
+        margin-bottom: 8vw;
+    }
+    .culture-content span {
+        margin-right: 1vw;
+    }
+    .culturePlace-Name {
+        width: 25vw;
+    }
+    .cultureTitle-wrapper .cultureTitle {
+        font-size: 2.5em;
+    }
+    .culture-profile {
+        width: 12vw;
+        height: 12vw;
+        bottom: 3vw;
+        top: -7.5vw;
+    }
 }

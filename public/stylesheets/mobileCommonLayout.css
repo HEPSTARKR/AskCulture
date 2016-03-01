@@ -137,7 +137,7 @@
         margin-top: 0.5vh;
     }
     nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-        line-height: 1.25;
+        line-height: 1.5;
         top: 0px;
         float: fixed;
         height: 10vh;
@@ -163,5 +163,58 @@
     }
     .mobile {
         font-size: 2.5em;
+    }
+        .move {
+        margin-top: 180vw;
+    }
+    .suggestContent {
+        padding-bottom: 75vw;
+    }
+    .cultureCard {
+        width: 100%;
+        margin-bottom: 10vw;
+    }
+    .cultureKindBox, .cultureEditBox {
+        left: 60vw;
+        right: 0;
+        font-size: 1.2em;
+        width: 20vw;
+        margin-bottom: 5vw;
+        height: 5vw;
+        margin-left: -3vw;
+    }
+    .cultureCard {
+        height: 50vw;
+    }
+    footer.page-footer {
+        margin-top: 370vw;
+    }
+    .culture-image {
+        height: 43vw;
+    }
+    .culture-content {
+        margin-bottom: -4vw;
+        height: 7vw;
+        font-size: 1.8em;
+        font-weight: bold;
+        padding-top: 1vw;
+    }
+    .cultureEditBox {
+        margin-bottom: 8vw;
+    }
+    .culture-content span {
+        margin-right: 1vw;
+    }
+    .culturePlace-Name {
+        width: 25vw;
+    }
+    .cultureTitle-wrapper .cultureTitle {
+        font-size: 2.5em;
+    }
+    .culture-profile {
+        width: 12vw;
+        height: 12vw;
+        bottom: 3vw;
+        top: -7.5vw;
     }
 }
