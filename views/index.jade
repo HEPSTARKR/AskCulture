@@ -1,26 +1,23 @@
 //
    Created by Sunrin on 2015. 12. 25..
-
 extends CommonLayout
 block CustomHead
-    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     link(rel='stylesheet' type='text/css' href='/stylesheets/index.css')
     link(rel='stylesheet' tyle='text/css' href='/stylesheets/mobileIndex.css')
 block content
+    div(id='loader' style='z-index:9999;position:fixed;top:0;left:0;width:100vw;height:100vh;background:black;') <div style='position:fixed;top:45vh;left:10vw;width:80vw;'><h2 style='color:white;text-align:center;'>AskCulture Now Loading...</h2><div class="progress"><div class="indeterminate"></div></div></div>
     div(class='row contentBox' id='contentHomeBox')
         div(id='map')
         div(class='filter')
-            div(class='Ready hide-on-large-only')
-                p 현재 모바일 웹사이트는<br>준비중에 있습니다.
             div(class='mainComment')
                 p Share the Korean Culture
                 p With AskCulture
-        a(href='/Suggestions')
-            div(class='BubbleVisitor submitBubble')
+        a(href='/Suggestions' id='goSuggestions')
+            div(class='BubbleVisitor submitBubble' style='display:none;')
                 p 방문자로 서비스
                 p 요청하기
-        a(href='/Askings')
-            div(class='BubbleLocal submitBubble')
+        a(href='/Askings' id='goAskings')
+            div(class='BubbleLocal submitBubble' style='display:none;')
                 p 현지주민으로 서비스
                 p 제안하기
         div(class='searchPlace')
@@ -29,12 +26,12 @@ block content
                 div(class='searchButton')
                     i(class='material-icons') &#xE8B6;
             form(method='' action='')
-                input(type='hidden' id='realValue' name='realPlace' value='')
+                input(type='hidden' id='realValue' lat='' lng='' name='realPlace' value='' onchange='makeQuery();')
     div(class='row contentBox introduceContentBox')
         div(class='col s12 l12 m12')
             div(class='introduceHeader btn-large center-` white-text') What is AskCulture?
             div(id='introduceService') AskCulture는 원하는 여행경험을 직접 요청할 수 있는<br>여행방식의 새로운 패러다임을 제공합니다.<br><br>AskCulture에서만 경험할 수 있는 문화체험에 대해 알아 보세요.
-            iframe(id='introduceVideo' width="60%" height="60%" src="https://www.youtube.com/embed/sE2AgbPST58" frameborder="0" allowfullscreen)
+            iframe(id='introduceVideo' width="60%" height="60%" src="https://www.youtube.com/embed/6_uzf5ClnWY?rel=0" frameborder="0" allowfullscreen)
     div(class='row contentBox HowToVisitor')
         div(class='col s12 l12 m12' id='Setting')
             p(class='HowitWorkHeader') How to Use
@@ -111,199 +108,277 @@ block content
     div(class='row contentBox suggestContent')
         div(class='col s12 l12 m12')
             div(class='ContentBlockHeader SuggestHeader') 이런 문화체험 어때요?
-            p(class='subhead') 현지주민이 제안하는 문화체험
-            center(class='.hide-on-large-only')
-                div(class='cultureCardEx')
-                    div(class='cardFilter')
-                        img(src='/images/cover/1.png')
-                        p 커버
-                div(class='cultureCardEx')
-                    div(class='cardFilter')
-                        img(src='/images/cover/1.png')
-                        p 커버
-                div(class='cultureCardEx')
-                    div(class='cardFilter')
-                        img(src='/images/cover/1.png')
-                        p 커버
-                div(class='cultureCardEx')
-                    div(class='cardFilter')
-                        img(src='/images/cover/1.png')
-                        p 커버
+            p(class='subhead') 현지주민이 제안한 문화체험
+            div(class='col s12 m6 l4 randBg')
+                div(class='container')
+                    div(class='cardContext') 강원도
+            div(class='col s12 m6 l4 randBg')
+                div(class='container')
+                    div(class='cardContext') 경주
+            div(class='col s12 m6 l4 randBg')
+                div(class='container')
+                    div(class='cardContext') 서울
+            div(class='col s12 m6 l4 randBg')
+                div(class='container')
+                    div(class='cardContext') 전주
+            div(class='col s12 m6 l4 randBg')
+                div(class='container')
+                    div(class='cardContext') 제주도
+            div(class='col s12 m6 l4 randBg')
+                div(class='container')
+                    div(class='cardContext') 충청도
             //div(class='cardContainer center')
-                div(class='cultureCard')
-                    div(class='culture-image' style='background-image:url(/images/tempTokyo.jpg);')
-                        div(class='cultureTitle-wrapper')
-                            p(class='cultureTitle') Tokyo City fantastic culture tour sdfghjkl
-                    div(class='culture-content')
-                        div(class='cultureInterfaceBox')
-                            div(class='culture-profile' style='background-image:url(/images/default.jpg)')
-                            div(class='cultureKindBox suggestKind') Ask
-                            div(class='cultureEditBox') Edited
-                        span(class='culturePlace-Name') Tokyo City asdasdas
-                        span ·
-                        span(class='yellow-text') ★
-                        span(class='assessScore') 4.6
-                        span ·
-                        span 리뷰수
-                        span 14
-                        span ·
-                        i(class='material-icons' style='color:#EC6321;margin-right:1vw') &#xE87E;
-                        span(style='color:#2DA3B5') ₩1000000
-                div(class='cultureCard')
-                    div(class='culture-image' style='background-image:url(/images/tempTokyo.jpg);')
-                        div(class='cultureTitle-wrapper')
-                            p(class='cultureTitle') Tokyo City fantastic culture tour sdfghjkl
-                    div(class='culture-content')
-                        div(class='cultureInterfaceBox')
-                            div(class='culture-profile' style='background-image:url(/images/default.jpg)')
-                            div(class='cultureKindBox suggestKind') Ask
-                            div(class='cultureEditBox') Edited
-                        span(class='culturePlace-Name') Tokyo City asdasdas
-                        span ·
-                        span(class='yellow-text') ★
-                        span(class='assessScore') 4.6
-                        span ·
-                        span 리뷰수
-                        span 14
-                        span ·
-                        i(class='material-icons' style='color:#EC6321;margin-right:1vw') &#xE87E;
-                        span(style='color:#2DA3B5') ₩1000000
-                div(class='cultureCard')
-                    div(class='culture-image' style='background-image:url(/images/tempTokyo.jpg);')
-                        div(class='cultureTitle-wrapper')
-                            p(class='cultureTitle') Tokyo City fantastic culture tour sdfghjkl
-                    div(class='culture-content')
-                        div(class='cultureInterfaceBox')
-                            div(class='culture-profile' style='background-image:url(/images/default.jpg)')
-                            div(class='cultureKindBox suggestKind') Ask
-                            div(class='cultureEditBox') Edited
-                        span(class='culturePlace-Name') Tokyo City asdasdas
-                        span ·
-                        span(class='yellow-text') ★
-                        span(class='assessScore') 4.6
-                        span ·
-                        span 리뷰수
-                        span 14
-                        span ·
-                        i(class='material-icons' style='color:#EC6321;margin-right:1vw') &#xE87E;
-                        span(style='color:#2DA3B5') ₩1000000
-                div(class='cultureCard')
-                    div(class='culture-image' style='background-image:url(/images/tempTokyo.jpg);')
-                        div(class='cultureTitle-wrapper')
-                            p(class='cultureTitle') Tokyo City fantastic culture tour sdfghjkl
-                    div(class='culture-content')
-                        div(class='cultureInterfaceBox')
-                            div(class='culture-profile' style='background-image:url(/images/default.jpg)')
-                            div(class='cultureKindBox suggestKind') Ask
-                            div(class='cultureEditBox') Edited
-                        span(class='culturePlace-Name') Tokyo City asdasdas
-                        span ·
-                        span(class='yellow-text') ★
-                        span(class='assessScore') 4.6
-                        span ·
-                        span 리뷰수
-                        span 14
-                        span ·
-                        i(class='material-icons' style='color:#EC6321;margin-right:1vw') &#xE87E;
-                        span(style='color:#2DA3B5') ₩1000000
-    div(class='row contentBox suggestContent')
+            //    div(class='cultureCard')
+            //        div(class='culture-image' style='background-image:url(/images/cover/5.png);')
+            //            div(class='cultureTitle-wrapper')
+            //                p(class='cultureTitle') I'd like to go to hidden restaurants
+            //        div(class='culture-content')
+            //            div(class='cultureInterfaceBox')
+            //                div(class='culture-profile' style='background-image:url(/images/tempProfile.jpg)')
+            //                div(class='cultureKindBox suggestKind') Suggest
+            //                div(class='cultureEditBox') Edited
+            //            span(class='culturePlace-Name') Seoul, Korea
+            //            span(style='display:none;') ·
+            //            span(class='yellow-text' style='display:none;') ★
+            //            span(class='assessScore' style='display:none;') 4.6
+            //            span(style='display:none;') ·
+            //            span(style='display:none;') 리뷰수
+            //            span(style='display:none;') 14
+            //            span(style='display:none;') ·
+            //            i(class='material-icons') favorite_border
+            //            span(class='cardPrice') ₩50,000
+            //    div(class='cultureCard')
+            //        div(class='culture-image' style='background-image:url(/images/cover/5.png)')
+            //            div(class='cultureTitle-wrapper')
+            //                p(class='cultureTitle') I'd like to go to hidden restaurants
+            //        div(class='culture-content')
+            //            div(class='cultureInterfaceBox')
+            //                div(class='culture-profile' style='background-image:url(/images/tempProfile.jpg)')
+            //                div(class='cultureKindBox suggestKind') Suggest
+            //                div(class='cultureEditBox' style='display:none;') Edited
+            //            span(class='culturePlace-Name') Seoul, Korea
+            //            span(style='display:none;') ·
+            //            span(class='yellow-text' style='display:none;') ★
+            //            span(class='assessScore' style='display:none;') 4.6
+            //            span(style='display:none;') ·
+            //            span(style='display:none;') 리뷰수
+            //            span(style='display:none;') 14
+            //            span(style='display:none;') ·
+            //            i(class='material-icons') favorite_border
+            //            span(class='cardPrice') ₩50,000
+            //    div(class='cultureCard')
+            //        div(class='culture-image' style='background-image:url(/images/cover/5.png)')
+            //            div(class='cultureTitle-wrapper')
+            //                p(class='cultureTitle') I'd like to go to hidden restaurants
+            //        div(class='culture-content')
+            //            div(class='cultureInterfaceBox')
+            //                div(class='culture-profile' style='background-image:url(/images/tempProfile.jpg)')
+            //                div(class='cultureKindBox suggestKind') Suggest
+            //                div(class='cultureEditBox' style='display:none;') Edited
+            //            span(class='culturePlace-Name') Seoul, Korea
+            //            span(style='display:none;') ·
+            //            span(class='yellow-text' style='display:none;') ★
+            //            span(class='assessScore' style='display:none;') 4.6
+            //            span(style='display:none;') ·
+            //            span(style='display:none;') 리뷰수
+            //            span(style='display:none;') 14
+            //            span(style='display:none;') ·
+            //            i(class='material-icons') favorite_border
+            //            span(class='cardPrice') ₩50,000
+            //    div(class='cultureCard')
+            //        div(class='culture-image' style='background-image:url(/images/cover/5.png)')
+            //            div(class='cultureTitle-wrapper')
+            //                p(class='cultureTitle') I'd like to go to hidden restaurants
+            //        div(class='culture-content')
+            //            div(class='cultureInterfaceBox')
+            //                div(class='culture-profile' style='background-image:url(/images/tempProfile.jpg)')
+            //                div(class='cultureKindBox suggestKind') Suggest
+            //                div(class='cultureEditBox' style='display:none;') Edited
+            //            span(class='culturePlace-Name') Seoul, Korea
+            //            span(style='display:none;') ·
+            //            span(class='yellow-text' style='display:none;') ★
+            //            span(class='assessScore' style='display:none;') 4.6
+            //            span(style='display:none;') ·
+            //            span(style='display:none;') 리뷰수
+            //            span(style='display:none;') 14
+            //            span(style='display:none;') ·
+            //            i(class='material-icons') favorite_border
+            //            span(class='cardPrice') ₩50,000
+            //    div(class='cultureCard hide-on-med-and-down')
+            //        div(class='culture-image' style='background-image:url(/images/cover/5.png)')
+            //            div(class='cultureTitle-wrapper')
+            //                p(class='cultureTitle') I'd like to go to hidden restaurants
+            //        div(class='culture-content')
+            //            div(class='cultureInterfaceBox')
+            //                div(class='culture-profile' style='background-image:url(/images/tempProfile.jpg)')
+            //                div(class='cultureKindBox suggestKind') Suggest
+            //                div(class='cultureEditBox' style='display:none;') Edited
+            //            span(class='culturePlace-Name') Seoul, Korea
+            //            span(style='display:none;') ·
+            //            span(class='yellow-text' style='display:none;') ★
+            //            span(class='assessScore' style='display:none;') 4.6
+            //            span(style='display:none;') ·
+            //            span(style='display:none;') 리뷰수
+            //            span(style='display:none;') 14
+            //            span(style='display:none;') ·
+            //            i(class='material-icons') favorite_border
+            //            span(class='cardPrice') ₩50,000
+            //    div(class='cultureCard hide-on-med-and-down')
+            //        div(class='culture-image' style='background-image:url(/images/cover/5.png)')
+            //            div(class='cultureTitle-wrapper')
+            //                p(class='cultureTitle') I'd like to go to hidden restaurants
+            //        div(class='culture-content')
+            //            div(class='cultureInterfaceBox')
+            //                div(class='culture-profile' style='background-image:url(/images/tempProfile.jpg)')
+            //                div(class='cultureKindBox suggestKind') Suggest
+            //                div(class='cultureEditBox' style='display:none;') Edited
+            //            span(class='culturePlace-Name') Seoul, Korea
+            //            span(style='display:none;') ·
+            //            span(class='yellow-text' style='display:none;') ★
+            //            span(class='assessScore' style='display:none;') 4.6
+            //            span(style='display:none;') ·
+            //            span(style='display:none;') 리뷰수
+            //            span(style='display:none;') 14
+            //            span(style='display:none;') ·
+            //            i(class='material-icons') favorite_border
+            //            span(class='cardPrice') ₩50,000
+    div(class='row contentBox suggestContent' id='requestContent')
         div(class='col s12 l12 m12 move')
             div(class='ContentBlockHeader RequestHeader') 이런 문화체험 하고싶어요!
-            p(class='subhead') 방문자가 요청하는 문화체험
-            center(class='.hide-on-large-only')
-                div(class='cultureCardEx')
-                    div(class='cardFilter')
-                        img(src='/images/cover/1.png')
-                        p 커버
-                div(class='cultureCardEx')
-                    div(class='cardFilter')
-                        img(src='/images/cover/1.png')
-                        p 커버
-                div(class='cultureCardEx')
-                    div(class='cardFilter')
-                        img(src='/images/cover/1.png')
-                        p 커버
-                div(class='cultureCardEx')
-                    div(class='cardFilter')
-                        img(src='/images/cover/1.png')
-                        p 커버
+            p(class='subhead') 방문자가 요청한 문화체험
+            div(class='col s12 m6 l4 randBg')
+                div(class='container')
+                    div(class='cardContext') 강원도
+            div(class='col s12 m6 l4 randBg')
+                div(class='container')
+                    div(class='cardContext') 경주
+            div(class='col s12 m6 l4 randBg')
+                div(class='container')
+                    div(class='cardContext') 서울
+            div(class='col s12 m6 l4 randBg')
+                div(class='container')
+                    div(class='cardContext') 전주
+            div(class='col s12 m6 l4 randBg')
+                div(class='container')
+                    div(class='cardContext') 제주도
+            div(class='col s12 m6 l4 randBg')
+                div(class='container')
+                    div(class='cardContext') 충청도
             //div(class='cardContainer center')
-                div(class='cultureCard')
-                    div(class='culture-image' style='background-image:url(/images/tempTokyo.jpg);')
-                        div(class='cultureTitle-wrapper')
-                            p(class='cultureTitle') Tokyo City fantastic culture tour sdfghjkl
-                    div(class='culture-content')
-                        div(class='cultureInterfaceBox')
-                            div(class='culture-profile' style='background-image:url(/images/default.jpg)')
-                            div(class='cultureKindBox suggestKind') Ask
-                            div(class='cultureEditBox') Edited
-                        span(class='culturePlace-Name') Tokyo City asdasdas
-                        span ·
-                        span(class='yellow-text') ★
-                        span(class='assessScore') 4.6
-                        span ·
-                        span 리뷰수
-                        span 14
-                        span ·
-                        i(class='material-icons' style='color:#EC6321;margin-right:1vw') &#xE87E;
-                        span(style='color:#2DA3B5') ₩1000000
-                div(class='cultureCard')
-                    div(class='culture-image' style='background-image:url(/images/tempTokyo.jpg);')
-                        div(class='cultureTitle-wrapper')
-                            p(class='cultureTitle') Tokyo City fantastic culture tour sdfghjkl
-                    div(class='culture-content')
-                        div(class='cultureInterfaceBox')
-                            div(class='culture-profile' style='background-image:url(/images/default.jpg)')
-                            div(class='cultureKindBox suggestKind') Ask
-                            div(class='cultureEditBox') Edited
-                        span(class='culturePlace-Name') Tokyo City asdasdas
-                        span ·
-                        span(class='yellow-text') ★
-                        span(class='assessScore') 4.6
-                        span ·
-                        span 리뷰수
-                        span 14
-                        span ·
-                        i(class='material-icons' style='color:#EC6321;margin-right:1vw') &#xE87E;
-                        span(style='color:#2DA3B5') ₩1000000
-                div(class='cultureCard')
-                    div(class='culture-image' style='background-image:url(/images/tempTokyo.jpg);')
-                        div(class='cultureTitle-wrapper')
-                            p(class='cultureTitle') Tokyo City fantastic culture tour sdfghjkl
-                    div(class='culture-content')
-                        div(class='cultureInterfaceBox')
-                            div(class='culture-profile' style='background-image:url(/images/default.jpg)')
-                            div(class='cultureKindBox suggestKind') Ask
-                            div(class='cultureEditBox') Edited
-                        span(class='culturePlace-Name') Tokyo City asdasdas
-                        span ·
-                        span(class='yellow-text') ★
-                        span(class='assessScore') 4.6
-                        span ·
-                        span 리뷰수
-                        span 14
-                        span ·
-                        i(class='material-icons' style='color:#EC6321;margin-right:1vw') &#xE87E;
-                        span(style='color:#2DA3B5') ₩1000000
-                div(class='cultureCard')
-                    div(class='culture-image' style='background-image:url(/images/tempTokyo.jpg);')
-                        div(class='cultureTitle-wrapper')
-                            p(class='cultureTitle') Tokyo City fantastic culture tour sdfghjkl
-                    div(class='culture-content')
-                        div(class='cultureInterfaceBox')
-                            div(class='culture-profile' style='background-image:url(/images/default.jpg)')
-                            div(class='cultureKindBox suggestKind') Ask
-                            div(class='cultureEditBox') Edited
-                        span(class='culturePlace-Name') Tokyo City asdasdas
-                        span ·
-                        span(class='yellow-text') ★
-                        span(class='assessScore') 4.6
-                        span ·
-                        span 리뷰수
-                        span 14
-                        span ·
-                        i(class='material-icons' style='color:#EC6321;margin-right:1vw') &#xE87E;
-                        span(style='color:#2DA3B5') ₩1000000
+            //    div(class='cultureCard')
+            //        div(class='culture-image' style='background-image:url(/images/cover/5.png)')
+            //            div(class='cultureTitle-wrapper')
+            //                p(class='cultureTitle') I'd like to go to hidden restaurants
+            //        div(class='culture-content')
+            //            div(class='cultureInterfaceBox')
+            //                div(class='culture-profile' style='background-image:url(/images/tempProfile.jpg)')
+            //                div(class='cultureKindBox suggestKind' style='background:#ff9800;') Ask
+            //                div(class='cultureEditBox' style='display:none;') Edited
+            //            span(class='culturePlace-Name') Seoul, Korea
+            //            span ·
+            //            span(class='yellow-text') ★
+            //            span(class='assessScore') 4.6
+            //            span ·
+            //            span 리뷰수
+            //            span 14
+            //            span ·
+            //            i(class='material-icons') favorite_border
+            //            span(class='cardPrice') ₩50,000
+            //    div(class='cultureCard')
+            //        div(class='culture-image' style='background-image:url(/images/cover/5.png)')
+            //            div(class='cultureTitle-wrapper')
+            //                p(class='cultureTitle') I'd like to go to hidden restaurants
+            //        div(class='culture-content')
+            //            div(class='cultureInterfaceBox')
+            //                div(class='culture-profile' style='background-image:url(/images/tempProfile.jpg)')
+            //                div(class='cultureKindBox suggestKind' style='background:#ff9800;') Ask
+            //                div(class='cultureEditBox' style='display:none;') Edited
+            //            span(class='culturePlace-Name') Seoul, Korea
+            //            span ·
+            //            span(class='yellow-text') ★
+            //            span(class='assessScore') 4.6
+            //            span ·
+            //            span 리뷰수
+            //            span 14
+            //            span ·
+            //            i(class='material-icons') favorite_border
+            //            span(class='cardPrice') ₩50,000
+            //    div(class='cultureCard')
+            //        div(class='culture-image' style='background-image:url(/images/cover/5.png)')
+            //            div(class='cultureTitle-wrapper')
+            //                p(class='cultureTitle') I'd like to go to hidden restaurants
+            //        div(class='culture-content')
+            //            div(class='cultureInterfaceBox')
+            //                div(class='culture-profile' style='background-image:url(/images/tempProfile.jpg)')
+            //                div(class='cultureKindBox suggestKind' style='background:#ff9800;') Ask
+            //                div(class='cultureEditBox' style='display:none;') Edited
+            //            span(class='culturePlace-Name') Seoul, Korea
+            //            span ·
+            //            span(class='yellow-text') ★
+            //            span(class='assessScore') 4.6
+            //            span ·
+            //            span 리뷰수
+            //            span 14
+            //            span ·
+            //            i(class='material-icons') favorite_border
+            //            span(class='cardPrice') ₩50,000
+            //    div(class='cultureCard')
+            //        div(class='culture-image' style='background-image:url(/images/cover/5.png)')
+            //            div(class='cultureTitle-wrapper')
+            //                p(class='cultureTitle') I'd like to go to hidden restaurants
+            //        div(class='culture-content')
+            //            div(class='cultureInterfaceBox')
+            //                div(class='culture-profile' style='background-image:url(/images/tempProfile.jpg)')
+            //                div(class='cultureKindBox suggestKind' style='background:#ff9800;') Ask
+            //                div(class='cultureEditBox' style='display:none;') Edited
+            //            span(class='culturePlace-Name') Seoul, Korea
+            //            span ·
+            //            span(class='yellow-text') ★
+            //            span(class='assessScore') 4.6
+            //            span ·
+            //            span 리뷰수
+            //            span 14
+            //            span ·
+            //            i(class='material-icons') favorite_border
+            //            span(class='cardPrice') ₩50,000
+            //    div(class='cultureCard hide-on-med-and-down')
+            //        div(class='culture-image' style='background-image:url(/images/cover/5.png)')
+            //            div(class='cultureTitle-wrapper')
+            //                p(class='cultureTitle') I'd like to go to hidden restaurants
+            //        div(class='culture-content')
+            //            div(class='cultureInterfaceBox')
+            //                div(class='culture-profile' style='background-image:url(/images/tempProfile.jpg)')
+            //                div(class='cultureKindBox suggestKind' style='background:#ff9800;') Ask
+            //                div(class='cultureEditBox' style='display:none;') Edited
+            //            span(class='culturePlace-Name') Seoul, Korea
+            //            span ·
+            //            span(class='yellow-text') ★
+            //            span(class='assessScore') 4.6
+            //            span ·
+            //            span 리뷰수
+            //            span 14
+            //            span ·
+            //            i(class='material-icons') favorite_border
+            //            span(class='cardPrice') ₩50,000
+            //    div(class='cultureCard hide-on-med-and-down')
+            //        div(class='culture-image' style='background-image:url(/images/cover/5.png)')
+            //            div(class='cultureTitle-wrapper')
+            //                p(class='cultureTitle') I'd like to go to hidden restaurants
+            //        div(class='culture-content')
+            //            div(class='cultureInterfaceBox')
+            //                div(class='culture-profile' style='background-image:url(/images/tempProfile.jpg)')
+            //                div(class='cultureKindBox suggestKind' style='background:#ff9800;') Ask
+            //                div(class='cultureEditBox' style='display:none;') Edited
+            //            span(class='culturePlace-Name') Seoul, Korea
+            //            span ·
+            //            span(class='yellow-text') ★
+            //            span(class='assessScore') 4.6
+            //            span ·
+            //            span 리뷰수
+            //            span 14
+            //            span ·
+            //            i(class='material-icons') favorite_border
+            //            span(class='cardPrice') ₩50,000
     script(type='text/javascript' src='/javascripts/autoComplete.js')
     script(type='text/javascript' async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCJHwCqCkJ7C9_ecZihe0qmiKoHF4LrY&libraries=places&callback=initMap&language=En&region=En")
     script(type='text/javascript' src='/javascripts/initMap.js')

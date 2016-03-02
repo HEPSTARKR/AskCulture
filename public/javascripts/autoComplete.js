@@ -26,6 +26,11 @@ function fillInAddress() {
     marker.setPosition({lat: pos.lat(),lng: pos.lng()});
     str+document.getElementById('autocomplete').value;
     document.getElementById('realValue').value=str;
+    $('#realValue').attr('lat',pos.lat);
+    $('#realValue').attr('lng',pos.lng);
+    if($('.submitBubble')){
+        $('.submitBubble').show();
+    }
 }
 function geolocate() {
     if (navigator.geolocation) {
@@ -38,7 +43,13 @@ function geolocate() {
                 center: geolocation,
                 radius: position.coords.accuracy
             });
-            autocomplete.setBounds(circle.getBounds());
+            try {
+                autocomplete.setBounds(circle.getBounds());
+            }catch(e){
+                initAutocomplete();
+                alert('지도 로딩에 실패했습니다.')
+                location.reload();
+            }
         });
     }
 }

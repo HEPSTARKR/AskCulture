@@ -1,6 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
 @font-face {
-    src: url(../font/NanumGothic-Regular.ttf),
-    url('../font/NanumGothic-Regular.woff') format('woff');
+    src: url(../font/NanumGothic-Regular.ttf);
     font-family: 'Nanum Gothic';
 }
 @font-face {
@@ -12,12 +12,11 @@
     font-family: 'Raleway-Bold';
 }
 @font-face {
-    src: url(../font/Raleway-Regular.ttf),
-    url('../font/Raleway-Regular.woff') format('woff');
+    src: url(../font/Raleway-Regular.ttf);
     font-family: 'Raleway-Regular';
 }
 @font-face {
-    src: url(../font/Raleway-Thin.ttf), url(../font/Raleway-Thin.woff) format ('woff');
+    src: url(../font/Raleway-Thin.ttf);
     font-family: 'Raleway-Thin';
 }
 @font-face{
@@ -25,8 +24,7 @@
     font-family: 'Noto Sans Black';
 }
 @font-face {
-    src: url(../font/NotoSansCJKkr-Bold.otf#iefix) format('embedded-opentype'),
-    url('../font/NotoSansCJKkr-Bold.woff') format('woff');
+    src: url(../font/NotoSansCJKkr-Bold.otf#iefix) format('embedded-opentype');
     font-family: 'Noto Sans Bold';
 }
 @font-face {
@@ -42,8 +40,7 @@
     font-family: 'Noto Sans Medium';
 }
 @font-face {
-    src: url(../font/NotoSansCJKkr-Regular.otf#iefix) format('embedded-opentype'),
-    url('../font/NotoSansCJKkr-Regular.woff') format('woff');
+    src: url(../font/NotoSansCJKkr-Regular.otf#iefix) format('embedded-opentype');
     font-family: 'Noto Sans Regular';
 }
 @font-face {
@@ -58,8 +55,11 @@
     src: url(../font/NotoSansMonoCJKkr-Regular.otf#iefix) format('embedded-opentype');
     font-family: 'Noto Sans Mono Regular';
 }
+::-webkit-scrollbar {
+    display: none;
+}
 body{
-    font-family: 'Noto Sans Regular', 'Nanum Gothic', 'Raleway-Regular', sans-serif;
+    font-family: 'Noto Sans','Noto Sans Regular', 'Nanum Gothic', 'Raleway-Regular', sans-serif;
 }
 nav{
     z-index: 999;
@@ -79,10 +79,12 @@ nav .nav_button{
     background: none;
     box-shadow: none !important;
     padding: 0 13px;
-    font-family: 'Noto Sans Regular' ,'Nanum Gothic', 'Roboto', sans-serif;
+    transition: 0.3s;
+    font-family: 'Noto Sans','Noto Sans Regular' ,'Nanum Gothic', 'Roboto', sans-serif;
 }
 nav .nav_button:hover{
-    background: rgba(255,255,255,0.5);
+    color: white;
+    background: #ff9800;
 }
 .profileImage{
     border-radius: 100%;
@@ -154,7 +156,7 @@ nav .material-icons{
     margin-left: 10px;
 }
 nav li a{
-    padding: 0px !important;
+    padding: 0px;
 }
 .hide-on-med-and-down li:hover{
     background: none !important;
@@ -178,17 +180,17 @@ nav li a{
     height: 100%;
     background: rgba(0,0,0,0.7);
 }
-#loginDialog, #registerTermDialog{
+#loginDialog, #registerTermDialog, #registerEmailDialog, #registerInformationDialog{
     background: white;
     width: 412px;
-    padding: 14px;
     margin: auto;
+    margin-top: 50px;
 }
-#loginDialog{
-    margin-top: calc(50vh - 185px);
+#loginDialog, #registerEmailDialog, #registerInformationDialog{
+    padding: 14px;
 }
 #registerTermDialog{
-    margin-top: calc(50vh - 300px);
+    padding: 14px 14px 5px 14px;
 }
 .loginHead, .registerHead{
     padding-top: 2px;
@@ -211,20 +213,20 @@ nav li a{
 iframe ._51mz, ._4z_b{
     width: 384px !important;
 }
-.facebookLogin {
+.facebookLogin, .facebookRegister {
     width: 384px;
     height: 40px;
     background-size: 100% 100%;
     background-image: url(/images/facebookButton.png);
     background-repeat: no-repeat;
 }
-#googlePlusLoginButton div{
+#googlePlusLoginButton div, #googlePlusRegisterButton div{
     box-shadow: none !important;
 }
 .facebookLogin, .googlePlusLogin{
     margin: 10px 0;
 }
-.loginDivider span:before, .loginDivider span:after{
+.loginDivider span:before, .loginDivider span:after, .registerDivider span:after, .registerDivider span:before{
     height: 1px;
     margin-top: 5px;
     width: 170px;
@@ -233,20 +235,20 @@ iframe ._51mz, ._4z_b{
     background: #8e8e8e;
     vertical-align: middle;
 }
-.loginDivider span{
+.loginDivider span, .registerDivider span{
     display: inline-block;
     position: relative;
 }
-.loginDivider{
+.loginDivider, .registerDivider{
     line-height: 0.5;
     text-align: center;
     margin-bottom: 10px;
 }
-.loginDivider span:before{
+.loginDivider span:before, .registerDivider span:before{
     right: 100%;
     margin-right: 15px;
 }
-.loginDivider span:after{
+.loginDivider span:after, .registerDivider span:after{
     left: 100%;
     margin-left: 15px;
 }
@@ -362,6 +364,7 @@ footer .dropdown-button:hover{
     text-align: center;
     color: #ff9800;
     padding: 1%;
+    margin-top: 10px;
     font-family: 'Noto Sans Regular' , 'Nanum Gothic', 'Roboto', sans-serif;
     font-size: 1.3em;
     transition: 0.3s;
@@ -370,6 +373,215 @@ footer .dropdown-button:hover{
     cursor: pointer;
     background: #ff9800;
     color: white;
+}
+.facebookRegister, .googlePlusRegister,.registerDivider{
+    margin: 5px 0;
+}
+#registerEmailDialog input{
+    margin-bottom: 0;
+    border: solid 1px #8e8e8e;
+    background: white;
+    color: #8e8e8e;
+    height: auto !important;
+    padding: 10px;
+}
+#registerEmailDialog input:focus{
+    box-shadow: none;
+}
+#registerEmailDialog > div > input{
+    width: calc(100% - 22px);
+}
+#registerFirstName{
+    width: calc(60% - 22px);
+    display: inline;
+}
+#registerLastName{
+    display: inline;
+    margin-left: 10px;
+    width: calc(40% - 32px);
+}
+.formDataContainer > div, .formDataContainer > input{
+    margin-top: 5px;
+}
+#checkDone{
+    background: green;
+    border-radius: 100%;
+    color: white;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+#checkFail{
+    background: red;
+    border-radius: 100%;
+    color: white;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.rightPassword i{
+    background: green;
+    border-radius: 100%;
+    color: white;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.wrongPassword i{
+    background: red;
+    border-radius: 100%;
+    color: white;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.lastRegisterStepButton{
+    border: solid #ff9800 1px;
+    text-align: center;
+    color: #ff9800;
+    padding: 1%;
+    margin-top: 10px;
+    font-family: 'Noto Sans Regular' , 'Nanum Gothic', 'Roboto', sans-serif;
+    font-size: 1.3em;
+    transition: 0.3s;
+}
+.lastRegisterStepButton:hover{
+    cursor: pointer;
+    background: #ff9800;
+    color: white;
+}
+#registerInformationDialog .registerBirthdayForm input.select-dropdown{
+    border: solid 1px #8e8e8e;
+    margin: 0;
+    display: inline-block !important;
+    height: auto;
+    line-height: inherit;
+    padding: 1%;
+}
+#registerInformationDialog .registerBirthdayForm .caret{
+    display: none;
+}
+#registerInformationDialog .registerBirthdayForm .select-wrapper{
+    width: 100px;
+    margin-right: 3px;
+    display: inline-block;
+}
+.registerLanguageForm i{
+    border: #ff9800 solid 1px;
+    color: #ff9800;
+    vertical-align: middle;
+    border-radius: 100%;
+    transition: 0.3s;
+}
+.registerLanguageForm i:hover{
+    background: #ff9800;
+    color: white;
+    cursor: pointer;
+}
+.registerLanguageForm span{
+    background: #ff9800;
+    border-radius: 19px;
+    color: white;
+    display: inline-block;
+    width: 76px;
+    text-align: center;
+    transition: 0.3s;
+    padding: 0 10px;
+    margin-right: 10px;
+}
+.languageLevelDialog{
+    top: calc(30% - 55px);
+    padding: 1%;
+    left: calc(50% - 150px);
+    width: 300px;
+    z-index: 999;
+    position: fixed;
+    background: white;
+    border: 1px solid #ff9800;
+    display: inline-block;
+    margin: auto;
+}
+.languageLevelDialog .levelSettingContainer i{
+    background: #ff9800;
+    color: white;
+    vertical-align: middle;
+}
+.languageLevelDialog .levelSettingContainer i:hover{
+    cursor: pointer;
+}
+.languageLevelDialog .levelSettingContainer span{
+    width: 24px;
+    text-align: center;
+    display: inline-block;
+}
+.languageLevelDialog .levelSettingContainer{
+    width: 72px;
+    margin: auto;
+}
+.levelConfirmContainer{
+    text-align: right;
+}
+.levelConfirmContainer span{
+    margin: 0 5px;
+}
+.levelConfirmContainer span:hover{
+    cursor: pointer;
+}
+.levelConfirmSettingButton{
+    color: #ff9800;
+}
+.registerLanguageForm span:hover{
+    background: red;
+    cursor: pointer;
+}
+#registerInformationDialog .dropdown-content li a, #registerInformationDialog .dropdown-content li span{
+    padding: 7px;
+}
+#registerInformationDialog .dropdown-content li{
+    min-height: auto;
+}
+#registerInformationDialog .dropdown-content{
+    height: 180px;
+}
+.material-tooltip span{
+    display: none;
+}
+.material-tooltip div{
+    line-height: 1.8;
+}
+label[for=male]{
+    margin-right: 20px;
+}
+.registerFavoriteGenreForm label{
+    width: 25%;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+.registerFavoriteGenreLabel{
+    border-bottom: 1px solid #8e8e8e;
+    margin-bottom: 15px;
+}
+.registerSubmitButton{
+    width: 25%;
+    border: solid 1px #ff9800;
+    color: #ff9800;
+    background: transparent;
+    transition: 0.3s;
+    text-align: center;
+    margin-left: 75%;
+    padding: 1%;
+}
+.registerSubmitButton:hover{
+    background: #ff9800;
+    color: white;
+    cursor: pointer;
+}
+.registerStateForm .select-wrapper{
+    width: 100px;
+    word-break: break-all;
+}
+.registerInformationLabel{
+    font-weight: bold;
+    margin-top: 10px;
+}
+#userSettingDropdown{
+    width: 130px !important;
 }
 .culture-image{
     height: 160px;
@@ -461,6 +673,185 @@ footer .dropdown-button:hover{
 .cardContainer{
     margin: auto;
 }
-.yellow-text {
-    color: yellow;
+.page-footer{
+    margin-top: 0 !important;
+}
+@media screen and (min-width:1000px) {
+    .mediaLine{
+        display: inline;
+        text-align: center;
+    }
+    .footer-context{
+        text-align: center;
+        line-height: 0.7;
+        font-size: 1.7em;
+    }
+}
+@media screen and (max-width: 1800px) {
+    .largeScreenOnlyshow{
+        display: none;
+    }
+}
+.culture-image{
+    height: 160px;
+    width: 100%;
+    background-size: cover;
+}
+.cultureCard{
+    width: 350px;
+    display: inline-block;
+    height: 200px;
+    margin: 5px;
+    border: 1px solid #8e8e8e;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.cultureTitle-wrapper .cultureTitle{
+    color: white;
+    background: rgba(0,0,0,0.5);
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.4em;
+    height: 1.4em;
+}
+.cultureTitle-wrapper{
+    padding: 10px;
+    height: 1.4em;
+    text-overflow: ellipsis;
+}
+.cultureInterfaceBox{
+    position: absolute;
+    width: 350px;
+    height: 40px;
+}
+.culture-profile{
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    border-radius: 100%;
+    border: 3px solid white;
+    left: 5px;
+    position: absolute;
+    bottom: 10px;
+}
+.suggestKind{
+    background: #00acc1;
+}
+.cultureKindBox{
+    width: 100px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    bottom: 45px;
+    right: 5px;
+}
+.cultureEditBox{
+    width: 100px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    bottom: 70px;
+    right: 5px;
+    background: #ec6321;
+}
+.culturePlace-Name{
+    margin-left: 70px;
+}
+.culture-content{
+    background: rgb(250, 248, 248);
+    height: 40px;
+    font-size: 14px;
+}
+.culturePlace-Name{
+    width: 68px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+}
+.culture-content i{
+    vertical-align: middle;
+}
+.culture-content span{
+    line-height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.cardContainer{
+    margin: auto;
+}
+.cardPrice{
+    float: right;
+    font-weight: bold;
+}
+.culturePlace-Name{
+    float: left;
+}
+span[style='display:none;'] + i{
+    float: left;
+    line-height: 170%;
+}
+span[style='display:none;'] + .culturePlace-Name{
+    width: auto !important;
+    overflow: auto;
+    text-overflow: clip;
+    white-space: inherit;
+}
+.randBg .container{
+    height: 100%;
+    width: 100% !important;
+    padding: 0 !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.cardContext{
+    height: 100%;
+    line-height: 180px;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    background: rgba(0,0,0,0.7);
+    transition: 0.3s;
+    opacity: 0;
+}
+.cardContext:hover{
+    opacity: 1;
+}
+.randBg{
+    margin: 10px 0;
+    padding: 0 1% !important;
+    height: 180px !important;
+}
+@media screen and (orientation: portrait) {
+    .suggestContent .col.randBg{
+        padding: 0 3% !important;
+    }
+    .suggestContent .randBg.col.s12{
+        display: block;
+        width: 100%;
+        height: 300px !important;
+    }
+    .suggestContent .randBg.col.s12 .cardContext{
+        line-height: 300px;
+    }
+    .suggestContent{
+        height: auto !important;
+    }
+}
+@media screen and (max-width: 992px){
+    .suggestContent{
+        height: auto !important;
+    }
+}
+@media screen and (max-width: 601px) {
+    .suggestContent .randBg.col.s12{
+        display: block;
+        width: 100%;
+    }
+}
+#requestContent{
+    padding-bottom: 3%;
 }

@@ -40,17 +40,17 @@ $(document).ready(function () {
         if($('.searchInputBox input').val()==''){
             $("nav").css('background','none','!important')
             $('#map').css('z-index',-10);
+            $('.submitBubble').hide();
             $('nav').css('box-shadow','none')
             $('.brand-logo img').attr('src','/images/logo_white.png');
             $('nav').css('color', '#ffffff');
             $('nav .nav_button').css({'color': '#ffffff','border':'solid 1px #ffffff'});
-            $('.nav-wrapper .material-icons').css('color','#ff9800');     
+            $('.nav-wrapper .material-icons').css('color','#ff9800');
             $('.submitBubble').hide();
             $('.searchPlace').css('z-index',201).animate({top: '60vh'},'slow');
         }
     })
     $('.indicator').css('background','#19bdc4');
-
     if(fullWidth < 1000)
     {
         $('.indicator').hide();
@@ -80,8 +80,8 @@ $(document).ready(function () {
                 var $pointerMypage = $('.pointerMypage span');
                 var flipsnapMypage = Flipsnap('.FlipsnapMypage');
                 flipsnapMypage.element.addEventListener('fspointmove', function() {
-                $pointerMypage.filter('.current').removeClass('current');
-                $pointerMypage.eq(flipsnapMypage.currentPoint).addClass('current');
+                    $pointerMypage.filter('.current').removeClass('current');
+                    $pointerMypage.eq(flipsnapMypage.currentPoint).addClass('current');
                 }, false);
                 $('.indicator').css('background','rgba(223, 98, 37, 1)','!important');
             }else if($(this).parent().index()==0){
@@ -89,8 +89,8 @@ $(document).ready(function () {
                 var $pointerVisitor = $('.pointerAVisitor span');
                 var flipsnapVisitor = Flipsnap('.FlipsnapAVisitor');
                 flipsnapVisitor.element.addEventListener('fspointmove', function() {
-                $pointerVisitor.filter('.current').removeClass('current');
-                $pointerVisitor.eq(flipsnapVisitor.currentPoint).addClass('current');
+                    $pointerVisitor.filter('.current').removeClass('current');
+                    $pointerVisitor.eq(flipsnapVisitor.currentPoint).addClass('current');
                 }, false);
                 $('.indicator').css('background','rgba(25, 189, 196, 1)','!important');
             }else{
@@ -98,13 +98,12 @@ $(document).ready(function () {
                 var $pointerLocal = $('.pointerALocal span');
                 var flipsnapLocal = Flipsnap('.FlipsnapALocal');
                 flipsnapLocal.element.addEventListener('fspointmove', function() {
-                $pointerLocal.filter('.current').removeClass('current');
-                $pointerLocal.eq(flipsnapLocal.currentPoint).addClass('current');
+                    $pointerLocal.filter('.current').removeClass('current');
+                    $pointerLocal.eq(flipsnapLocal.currentPoint).addClass('current');
                 }, false);
                 $('.indicator').css('background','rgba(242, 147, 26, 1)','!important');
             }
         });
-        $('.tabs li:eq(0) a').click();
     }
     else
     {
@@ -121,12 +120,8 @@ $(document).ready(function () {
             }
         });
     }
-    $('.tabs li:eq(0) a').click();
-
-    /* MOBILE READY CODE */
-    (window).scroll(function(){
-        window.scrollTop(0,0);
+    $('.tabs li:eq(0) a').ready(function(){
+        $('.tabs li:eq(0) a').click();
     });
-    /* END */
+    $('#loader').remove();
 });
-

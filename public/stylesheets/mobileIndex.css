@@ -3,278 +3,36 @@
             display: inline-block !important;
             width: 33.333333%;
     }
+    /*
     .footer-context p {
         font-size: 0.8em;
-    }
+        margin-top: 0.8%;
+   }
+   */
 }
 @media screen and (min-width:501px) and (max-width:999px) {
 /**
 * tablet style css
 */
-    #ToBeAVisitor, #ToBeALocal, #ToBeMypage {
-        height: 800px;
-        /*
-        overflow-x: scroll;
-        white-space: nowrap;
-        overflow-y: hidden;
-        */
-    }
-    #ToBeAVisitor .circle, #ToBeALocal .circle, #ToBeMypage .circle {
-        margin-top: 20px;
-    }
-    .howWorkBox {
-        /*width: 80% !important;*/
-        border: 1px solid gray;
-        display: inline-block !important;
-        box-shadow: 1px 1px 3px #888;
-        height: 730px !important;
-        padding: 10px;
-        margin: 10px 10vw;
-        float: left;
-    }
-    .howWorkBox p {
-        font-size: 3.5vw;
-    }
-    .howWorkBoxHeader {
-        font-size: 7vw !important;
-    }
-    .howWorkBox .circle{
-        width: 15vw;
-        height:15vw;
-    }
-    .viewport {
-        overflow: hidden;
-        width: 100vw;
-    } 
-    .FlipsnapAVisitor, .FlipsnapALocal, .FlipsnapMypage {
-        width: 300vw;
-    } 
-    .item {
-        float: left;
-        width: 80vw;
-    }
-    .pointer {
-        text-align: center;
-    }
-    .pointer span{
-        border: 1px solid #000;
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        border-radius: 100%;
-        margin: 2vw;
-        background: #F5F5F5;
-    }
-    .pointerAVisitor .current {
-        background: rgba(25, 189, 196, 1) !important;
-    }
-    .pointerALocal .current {
-        background: rgba(242, 147, 26, 1) !important;
-    }
-    .pointerMypage .current {
-        background: rgba(223, 98, 37, 1) !important;
-    }
-    .HowitWorkHeader {
-        font-size: 8vw;
-        margin-bottom: 3vw;
-    }
-    .searchPlace .searchInputBox {
-        width: 80% !important;
-        margin-left: 10% !important;
-        height: 4em !important;
-    }
-    .searchInputBox input {
-        height: 4em !important;
-    }
-    .searchButton {
-        height: 4em;
-        width: 7em;
-        margin-left: -4vw;
-    }
-    /*
-    .searchInputBox i {
-        line-height: 0.8;
-    }
-    */
-    .introduceHeader {
-        margin-top: 3vw;
-        font-size: 2vw;
-        width: 80vw !important;
-        margin-left: 10% !important;
-    }
-    #introduceService {
-        margin-top : 3vw;
-    }
-    #introduceVideo {
-        padding-top: 1vw;
-    }
-    .introduceLink-Item {
-        font-size: 2em;
-        font-weight: bold;
-    }
-    .RequestHeader {
-        font-size: 2vw;
-        padding: 1vw 0;
-        font-weight: bold;
-    }
-    .SuggestHeader {
-        padding: 1vw 0;
-    }
-    .subhead {
-        font-size: 2vw;
-    }
-    .ContentBlockHeader {
-        width: 100%;
-        font-size: 2vw;
-        font-family: 'Noto Sans Bold', 'Nanum Gothic-Bold', 'Raleway-Bold', sans-serif;
-    }
-    #introduceVideo {
-        height: 60% !important;
-    }
-    .introduceContentBox {
-        height: 800px;
-    }
-    .ContentBlockHeader {
-        margin-top: 7%;
-    }
-    .move {
-        margin-top: 3vw;
-    }
-    .mainComment p:first-child {
-        font-size: 6vw;
-    }
-    .mainComment p:last-child {
-        font-size: 4vw;
-    }
-    .languageContainer {
-        margin-top: 5vw;
-    }
-    .introduceLink-Container {
-        margin-top: 5vw;
-    }
-    .moreLink-Container {
-        margin-top: 2vw;
-    }
-    .moreLink-Item {
-        margin: 0 22.5px;
-    }
-    .indicator {
-        height: 10px !important;
-    }
-    .tabs .tab a {
-        font-size: 3.5vw;
-        font-weight: bold;
-    }
-    .tabs .tab {
-        height: 70px;
-        line-height: 50px;
-    }
-    .tabs {
-        height: 7vw;
-    }
-    .btn, .btn-large, .btn-flat {
-        text-transform: none;
-    }
-    .move {
-        margin-top: 15vw;
-    }
-    .suggestContent {
-        padding-bottom: 165vw;
-    }
-    .cultureCard {
-        width: 100%;
-    }
-    .cultureKindBox, .cultureEditBox {
-        left: 68vw;
-        right: 0;
-    }
-    .cultureCard {
-        height: 45vw;
-        marign-bottom: 5vw;
-    }
-    footer.page-footer {
-        margin-top: 30vw;
-    }
+
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /**
     * mobile style css
     */
-    body {
-        overflow: hidden;
+    /* Share the Korean Culture */
+    .mainComment {
+        margin-top: 6vw;
     }
-    .tabs{
-        font-size: 3em;
-        width: 100% !important;
-    }
-    #ToBeAVisitor, #ToBeALocal, #ToBeMypage {
-        height: 800px;
-        /*
-        overflow-x: scroll;
-        white-space: nowrap;
-        overflow-y: hidden;
-        */
-    }
-    #ToBeAVisitor .circle, #ToBeALocal .circle, #ToBeMypage .circle {
-        margin-top: 20px;
-    }
-    .howWorkBox {
-        /*width: 80% !important;*/
-        border: 1px solid gray;
-        display: inline-block !important;
-        box-shadow: 1px 1px 3px #888;
-        height: 730px !important;
-        padding: 10px;
-        margin: 10px 10vw;
-        float: left;
-    }
-    .howWorkBox p {
-        font-size: 3.5vw;
-    }
-    .howWorkBoxHeader {
-        font-size: 7vw !important;
-    }
-    .howWorkBox .circle{
-        width: 15vw;
-        height:15vw;
-    }
-    .viewport {
-        overflow: hidden;
-        width: 100vw;
-    } 
-    .FlipsnapAVisitor, .FlipsnapALocal, .FlipsnapMypage {
-        width: 300vw;
-    } 
-    .item {
-        float: left;
-        width: 80vw;
-    }
-    .pointer {
-        text-align: center;
-    }
-    .pointer span{
-        border: 1px solid #000;
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        border-radius: 100%;
-        margin: 2vw;
-        background: #F5F5F5;
-    }
-    .pointerAVisitor .current {
-        background: rgba(25, 189, 196, 1) !important;
-    }
-    .pointerALocal .current {
-        background: rgba(242, 147, 26, 1) !important;
-    }
-    .pointerMypage .current {
-        background: rgba(223, 98, 37, 1) !important;
-    }
-    .HowitWorkHeader {
+    .mainComment p:first-child {
         font-size: 8vw;
-        margin-bottom: 3vw;
-        margin-top: 14vw;
     }
+    .mainComment p:last-child {
+        font-size: 6vw;
+    }
+    /* END */
+
+    /* SearchBar Css */
     .searchPlace .searchInputBox {
         width: 80% !important;
         margin-left: 9% !important;
@@ -285,9 +43,6 @@
         height: 3em !important;
         font-size: 2.8em;
     }
-    #contentHomeBox {
-        background-position: center center;
-    }
     .searchButton {
         height: 8em;
         width: 14em;
@@ -295,35 +50,90 @@
         overflow: hidden;
     }
     .searchInputBox i {
-        /*line-height: 1.4;*/
         font-size: 6em;
     }
-    .ContentBlockHeader {
-        font-size: 2.5vw;
-    }
+    /* END */
+
+    /* What is Askculture */
     .introduceHeader {
         margin-top: 3vw;
         font-size: 3vw;
         width: 80vw !important;
         margin-left: 10% !important;
     }
-    #introduceService {
-        margin-top : 3vw;
-        font-size: 2vh;
-        word-wrap: break-word;
+    /* Not Uppercase */
+    .btn, .btn-large, .btn-flat {
+        text-transform: none;
     }
-    #introduceVideo {
-        padding-top: 1vw;
+    /* END */
+
+    /* How it Works margin */
+    .HowitWorkHeader {
+        font-size: 8vw;
+        margin-bottom: 3vw;
+        margin-top: 14vw;
     }
-    .introduceLink-Item {
-        font-size: 2em;
-        font-weight: bold;
+    /* END */
+
+    /* FilpSnap CSS */
+    .viewport {
+        overflow: hidden;
+        width: 100vw;
+    } 
+    .FlipsnapAVisitor, .FlipsnapALocal, .FlipsnapMypage {
+        width: 300vw;
+    } 
+    .item {
+        float: left;
+        width: 80vw;
     }
-    .RequestHeader {
-        font-size: 2vw;
-        padding: 1vw 0;
-        font-weight: bold;
+    .pointer {
+        text-align: center;
     }
+    .pointer span{
+        border: 1px solid #000;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        margin: 2vw;
+        background: #F5F5F5;
+    }
+    .pointerAVisitor .current {
+        background: rgba(25, 189, 196, 1) !important;
+    }
+    .pointerALocal .current {
+        background: rgba(242, 147, 26, 1) !important;
+    }
+    .pointerMypage .current {
+        background: rgba(223, 98, 37, 1) !important;
+    }
+    /* END */
+
+    /* howWorkBox CSS */
+    .howWorkBox {
+        /*width: 80% !important;*/
+        border: 1px solid gray;
+        display: inline-block !important;
+        box-shadow: 1px 1px 3px #888;
+        height: 730px !important;
+        padding: 10px;
+        margin: 10px 10vw;
+        float: left;
+    }
+    .howWorkBox p {
+        font-size: 3.5vw;
+    }
+    .howWorkBoxHeader {
+        font-size: 7vw !important;
+    }
+    .howWorkBox .circle{
+        width: 15vw;
+        height:15vw;
+    }
+    /* END */
+
+    /* Request Response CSS */
     .SuggestHeader {
         padding: 1vw 0;
     }
@@ -335,137 +145,11 @@
         font-size: 3vw;
         font-family: 'Noto Sans Bold', 'Nanum Gothic-Bold', 'Raleway-Bold', sans-serif;
     }
-    #introduceVideo {
-        height: 60% !important;
-    }
-    .introduceContentBox {
-        height: 800px;
-    }
-    .ContentBlockHeader {
-        margin-top: 7%;
-    }
-    .move {
-        margin-top: 3vw;
-    }
-    .mainComment {
-        margin-top: 6vw;
-    }
-    .mainComment p:first-child {
-        font-size: 8vw;
-    }
-    .mainComment p:last-child {
-        font-size: 6vw;
-    }
-    .languageContainer {
-        margin-top: 5vw;
-    }
-    .introduceLink-Container {
-        margin-top: 5vw;
-    }
-    .moreLink-Container {
-        margin-top: 2vw;
-    }
-    .moreLink-Item {
-        margin: 0 22.5px;
-    }
-    /*
-    .indicator {
-        height: 10px !important;
-    }
-    */
-    .tabs .tab a {
-        font-size: 5vw;
-        font-weight: bold;
-    }
-    .tabs .tab {
-        height: 70px;
-        line-height: 50px;
-    }
-    .tabs {
-        height: 7vw;
-    }
-    .btn, .btn-large, .btn-flat {
-        text-transform: none;
-    }
-    .move {
-        margin-top: 190vw;
-        z-index: 100;
-    }
-    .suggestContent {
-        padding-bottom: 75vw;
-    }
-    .cultureCard {
-        width: 100%;
-        margin-bottom: 10vw;
-    }
-    .cultureKindBox, .cultureEditBox {
-        left: 60vw;
-        right: 0;
-        font-size: 1.2em;
-        width: 20vw;
-        margin-bottom: 5vw;
-        height: 5vw;
-        margin-left: -3vw;
-    }
-    .cultureCard {
-        height: 50vw;
-    }
-    footer.page-footer {
-        margin-top: 385vw;
-    }
-    .culture-image {
-        height: 43vw;
-    }
-    .culture-content {
-        margin-bottom: -4vw;
-        height: 7vw;
-        font-size: 1.8em;
-        font-weight: bold;
-        padding-top: 1vw;
-    }
-    .cultureEditBox {
-        margin-bottom: 8vw;
-    }
-    .culture-content span {
-        margin-right: 1vw;
-    }
-    .culturePlace-Name {
-        width: 25vw;
-    }
-    .cultureTitle-wrapper .cultureTitle {
-        font-size: 2.5em;
-    }
-    .culture-profile {
-        width: 12vw;
-        height: 12vw;
-        bottom: 3vw;
-        top: -7.5vw;
-    }
-    .cultureCardEx .cardFilter p {
-        left: 0;
-    }
-    .cardFilter {
-        margin-bottom: -32vw;
-    }
-    .Ready {
-        /*background-image: url('/images/bg5.png');*/
-        background-color: rgba(0,0,0,1);
+    /* END */
+
+    /* Main Picture Center CSS */
+    #contentHomeBox {
         background-position: center center;
-        position: fixed;
-        text-shadow:0px 0px 5px black, 0px 0px 5px white;
-        height: 100%;
-        width: 100vw;
-        text-align: center;
-        top: 0;
-        z-index: 9999;
     }
-    .Ready p {
-        margin-top: 60%;
-        font-size: 6em;
-        font-weight: bold;
-        color: white;
-    }
-    body {
-        overflow-x: hidden !important;
-    }
+    /* END */
 }
